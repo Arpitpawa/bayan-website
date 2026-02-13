@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Amargarh, Udaipur | Bayan Group</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/hotel-detail.css" />
+
+    <!-- Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      defer
+    ></script>
+  </head>
+
+  <body class="hotel-page">
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+      <div class="nav-bar">
+        <!-- LEFT -->
+        <div class="nav-left">
+          <button class="menu-toggle" id="menuToggle">
+            <svg viewBox="0 0 24 10">
+              <line x1="0" y1="1" x2="24" y2="1"></line>
+              <line x1="0" y1="9" x2="24" y2="9"></line>
+            </svg>
+            <span>Menu</span>
+          </button>
+
+          <button class="search-toggle">
+            <svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="6"></circle>
+              <line x1="16" y1="16" x2="22" y2="22"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- CENTER -->
+        <a href="index.html" class="logo">BAYAN</a>
+
+        <!-- RIGHT -->
+        <a
+          href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+          class="nav-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          BOOK NOW
+        </a>
+      </div>
+    </header>
+
+    <!-- ================= MENU OVERLAY ================= -->
+    <div class="menu-overlay" id="menuOverlay">
+      <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="menu-container">
+        <nav class="menu-nav">
+          <a href="destinations.html">Destinations</a>
+          <a href="hotels.html">Stays</a>
+          <a href="experiences.html">Experiences</a>
+          <a href="wellness.html">Wellness</a>
+          <a href="dining.html">Dining</a>
+          <a href="about.html">About Bayan</a>
+        </nav>
+
+        <div class="menu-destinations">
+          <span class="menu-eyebrow">Discover Bayan In</span>
+          <a href="#">Jaipur</a>
+          <a href="#">Udaipur</a>
+          <a href="#">Kumbhalgarh</a>
+          <a href="#">Sawai Madhopur</a>
+          <span class="coming">Pushkar — Coming Soon</span>
+          <span class="coming">Jodhpur — Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-spacer"></div>
+
+    <!-- SUB NAV (DESKTOP ONLY) -->
+    <section class="hotel-subnav">
+      <div class="subnav-inner">
+        <div class="subnav-breadcrumb">
+          <span class="breadcrumb-current">THE AMARGARH</span>
+          <span class="breadcrumb-separator">›</span>
+        </div>
+
+        <nav class="subnav-links">
+          <a href="#accommodation">Accommodation</a>
+          <a href="#experiences">Experiences</a>
+          <a href="#wellness">Wellness</a>
+          <a href="#dining">Dining</a>
+          <a href="#getting-here">Getting Here</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- HERO -->
+    <section class="hotel-hero">
+      <img
+        src="../assets/images/amargarh/hero.webp"
+        alt="The Amargarh Udaipur"
+      />
+    </section>
+
+    <!-- INTRO -->
+    <section class="hotel-intro">
+      <span class="hotel-location">Udaipur, Rajasthan</span>
+      <h1>The Amargarh</h1>
+
+      <p class="hotel-tagline">
+        A heritage-inspired retreat overlooking the timeless city of Udaipur.
+      </p>
+
+      <p class="hotel-description">
+        Perched on a hilltop, The Amargarh blends historic character with
+        panoramic views, offering an atmosphere of quiet sophistication and
+        refined exclusivity.
+      </p>
+    </section>
+
+    <!-- AMAN EDITORIAL GALLERY -->
+    <section class="aman-gallery-section">
+      <div class="aman-gallery-viewport">
+        <div class="aman-gallery-track" id="galleryTrack">
+          <div class="gallery-item vertical">
+            <img src="../assets/images/amargarh/g1.webp" alt="" />
+          </div>
+
+          <div class="gallery-item square">
+            <img src="../assets/images/amargarh/g2.webp" alt="" />
+          </div>
+
+          <div class="gallery-item horizontal">
+            <img src="../assets/images/amargarh/g3.webp" alt="" />
+          </div>
+
+          <div class="gallery-item vertical">
+            <img src="../assets/images/amargarh/g4.webp" alt="" />
+          </div>
+
+          <div class="gallery-item square">
+            <img src="../assets/images/amargarh/g5.webp" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDER (AMAN STYLE) -->
+      <div class="aman-slider-wrapper">
+        <div class="aman-slider-track" id="sliderTrack">
+          <span class="aman-segment"><i></i><i></i><i></i></span>
+          <span class="aman-segment"><i></i><i></i><i></i></span>
+          <span class="aman-segment"><i></i><i></i><i></i></span>
+          <span class="aman-segment"><i></i><i></i><i></i></span>
+          <span class="aman-segment"><i></i><i></i><i></i></span>
+
+          <span class="aman-indicator" id="sliderIndicator"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE IMAGE -->
+    <section class="hotel-feature">
+      <img
+        src="../assets/images/amargarh/suite.webp"
+        alt="Suites at The Amargarh"
+      />
+    </section>
+
+    <!-- ROOMS & SUITES -->
+    <section id="accommodation" class="hotel-content">
+      <span class="section-eyebrow">Rooms & Suites</span>
+      <h2>Hilltop spaces with sweeping views</h2>
+      <p>
+        Rooms and suites at The Amargarh reflect traditional architecture,
+        featuring expansive layouts, natural textures, and uninterrupted views
+        across the Udaipur landscape.
+      </p>
+    </section>
+
+    <!-- EDITORIAL GRID -->
+    <section id="experiences" class="hotel-editorial">
+      <div class="editorial-item">
+        <img src="../assets/images/amargarh/dining.webp" alt="" />
+        <h3 id="dining">Dining Experiences</h3>
+        <p>
+          Enjoy regional cuisine served in elegant settings, celebrating
+          seasonal produce and local flavours.
+        </p>
+      </div>
+
+      <div class="editorial-item">
+        <img src="../assets/images/amargarh/experience.webp" alt="" />
+        <h3>Explore Udaipur</h3>
+        <p>
+          Discover lakes, palaces, and cultural landmarks through curated
+          journeys from the hilltop.
+        </p>
+      </div>
+
+      <div class="editorial-item" id="wellness">
+        <img src="../assets/images/amargarh/wellness.webp" alt="" />
+        <h3>Wellness & Stillness</h3>
+        <p>
+          Spaces dedicated to quiet reflection and rejuvenation, elevated above
+          the city.
+        </p>
+      </div>
+    </section>
+
+    <!-- GETTING HERE -->
+    <section id="getting-here" class="hotel-location-info">
+      <h2>Getting here</h2>
+      <p>
+        The Amargarh is located on a scenic hill overlooking Udaipur,
+        approximately 45 minutes from Maharana Pratap Airport.
+      </p>
+
+      <div class="aman-map-wrapper">
+        <div id="amanMap"></div>
+
+        <div class="aman-map-info">
+          <div>
+            <strong>Address</strong><br />
+            The Amargarh, Udaipur<br />
+            Rajasthan, India
+          </div>
+
+          <div>
+            <strong>Airports</strong><br />
+            Maharana Pratap Airport (45 mins)
+          </div>
+
+          <div>
+            <strong>By car</strong><br />
+            45 minutes from Udaipur city
+          </div>
+
+          <a
+            href="https://www.google.com/maps?q=The+Amargarh+Udaipur"
+            target="_blank"
+            class="aman-directions"
+          >
+            Get directions
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEARBY RESORTS -->
+    <section class="aman-nearby-resorts">
+      <h2 class="aman-nearby-title">Nearby resorts</h2>
+
+      <div class="nearby-viewport">
+        <div class="nearby-track">
+          <a class="nearby-item" href="udai-bagh-palace.html">
+            <img src="../assets/images/nearby/udai-bagh.webp" alt="" />
+            <span class="resort-location">UDAIPUR, INDIA</span>
+            <h3 class="resort-name">The Udai Bagh Palace</h3>
+          </a>
+
+          <a class="nearby-item" href="hadi-rani-palace.html">
+            <img src="../assets/images/nearby/hadi-rani.webp" alt="" />
+            <span class="resort-location">UDAIPUR, INDIA</span>
+            <h3 class="resort-name">Hotel Hadi Rani Palace</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+    <div id="footer"></div>
+    <!-- SCRIPTS -->
+    <script src="../assets/js/subnav-scroll.js"></script>
+    <script src="../assets/js/innerpages-gallery.js"></script>
+    <script src="../assets/js/map.js"></script>
+    <script src="../assets/js/nearby-resorts.js"></script>
+    <script src="../assets/js/nearby-slider.js"></script>
+  </body>
+</html>

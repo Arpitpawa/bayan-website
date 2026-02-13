@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Journal | Bayan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/brand-skin.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/journal.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+      <div class="nav-bar">
+        <!-- LEFT -->
+        <div class="nav-left">
+          <button class="menu-toggle" id="menuToggle">
+            <svg viewBox="0 0 24 10">
+              <line x1="0" y1="1" x2="24" y2="1"></line>
+              <line x1="0" y1="9" x2="24" y2="9"></line>
+            </svg>
+            <span>Menu</span>
+          </button>
+
+          <button class="search-toggle">
+            <svg viewBox="0 0 24 24" class="icon">
+              <circle cx="11" cy="11" r="6"></circle>
+              <line x1="16" y1="16" x2="22" y2="22"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- CENTER -->
+        <a href="index.html" class="logo">BAYAN</a>
+
+        <!-- RIGHT -->
+        <a
+          href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+          class="nav-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          BOOK NOW
+        </a>
+      </div>
+    </header>
+
+    <!-- ================= MENU OVERLAY ================= -->
+    <!-- ================= MENU OVERLAY ================= -->
+    <div class="menu-overlay" id="menuOverlay">
+      <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="menu-container">
+        <!-- NAV -->
+        <nav class="menu-nav">
+          <a href="index.html">Home</a>
+          <a href="hotels.html">Stays</a>
+          <a href="experiences.html">Experiences</a>
+          <a href="wellness.html">Wellness</a>
+          <a href="dining.html">Dining</a>
+          <a href="about.html">About Bayan</a>
+        </nav>
+
+        <!-- DESTINATIONS -->
+        <div class="menu-destinations">
+          <span class="menu-eyebrow">Discover Bayan In</span>
+
+          <a href="#">Jaipur</a>
+          <a href="#">Udaipur</a>
+          <a href="#">Kumbhalgarh</a>
+          <a href="#">Sawai Madhopur</a>
+
+          <span class="coming">Pushkar — Coming Soon</span>
+          <span class="coming">Jodhpur — Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-spacer"></div>
+
+    <div class="nav-spacer"></div>
+
+    <!-- HERO -->
+    <section class="journal-hero">
+      <h1>Journal</h1>
+      <p>
+        Stories shaped by heritage, nature and the quiet rhythms of Rajasthan —
+        reflections from within and beyond Bayan.
+      </p>
+    </section>
+
+    <!-- FILTER TAGS -->
+    <section class="journal-tags">
+      <span class="active" data-filter="all">All</span>
+      <span data-filter="culture">Culture</span>
+      <span data-filter="sustainability">Sustainability</span>
+      <span data-filter="nature">Nature</span>
+      <span data-filter="people">People</span>
+    </section>
+
+    <!-- JOURNAL GRID -->
+    <section class="journal-grid">
+      <!-- CARD -->
+      <article class="journal-card" data-category="culture">
+        <img src="images/journal-heritage.webp" alt="" />
+        <div class="journal-content">
+          <h3>Myths, murder, modern-day magic</h3>
+          <p>Legends and folklore surrounding the fort.</p>
+          <a href="journal-detail.html" class="journal-btn">Read the story</a>
+        </div>
+      </article>
+
+      <!-- CARD -->
+      <article class="journal-card" data-category="nature">
+        <img src="images/journal-nature.webp" alt="" />
+        <div class="journal-content">
+          <h3>Walk on the wild side</h3>
+          <p>Rewilding efforts around Bayan.</p>
+          <a href="journal-detail.html" class="journal-btn">Read the story</a>
+        </div>
+      </article>
+    </section>
+    <script>
+      const tagButtons = document.querySelectorAll(".journal-tags span");
+      const journalCards = document.querySelectorAll(".journal-card");
+
+      tagButtons.forEach((tag) => {
+        tag.addEventListener("click", () => {
+          // Active state
+          tagButtons.forEach((t) => t.classList.remove("active"));
+          tag.classList.add("active");
+
+          const filter = tag.dataset.filter;
+
+          journalCards.forEach((card) => {
+            if (filter === "all") {
+              card.style.display = "block";
+            } else {
+              card.style.display =
+                card.dataset.category === filter ? "block" : "none";
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      const menuOverlay = document.getElementById("menuOverlay");
+      const menuToggle = document.getElementById("menuToggle");
+      const menuClose = document.getElementById("menuCloseBtn");
+
+      if (menuToggle && menuOverlay) {
+        menuToggle.addEventListener("click", () => {
+          menuOverlay.classList.add("active");
+          document.body.classList.add("menu-open");
+        });
+      }
+
+      if (menuClose) {
+        menuClose.addEventListener("click", closeMenu);
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+
+      menuOverlay?.addEventListener("click", (e) => {
+        if (e.target === menuOverlay) closeMenu();
+      });
+
+      function closeMenu() {
+        menuOverlay.classList.remove("active");
+        document.body.classList.remove("menu-open");
+      }
+
+      /* ACTIVE NAV LINK */
+      document.querySelectorAll(".menu-nav a").forEach((link) => {
+        if (window.location.href.includes(link.getAttribute("href"))) {
+          link.classList.add("active");
+        }
+      });
+    </script>
+  </body>
+</html>

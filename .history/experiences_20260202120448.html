@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bayan Experiences</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/experiences.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/brand-skin.css" />
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+      <div class="nav-bar">
+        <!-- LEFT -->
+        <div class="nav-left">
+          <button class="menu-toggle" id="menuToggle">
+            <svg viewBox="0 0 24 10">
+              <line x1="0" y1="1" x2="24" y2="1"></line>
+              <line x1="0" y1="9" x2="24" y2="9"></line>
+            </svg>
+            <span>Menu</span>
+          </button>
+
+          <button class="search-toggle">
+            <svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="6"></circle>
+              <line x1="16" y1="16" x2="22" y2="22"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- CENTER -->
+        <a href="index.html" class="logo">BAYAN</a>
+
+        <!-- RIGHT -->
+        <a
+          href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+          class="nav-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          BOOK NOW
+        </a>
+      </div>
+    </header>
+
+    <!-- ================= MENU OVERLAY ================= -->
+    <div class="menu-overlay" id="menuOverlay">
+      <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="menu-container">
+        <nav class="menu-nav">
+          <a href="index.html">Home</a>
+          <a href="hotels.html">Stays</a>
+          <a href="experiences.html">Experiences</a>
+          <a href="wellness.html">Wellness</a>
+          <a href="dining.html">Dining</a>
+          <a href="about.html">About Bayan</a>
+        </nav>
+
+        <div class="menu-destinations">
+          <span class="menu-eyebrow">Discover Bayan In</span>
+          <a href="#">Jaipur</a>
+          <a href="#">Udaipur</a>
+          <a href="#">Kumbhalgarh</a>
+          <a href="#">Sawai Madhopur</a>
+          <span class="coming">Pushkar — Coming Soon</span>
+          <span class="coming">Jodhpur — Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-spacer"></div>
+    <!-- ================= HERO ================= -->
+    <section class="exp-hero">
+      <div class="exp-hero-inner">
+        <span class="exp-eyebrow">Bayan Experiences</span>
+        <h1>A thoughtful way to experience Rajasthan</h1>
+        <p>
+          At Bayan, experiences unfold naturally — shaped by place, culture,
+          landscape and time. Each moment is designed to feel unhurried,
+          meaningful and deeply rooted.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= FILTER ================= -->
+    <section class="exp-filter">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="culture">Culture</button>
+      <button data-filter="nature">Nature</button>
+      <button data-filter="dining">Dining</button>
+      <button data-filter="wellness">Wellness</button>
+      <button data-filter="exploration">Exploration</button>
+    </section>
+
+    <!-- ================= GRID ================= -->
+    <section class="exp-grid">
+      <article class="exp-card" data-category="culture">
+        <img src="images/heritage-walk.webp" alt="Heritage Walk" />
+        <div class="exp-content">
+          <h3>Heritage Walks</h3>
+          <p>
+            Guided explorations through forts, palaces and historic quarters,
+            revealing stories shaped by centuries of Rajasthan.
+          </p>
+        </div>
+      </article>
+
+      <article class="exp-card" data-category="nature">
+        <img src="images/sunset-view.webp" alt="Sunset Experience" />
+        <div class="exp-content">
+          <h3>Sunset Moments</h3>
+          <p>
+            Golden evenings enjoyed from serene viewpoints, where nature and
+            architecture meet quietly.
+          </p>
+        </div>
+      </article>
+
+      <article class="exp-card" data-category="dining">
+        <img src="images/dining.webp" alt="Dining Experience" />
+        <div class="exp-content">
+          <h3>Culinary Journeys</h3>
+          <p>
+            Local Rajasthani flavours and global comfort dishes, crafted with
+            simplicity and seasonal produce.
+          </p>
+        </div>
+      </article>
+
+      <article class="exp-card" data-category="wellness">
+        <img src="images/wellness.webp" alt="Wellness" />
+        <div class="exp-content">
+          <h3>Wellness & Leisure</h3>
+          <p>
+            Slow down with spa therapies, pools and peaceful spaces designed for
+            rest and restoration.
+          </p>
+        </div>
+      </article>
+
+      <article class="exp-card" data-category="exploration">
+        <img src="images/sightseeing.webp" alt="Sightseeing" />
+        <div class="exp-content">
+          <h3>Local Exploration</h3>
+          <p>
+            Discover lakes, wildlife zones, temples and towns curated through
+            our local knowledge.
+          </p>
+        </div>
+      </article>
+
+      <article class="exp-card" data-category="culture">
+        <img src="images/celebrations.webp" alt="Celebrations" />
+        <div class="exp-content">
+          <h3>Celebrations & Gatherings</h3>
+          <p>
+            Intimate weddings and meaningful gatherings set within calm and
+            elegant Bayan settings.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <script>
+      const menuOverlay = document.getElementById("menuOverlay");
+      const menuToggle = document.getElementById("menuToggle");
+      const menuClose = document.getElementById("menuCloseBtn");
+
+      if (menuToggle && menuOverlay) {
+        menuToggle.addEventListener("click", () => {
+          menuOverlay.classList.add("active");
+          document.body.classList.add("menu-open");
+        });
+      }
+
+      if (menuClose) {
+        menuClose.addEventListener("click", closeMenu);
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+
+      menuOverlay?.addEventListener("click", (e) => {
+        if (e.target === menuOverlay) closeMenu();
+      });
+
+      function closeMenu() {
+        menuOverlay.classList.remove("active");
+        document.body.classList.remove("menu-open");
+      }
+
+      /* ACTIVE NAV LINK */
+      document.querySelectorAll(".menu-nav a").forEach((link) => {
+        if (window.location.href.includes(link.getAttribute("href"))) {
+          link.classList.add("active");
+        }
+      });
+    </script>
+    <script>
+      const floatingBook = document.getElementById("floatingBook");
+      const hero = document.querySelector(".hero");
+
+      if (floatingBook && hero) {
+        const triggerHeight = hero.offsetHeight * 0.6;
+
+        window.addEventListener("scroll", () => {
+          floatingBook.textContent =
+            window.scrollY > triggerHeight ? "CHECK AVAILABILITY" : "BOOK NOW";
+        });
+      }
+    </script>
+    <script>
+      const filterButtons = document.querySelectorAll(".exp-filter button");
+      const cards = document.querySelectorAll(".exp-card");
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const filter = btn.dataset.filter;
+
+          cards.forEach((card) => {
+            card.classList.remove("hide");
+
+            if (filter !== "all" && card.dataset.category !== filter) {
+              card.classList.add("hide");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

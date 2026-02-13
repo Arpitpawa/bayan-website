@@ -1,0 +1,469 @@
+
+:root {
+  --ivory: #f7f4ee;
+  --beige: #faf9f6;
+  --text-dark: #1c1c1c;
+  --overlay-bg: rgba(247, 244, 238, 0.88); /* subtle – Six Senses level */
+}
+
+/* ================= GLOBAL FIXES ================= */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* 🔥 KILLS horizontal bar */
+}
+
+/* ================= HEADER ================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 76px;
+  background: var(--ivory); /* ✅ SOLID like Six Senses */
+  z-index: 1000;
+}
+
+.nav-bar {
+  height: 100%;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.logo {
+  justify-self: center;
+  font-family: 'Libre Baskerville', serif;
+  letter-spacing: 0.28em;
+  font-size: 18px;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.nav-cta {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+/* LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.menu-toggle,
+.search-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-toggle svg,
+.search-toggle svg {
+  width: 18px;
+  stroke: var(--text-dark);
+  stroke-width: 1.4;
+  fill: none;
+}
+
+/* ================= SIX SENSES MENU ================= */
+
+html, body {
+  overflow-x: hidden;
+}
+
+body.menu-open {
+  overflow: hidden; /* lock background */
+}
+
+/* OVERLAY */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25); /* subtle dim like Six Senses */
+  backdrop-filter: blur(4px);     /* VERY light blur */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 3000;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* LEFT PANEL (THE ACTUAL MENU) */
+.menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26vw;                 /* ✅ Six Senses / RAAS width */
+  min-width: 360px;
+  height: 100vh;
+  background: #f7f4ee;         /* solid ivory */
+  padding: 110px 70px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* CLOSE BUTTON */
+.menu-close {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-close span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #1c1c1c;
+}
+
+.menu-close span:first-child { transform: rotate(45deg); }
+.menu-close span:last-child  { transform: rotate(-45deg); }
+
+/* MAIN NAV */
+.menu-nav a {
+  display: block;
+  font-family: "Libre Baskerville", serif;
+  font-size: 26px;
+  margin-bottom: 28px;
+  color: #1c1c1c;
+  text-decoration: none;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.menu-nav a:hover {
+  transform: translateX(6px);
+  opacity: 0.85;
+}
+
+/* DESTINATIONS */
+.menu-destinations {
+  margin-top: 70px;
+}
+
+.menu-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 26px;
+  display: block;
+}
+
+.menu-destinations a {
+  display: block;
+  font-family: "Libre Baskerville", serif;
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #1c1c1c;
+  text-decoration: none;
+}
+
+.menu-destinations .coming {
+  font-size: 14px;
+  color: #999;
+  margin-top: 6px;
+  display: block;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .menu-container {
+    width: 100%;
+    min-width: unset;
+    padding: 96px 32px;
+  }
+
+  .menu-nav a {
+    font-size: 22px;
+  }
+
+  .menu-destinations a {
+    font-size: 18px;
+  }
+}
+/* ================= HIDE SCROLLBAR (SIX SENSES STYLE) ================= */
+
+/* Chrome, Edge, Safari */
+.menu-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Firefox */
+.menu-container {
+  scrollbar-width: none; /* hides scrollbar */
+}
+
+/* Prevent body scrollbar when menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+.menu-container {
+  padding-right: 72px; /* avoids content touching edge */
+}
+/* ================= MENU CLOSE BUTTON ================= */
+
+.menu-close-btn {
+  position: fixed;
+  top: 28px;
+  left: 28px;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.menu-close-btn span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #1c1c1c;
+}
+
+.menu-close-btn span:first-child {
+  transform: rotate(45deg);
+}
+
+.menu-close-btn span:last-child {
+  transform: rotate(-45deg);
+}
+
+/* Hide close button when menu closed */
+.menu-overlay:not(.active) .menu-close-btn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ================= MENU ANIMATION ================= */
+
+.menu-overlay {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* LEFT PANEL SLIDE */
+.menu-container {
+  transform: translateX(-40px);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.menu-overlay.active .menu-container {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* STAGGER MENU LINKS */
+.menu-nav a,
+.menu-destinations a,
+.menu-destinations span {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* When menu opens */
+.menu-overlay.active .menu-nav a,
+.menu-overlay.active .menu-destinations a,
+.menu-overlay.active .menu-destinations span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay for elegance */
+.menu-nav a:nth-child(1) { transition-delay: .1s; }
+.menu-nav a:nth-child(2) { transition-delay: .16s; }
+.menu-nav a:nth-child(3) { transition-delay: .22s; }
+.menu-nav a:nth-child(4) { transition-delay: .28s; }
+.menu-nav a:nth-child(5) { transition-delay: .34s; }
+.menu-nav a:nth-child(6) { transition-delay: .40s; }
+
+.menu-destinations * {
+  transition-delay: .45s;
+}
+/* ================= MENU ACTIVE UNDERLINE ================= */
+
+.menu-nav a {
+  position: relative;
+}
+
+.menu-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: #1c1c1c;
+  transition: width 0.4s ease;
+}
+
+.menu-nav a:hover::after,
+.menu-nav a.active::after {
+  width: 24px;
+}
+/* ================= MOBILE MENU ================= */
+
+@media (max-width: 900px) {
+
+  .menu-container {
+    max-width: 100%;
+    padding: 100px 28px 60px;
+  }
+
+  .menu-nav a {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .menu-destinations {
+    margin-top: 60px;
+    border-top: 1px solid #ddd;
+    padding-top: 32px;
+  }
+
+  .menu-destinations a {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .menu-destinations .coming {
+    font-size: 14px;
+  }
+
+  /* Remove blur strength on mobile */
+  .menu-overlay {
+    backdrop-filter: none;
+    background: #f7f4ee;
+  }
+}
+/* ================= MOBILE HEADER FIX ================= */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    height: 64px;
+  }
+
+  .nav-bar {
+    padding: 0 18px;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  /* LEFT */
+  .nav-left {
+    gap: 16px;
+  }
+
+  .menu-toggle span {
+    display: none; /* hide text, keep icon */
+  }
+
+  .menu-toggle svg,
+  .search-toggle svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* CENTER LOGO */
+  .logo {
+    font-size: 15px;
+    letter-spacing: 0.22em;
+  }
+
+  /* RIGHT CTA */
+  .nav-cta {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    padding: 6px 8px;
+  }
+}
+@media (max-width: 420px) {
+  .nav-cta {
+    display: none;
+  }
+}
+.menu-toggle,
+.search-toggle {
+  padding: 6px;
+}
+/* ================= BOOK NOW – SIX SENSES STYLE ================= */
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 18px;
+  border-radius: 999px;
+
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.12);
+
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: #1c1c1c;
+  text-decoration: none;
+
+  box-shadow: 
+    0 1px 2px rgba(0,0,0,0.04),
+    0 4px 12px rgba(0,0,0,0.06);
+
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.nav-cta svg,
+.nav-cta img {
+  width: 14px;
+  height: 14px;
+  opacity: 0.75;
+}
+.nav-cta:hover {
+  background: #f7f4ee;
+  box-shadow: 
+    0 2px 4px rgba(0,0,0,0.06),
+    0 8px 20px rgba(0,0,0,0.10);
+  transform: translateY(-1px);
+}
+@media (max-width: 768px) {
+  .nav-cta {
+    padding: 8px 14px;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+  }
+}

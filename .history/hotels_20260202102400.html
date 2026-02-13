@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Our Hotels | Bayan Group</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/hotels.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/brand-skin.css" />
+  </head>
+
+  <body class="hotels-page">
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+      <div class="nav-bar">
+        <!-- LEFT -->
+        <div class="nav-left">
+          <button class="menu-toggle" id="menuToggle">
+            <svg viewBox="0 0 24 10">
+              <line x1="0" y1="1" x2="24" y2="1"></line>
+              <line x1="0" y1="9" x2="24" y2="9"></line>
+            </svg>
+            <span>Menu</span>
+          </button>
+
+          <button class="search-toggle">
+            <svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="6"></circle>
+              <line x1="16" y1="16" x2="22" y2="22"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- CENTER -->
+        <a href="index.html" class="logo">BAYAN</a>
+
+        <!-- RIGHT -->
+        <a
+          href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+          class="nav-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          BOOK NOW
+        </a>
+      </div>
+    </header>
+
+    <!-- ================= MENU OVERLAY ================= -->
+    <div class="menu-overlay" id="menuOverlay">
+      <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="menu-container">
+        <nav class="menu-nav">
+          <a href="destinations.html">Destinations</a>
+          <a href="hotels.html">Stays</a>
+          <a href="experiences.html">Experiences</a>
+          <a href="wellness.html">Wellness</a>
+          <a href="dining.html">Dining</a>
+          <a href="about.html">About Bayan</a>
+        </nav>
+
+        <div class="menu-destinations">
+          <span class="menu-eyebrow">Discover Bayan In</span>
+          <a href="#">Jaipur</a>
+          <a href="#">Udaipur</a>
+          <a href="#">Kumbhalgarh</a>
+          <a href="#">Sawai Madhopur</a>
+          <span class="coming">Pushkar — Coming Soon</span>
+          <span class="coming">Jodhpur — Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-spacer"></div>
+
+    <!-- PAGE INTRO -->
+    <section class="hotels-intro">
+      <h2>Our Hotels</h2>
+      <p>
+        A collection of rooted luxury stays across Rajasthan, shaped by culture,
+        heritage, and quiet hospitality.
+      </p>
+    </section>
+
+    <!-- LOCATION FILTER -->
+    <div class="hotel-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="jaipur">Jaipur</button>
+      <button class="filter-btn" data-filter="udaipur">Udaipur</button>
+      <button class="filter-btn" data-filter="kumbhalgarh">Kumbhalgarh</button>
+      <button class="filter-btn" data-filter="sawai">Sawai Madhopur</button>
+    </div>
+    <!-- FILTER DIVIDER + SORT -->
+    <div class="hotel-controls">
+      <div class="controls-line"></div>
+
+      <div class="sort-dropdown">
+        <label for="sortSelect">Sort by</label>
+        <select id="sortSelect">
+          <option value="recommended">Recommended</option>
+          <option value="az">A – Z</option>
+          <option value="za">Z – A</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- HOTELS GRID -->
+    <section class="hotels-grid">
+      <!-- JAIPUR -->
+      <a href="#" class="hotel-card" data-location="jaipur">
+        <div class="hotel-image">
+          <img
+            src="../assets/images/hotels/bayan-elegance.webp"
+            alt="The Bayan Elegance Jaipur"
+          />
+        </div>
+        <div class="hotel-info">
+          <span class="hotel-location">Jaipur, Rajasthan</span>
+          <h3>The Bayan Elegance</h3>
+          <p>Contemporary comfort and refined city hospitality.</p>
+        </div>
+      </a>
+
+      <a href="#" class="hotel-card" data-location="jaipur">
+        <div class="hotel-image">
+          <img
+            src="../assets/images/hotels/jaibagh-palace.webp"
+            alt="Jaibagh Palace Jaipur"
+          />
+        </div>
+        <div class="hotel-info">
+          <span class="hotel-location">Jaipur, Rajasthan</span>
+          <h3>The Jaibagh Palace</h3>
+          <p>A heritage-inspired palace retreat on the city’s edge.</p>
+        </div>
+      </a>
+
+      <!-- UDAIPUR -->
+      <a href="#" class="hotel-card" data-location="udaipur">
+        <div class="hotel-image">
+          <img
+            src="../assets/images/hotels/udai-bagh-palace.webp"
+            alt="Udai Bagh Palace Udaipur"
+          />
+        </div>
+        <div class="hotel-info">
+          <span class="hotel-location">Udaipur, Rajasthan</span>
+          <h3>The Udai Bagh Palace</h3>
+          <p>Heritage elegance set against Udaipur’s serene landscape.</p>
+        </div>
+      </a>
+
+      <a href="#" class="hotel-card" data-location="udaipur">
+        <div class="hotel-image">
+          <img
+            src="../assets/images/hotels/amargarh-udaipur.webp"
+            alt="Amargarh Udaipur"
+          />
+        </div>
+        <div class="hotel-info">
+          <span class="hotel-location">Udaipur, Rajasthan</span>
+          <h3>The Amargarh</h3>
+          <p>Open-air luxury inspired by nature and slow living.</p>
+        </div>
+      </a>
+
+      <a href="#" class="hotel-card" data-location="udaipur">
+        <div class="hotel-image">
+          <img
+            src="../assets/images/hotels/hadi-rani-palace.webp"
+            alt="Hotel Hadi Rani Udaipur"
+          />
+        </div>
+        <div class="hotel-info">
+          <span class="hotel-location">Udaipur, Rajasthan</span>
+          <h3>Hotel Hadi Rani Palace</h3>
+          <p>A heritage stay echoing timeless Rajputana grace.</p>
+        </div>
+      </a>
+
+      <!-- KUMBHALGARH -->
+      <a href="#" class="hotel-card" data-location="kumbhalgarh">
+        <div class="hotel-image">
+          <img
+            src="../assets/images/hotels/kumbha-bagh-palace.webp"
+            alt="Kumbha Bagh Palace"
+          />
+        </div>
+        <div class="hotel-info">
+          <span class="hotel-location">Kumbhalgarh, Rajasthan</span>
+          <h3>The Kumbha Bagh Palace</h3>
+          <p>A palace retreat overlooking hills and ancient history.</p>
+        </div>
+      </a>
+
+      <!-- SAWAI MADHOPUR -->
+      <a href="#" class="hotel-card" data-location="sawai">
+        <div class="hotel-image">
+          <img src="../assets/images/hotels/sawai-bagh.webp" alt="Sawai Bagh" />
+        </div>
+        <div class="hotel-info">
+          <span class="hotel-location">Sawai Madhopur, Rajasthan</span>
+          <h3>The Sawai Bagh</h3>
+          <p>A tranquil resort close to nature and Ranthambore.</p>
+        </div>
+      </a>
+    </section>
+    <!-- EDITORIAL FEATURE SECTION -->
+    <section class="bayan-editorial">
+      <div class="editorial-content">
+        <span class="editorial-eyebrow">Journeys & Experiences</span>
+
+        <h3>Private travel with Bayan</h3>
+
+        <p>
+          Thoughtfully curated journeys that extend beyond the walls of our
+          hotels. From slow desert crossings to intimate cultural immersions,
+          each experience is shaped by place, people, and time.
+        </p>
+
+        <p>
+          Travel privately, unhurried and deeply connected, exploring the
+          landscapes and stories that define each Bayan destination.
+        </p>
+
+        <a href="#" class="editorial-link">Discover more</a>
+      </div>
+
+      <div class="editorial-media">
+        <img
+          src="../assets/images/editorial/private-journeys.webp"
+          alt="Private journeys with Bayan"
+        />
+      </div>
+      <div id="footer"></div>
+    </section>
+    <a
+      href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+      class="floating-book"
+      id="floatingBook"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      BOOK NOW
+    </a>
+
+    <!-- JS -->
+    <script src="../assets/js/hotels.js"></script>
+  </body>
+</html>

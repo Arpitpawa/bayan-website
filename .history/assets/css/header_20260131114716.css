@@ -1,0 +1,649 @@
+:root {
+  --ivory: #f7f4ee;
+  --beige: #faf9f6;
+  --text-dark: #1c1c1c;
+  --text-muted: #777;
+}
+
+/* ================= HEADER ================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 78px;
+  background: var(--ivory);
+  z-index: 1000;
+}
+
+.nav-bar {
+  height: 100%;
+  padding: 0 56px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.logo {
+  justify-self: center;
+  font-family: 'Libre Baskerville', serif;
+  letter-spacing: 0.28em;
+  font-size: 18px;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.nav-cta {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.menu-toggle,
+.search-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+}
+
+.menu-toggle svg,
+.search-toggle svg {
+  width: 20px;
+  stroke: var(--text-dark);
+  stroke-width: 1.4;
+  fill: none;
+}
+
+/* ================= MENU OVERLAY ================= */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25); /* dim page like Six Senses */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 9999;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ================= MENU PANEL ================= */
+.menu-container {
+  width: 36vw;              /* 🔥 RAAS / SIX SENSES WIDTH */
+  min-width: 420px;
+  height: 100vh;
+  background: var(--ivory);
+  padding: 120px 80px;
+  overflow-y: auto;
+}
+
+/* ================= CLOSE BUTTON ================= */
+.menu-close {
+  position: fixed;
+  top: 28px;
+  left: 28px;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.menu-close span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--text-dark);
+}
+
+.menu-close span:first-child {
+  transform: rotate(45deg);
+}
+
+.menu-close span:last-child {
+  transform: rotate(-45deg);
+}
+
+/* ================= PRIMARY NAV ================= */
+.menu-nav {
+  margin-bottom: 80px;
+}
+
+.menu-nav a {
+  display: block;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  color: var(--text-dark);
+  text-decoration: none;
+  margin-bottom: 28px;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.menu-nav a:hover {
+  transform: translateX(6px);
+  opacity: 0.85;
+}
+
+/* ================= DESTINATIONS ================= */
+.menu-destinations {
+  margin-top: 40px;
+}
+
+.menu-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  display: block;
+}
+
+.menu-destinations a {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: var(--text-dark);
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.menu-destinations a:hover {
+  transform: translateX(4px);
+}
+
+/* COMING SOON */
+.menu-destinations .coming {
+  display: block;
+  font-size: 14px;
+  color: #999;
+  margin-top: 10px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .menu-container {
+    width: 100%;
+    min-width: unset;
+    padding: 100px 40px;
+  }
+
+  .menu-nav a {
+    font-size: 26px;
+  }
+}
+/* ===============================
+   VARIABLES
+================================ */
+:root {
+  --ivory: #f7f4ee;
+  --beige: #faf9f6;
+  --text-dark: #1c1c1c;
+  --muted: #7a7a7a;
+}
+
+/* ===============================
+   GLOBAL FIXES (VERY IMPORTANT)
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* 🔥 KILLS HORIZONTAL SCROLL */
+}
+
+/* ===============================
+   HEADER
+================================ */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 76px;
+  background: var(--ivory);
+  z-index: 1000;
+}
+
+.nav-bar {
+  height: 100%;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.logo {
+  justify-self: center;
+  font-family: "Libre Baskerville", serif;
+  letter-spacing: 0.32em;
+  font-size: 16px;
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.nav-cta {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+/* LEFT */
+.nav-left {
+  display: flex;
+  gap: 22px;
+}
+
+.menu-toggle,
+.search-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+}
+
+.menu-toggle svg,
+.search-toggle svg {
+  width: 18px;
+  stroke: var(--text-dark);
+  fill: none;
+  stroke-width: 1.3;
+}
+
+/* ===============================
+   MENU OVERLAY (SIX SENSES)
+================================ */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  pointer-events: none;
+  z-index: 2000;
+}
+
+/* BACKDROP (SOFT BLUR) */
+.menu-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  background: rgba(247,244,238,0.6);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-overlay.active::before {
+  opacity: 1;
+}
+
+/* ===============================
+   LEFT PANEL
+================================ */
+.menu-container {
+  position: relative;
+  width: 36vw;              /* ✅ RAAS RANGE */
+  max-width: 520px;
+  min-width: 320px;
+  height: 100vh;
+  background: var(--ivory);
+  padding: 110px 72px;
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  overflow-y: auto;
+}
+
+.menu-overlay.active .menu-container {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* ===============================
+   CLOSE
+================================ */
+.menu-close {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  width: 26px;
+  height: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-close span {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1.3px;
+  background: var(--text-dark);
+}
+
+.menu-close span:first-child { transform: rotate(45deg); }
+.menu-close span:last-child  { transform: rotate(-45deg); }
+
+/* ===============================
+   NAV LINKS (FADE-UP STAGGER)
+================================ */
+.menu-nav a {
+  display: block;
+  font-family: "Libre Baskerville", serif;
+  font-size: 24px;
+  font-weight: 400; /* 🔥 LIGHTER */
+  color: var(--text-dark);
+  text-decoration: none;
+  margin-bottom: 28px;
+
+  opacity: 0;
+  transform: translateY(14px);
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.menu-nav a:nth-child(1) { animation-delay: .05s; }
+.menu-nav a:nth-child(2) { animation-delay: .12s; }
+.menu-nav a:nth-child(3) { animation-delay: .19s; }
+.menu-nav a:nth-child(4) { animation-delay: .26s; }
+.menu-nav a:nth-child(5) { animation-delay: .33s; }
+.menu-nav a:nth-child(6) { animation-delay: .40s; }
+
+.menu-nav a:hover {
+  transform: translateX(6px);
+}
+
+/* ===============================
+   DESTINATIONS
+================================ */
+.menu-destinations {
+  margin-top: 80px;
+}
+
+.menu-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 26px;
+  display: block;
+}
+
+.menu-destinations a {
+  display: block;
+  font-family: "Libre Baskerville", serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.menu-destinations .coming {
+  font-size: 13px;
+  color: #999;
+  margin-top: 10px;
+  display: block;
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   MOBILE FIXES
+================================ */
+@media (max-width: 900px) {
+  .menu-container {
+    width: 100%;
+    max-width: none;
+    min-width: 100%;
+    padding: 96px 32px;
+  }
+
+  .menu-nav a {
+    font-size: 22px;
+  }
+
+  .menu-destinations {
+    margin-top: 60px;
+  }
+}
+
+/* EXTRA SMALL */
+@media (max-width: 480px) {
+  .nav-bar {
+    padding: 0 22px;
+  }
+
+  .logo {
+    font-size: 14px;
+    letter-spacing: 0.26em;
+  }
+}
+:root {
+  --ivory: #f7f4ee;
+  --beige: #faf9f6;
+  --text-dark: #1c1c1c;
+}
+
+/* ================= RESET FIX ================= */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* 🔥 KILLS HORIZONTAL BAR */
+}
+
+/* ================= HEADER ================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 78px;
+  background: var(--ivory);
+  z-index: 1000;
+}
+
+.nav-bar {
+  height: 100%;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.logo {
+  justify-self: center;
+  font-family: 'Libre Baskerville', serif;
+  letter-spacing: 0.28em;
+  font-size: 18px;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.nav-cta {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.menu-toggle,
+.search-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+}
+
+.menu-toggle svg,
+.search-toggle svg {
+  width: 20px;
+  stroke: var(--text-dark);
+  stroke-width: 1.4;
+  fill: none;
+}
+
+/* ================= MENU OVERLAY ================= */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+}
+
+/* subtle Six Senses blur */
+.menu-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.18);
+  backdrop-filter: blur(3px); /* 🔥 MINIMAL BLUR */
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ================= LEFT PANEL ================= */
+.menu-left {
+  position: relative;
+  width: clamp(320px, 38vw, 520px); /* 🔥 30–40vw like RAAS */
+  background: var(--ivory);
+  padding: 110px 70px;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 2;
+}
+
+/* ================= CLOSE BUTTON ================= */
+.menu-close {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  width: 26px;
+  height: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-close span {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1.5px;
+  background: var(--text-dark);
+}
+
+.menu-close span:first-child { transform: rotate(45deg); }
+.menu-close span:last-child { transform: rotate(-45deg); }
+
+/* ================= NAV LINKS ================= */
+.menu-nav a {
+  display: block;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 24px;
+  color: var(--text-dark);
+  text-decoration: none;
+  margin-bottom: 28px;
+  transition: transform .4s ease;
+}
+
+.menu-nav a:hover {
+  transform: translateX(6px);
+}
+
+/* ================= DESTINATIONS ================= */
+.menu-destinations {
+  margin-top: 80px;
+}
+
+.menu-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.menu-destinations a {
+  display: block;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+.menu-destinations .coming {
+  font-size: 14px;
+  color: #999;
+  margin-top: 6px;
+}
+
+/* ================= RIGHT EMPTY AREA ================= */
+.menu-spacer {
+  flex: 1;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .menu-left {
+    width: 100%;
+    padding: 90px 36px;
+  }
+
+  .menu-nav a {
+    font-size: 22px;
+  }
+
+  .menu-destinations a {
+    font-size: 18px;
+  }
+}

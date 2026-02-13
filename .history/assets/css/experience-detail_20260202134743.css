@@ -1,0 +1,196 @@
+/* =====================================================
+   BAYAN – EXPERIENCE DETAIL PAGES
+   Inspired by Six Senses / Aman
+===================================================== */
+
+/* ================= BASE WRAPPER ================= */
+
+.experience-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 20px 140px;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 120px;
+  align-items: flex-start;
+}
+
+/* ================= LEFT CONTENT ================= */
+
+.experience-content {
+  max-width: 520px;
+}
+
+.experience-back {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.experience-back:hover {
+  opacity: 0.7;
+}
+
+.experience-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.experience-tag {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 36px;
+}
+
+.experience-intro {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--text-dark);
+  margin-bottom: 28px;
+}
+
+.experience-body {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin-bottom: 70px;
+}
+
+/* ================= META BLOCK ================= */
+
+.experience-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.meta-block h4 {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.meta-block p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.meta-block ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.meta-block li {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* ================= IMAGE ================= */
+
+.experience-image img {
+  width: 100%;
+  height: 640px;
+  object-fit: cover;
+}
+
+/* ================= EXPERIENCE NAV ================= */
+
+.exp-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.exp-nav-item {
+  text-decoration: none;
+  color: var(--text-dark);
+  max-width: 45%;
+}
+
+.exp-nav-label {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.exp-nav-item h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.exp-nav-item:hover h4 {
+  opacity: 0.6;
+}
+
+.exp-nav-item.next {
+  text-align: right;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+  .experience-wrap {
+    grid-template-columns: 1fr;
+    gap: 70px;
+    padding: 100px 20px;
+  }
+
+  .experience-image img {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-content h1 {
+    font-size: 34px;
+  }
+
+  .experience-body {
+    margin-bottom: 50px;
+  }
+
+  .exp-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .exp-nav-item {
+    max-width: 100%;
+  }
+
+  .exp-nav-item.next {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-wrap {
+    padding: 80px 16px;
+  }
+
+  .experience-content h1 {
+    font-size: 30px;
+  }
+}

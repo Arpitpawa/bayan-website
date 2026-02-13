@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Udai Bagh Palace, Udaipur | Bayan Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/hotel-detail.css">
+     <link rel="stylesheet" href="../assets/css/style.css" />
+   <link rel="stylesheet" href="../assets/css/header.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/brand-skin.css" />
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+</head>
+
+<body class="hotel-page">
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="nav-bar">
+
+    <!-- LEFT -->
+    <div class="nav-left">
+      <button class="menu-toggle" id="menuToggle">
+        <svg viewBox="0 0 24 10">
+          <line x1="0" y1="1" x2="24" y2="1"></line>
+          <line x1="0" y1="9" x2="24" y2="9"></line>
+        </svg>
+        <span>Menu</span>
+      </button>
+
+      <button class="search-toggle">
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="6"></circle>
+          <line x1="16" y1="16" x2="22" y2="22"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- CENTER -->
+    <a href="../index.html" class="logo">BAYAN</a>
+
+    <!-- RIGHT -->
+    <a
+      href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+      class="nav-cta"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      BOOK NOW
+    </a>
+
+  </div>
+</header>
+
+<!-- ================= MENU OVERLAY ================= -->
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="menu-container">
+    <nav class="menu-nav">
+  <a href="../index.html">Home</a>
+  <a href="../hotels.html">Stays</a>
+  <a href="../experiences.html">Experiences</a>
+  <a href="../wellness.html">Wellness</a>
+  <a href="../dining.html">Dining</a>
+  <a href="../about.html">About Bayan</a>
+</nav>
+
+
+    <div class="menu-destinations">
+      <span class="menu-eyebrow">Discover Bayan In</span>
+      <a href="#">Jaipur</a>
+      <a href="#">Udaipur</a>
+      <a href="#">Kumbhalgarh</a>
+      <a href="#">Sawai Madhopur</a>
+      <span class="coming">Pushkar — Coming Soon</span>
+      <span class="coming">Jodhpur — Coming Soon</span>
+    </div>
+  </div>
+</div>
+
+<div class="nav-spacer"></div>
+
+  <!-- SUB NAV (DESKTOP ONLY) -->
+  <section class="hotel-subnav">
+    <div class="subnav-inner">
+
+      <div class="subnav-breadcrumb">
+        <span class="breadcrumb-current">THE UDAI BAGH PALACE</span>
+        <span class="breadcrumb-separator">›</span>
+      </div>
+
+      <nav class="subnav-links">
+        <a href="#accommodation">Accommodation</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#wellness">Wellness</a>
+        <a href="#dining">Dining</a>
+        <a href="#getting-here">Getting Here</a>
+      </nav>
+
+    </div>
+  </section>
+
+  <!-- HERO -->
+  <section class="hotel-hero">
+    <img src="../assets/images/udai-bagh/hero.webp" alt="The Udai Bagh Palace Udaipur">
+     <!-- ================= LUXURY BOOKING BAR ================= -->
+<form id="bookingForm" class="lux-booking-bar">
+
+  <!-- Check-in -->
+  <div class="lux-field">
+    <label>Check-in</label>
+    <input type="text" id="checkIn" placeholder="Check-in">
+  </div>
+
+  <div class="lux-separator"></div>
+
+  <!-- Check-out -->
+  <div class="lux-field">
+    <label>Check-out</label>
+    <input type="text" id="checkOut" placeholder="Check-out">
+  </div>
+
+  <div class="lux-separator"></div>
+
+  <!-- Guests -->
+  <div class="lux-field lux-guests">
+
+    <label>Guests</label>
+
+    <div class="guest-display" id="guestToggle">
+      <span id="guestSummary">2 Adults, 0 Children</span>
+    </div>
+
+    <!-- Guest Dropdown -->
+    <div class="guest-dropdown" id="guestDropdown">
+
+      <div class="guest-row">
+        <span>Adults</span>
+        <div class="counter">
+          <button type="button" class="minus" data-type="adult">−</button>
+          <span id="adultCount">2</span>
+          <button type="button" class="plus" data-type="adult">+</button>
+        </div>
+      </div>
+
+      <div class="guest-row">
+        <span>Children</span>
+        <div class="counter">
+          <button type="button" class="minus" data-type="child">−</button>
+          <span id="childCount">0</span>
+          <button type="button" class="plus" data-type="child">+</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Search -->
+  <button type="submit" class="lux-search-btn">
+    SEARCH
+  </button>
+
+</form>
+  </section>
+
+  <!-- INTRO -->
+  <section class="hotel-intro">
+    <span class="hotel-location">Udaipur, Rajasthan</span>
+    <h1>The Udai Bagh Palace</h1>
+
+    <p class="hotel-tagline">
+      A secluded palace retreat set amidst the tranquil hills of Udaipur.
+    </p>
+
+    <p class="hotel-description">
+      Surrounded by nature and overlooking the Aravalli landscape,
+      The Udai Bagh Palace offers a heritage stay defined by quiet luxury,
+      expansive gardens, and a deep connection to its surroundings.
+    </p>
+  </section>
+
+  <!-- AMAN EDITORIAL GALLERY -->
+  <section class="aman-gallery-section">
+
+    <div class="aman-gallery-viewport">
+      <div class="aman-gallery-track" id="galleryTrack">
+
+        <div class="gallery-item vertical">
+          <img src="../assets/images/udai-bagh/g1.webp" alt="">
+        </div>
+
+        <div class="gallery-item square">
+          <img src="../assets/images/udai-bagh/g2.webp" alt="">
+        </div>
+
+        <div class="gallery-item horizontal">
+          <img src="../assets/images/udai-bagh/g3.webp" alt="">
+        </div>
+
+        <div class="gallery-item vertical">
+          <img src="../assets/images/udai-bagh/g4.webp" alt="">
+        </div>
+
+        <div class="gallery-item square">
+          <img src="../assets/images/udai-bagh/g5.webp" alt="">
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SLIDER -->
+    <div class="aman-slider-wrapper">
+      <div class="aman-slider-track" id="sliderTrack">
+
+        <span class="aman-segment"><i></i><i></i><i></i></span>
+        <span class="aman-segment"><i></i><i></i><i></i></span>
+        <span class="aman-segment"><i></i><i></i><i></i></span>
+        <span class="aman-segment"><i></i><i></i><i></i></span>
+        <span class="aman-segment"><i></i><i></i><i></i></span>
+
+        <span class="aman-indicator" id="sliderIndicator"></span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FEATURE IMAGE -->
+  <section class="hotel-feature">
+    <img src="../assets/images/udai-bagh/suite.webp" alt="Suites at Udai Bagh Palace">
+  </section>
+
+  <!-- ROOMS & SUITES -->
+  <section id="accommodation" class="hotel-content">
+    <span class="section-eyebrow">Rooms & Suites</span>
+    <h2>Palatial spaces immersed in nature</h2>
+    <p>
+      Each room and suite reflects traditional Mewari design,
+      offering generous space, handcrafted details, and views
+      over gardens and surrounding hills.
+    </p>
+  </section>
+
+  <!-- EDITORIAL GRID -->
+  <section id="experiences" class="hotel-editorial">
+
+    <div class="editorial-item">
+      <img src="../assets/images/dining.webp" alt="">
+      <h3 id="dining">Dining Experiences</h3>
+      <p>
+        Heritage-inspired cuisine served in serene settings,
+        celebrating local flavours and seasonal ingredients.
+      </p>
+    </div>
+
+    <div class="editorial-item">
+      <img src="../assets/images/experience.webp" alt="">
+      <h3>Discover Udaipur</h3>
+      <p>
+        Explore lakes, palaces, and cultural landmarks through
+        curated experiences rooted in local tradition.
+      </p>
+    </div>
+
+    <div class="editorial-item" id="wellness">
+      <img src="../assets/images/udai-bagh/wellness.webp" alt="">
+      <h3>Wellness & Stillness</h3>
+      <p>
+        Spaces designed for rest and renewal,
+        surrounded by silence and natural beauty.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- GETTING HERE -->
+  <section id="getting-here" class="hotel-location-info">
+    <h2>Getting here</h2>
+    <p>
+      The Udai Bagh Palace is located on the outskirts of Udaipur,
+      approximately 40 minutes from Maharana Pratap Airport.
+    </p>
+
+    <div class="aman-map-wrapper">
+      <div id="amanMap"></div>
+
+      <div class="aman-map-info">
+        <div>
+          <strong>Address</strong><br>
+          Udai Bagh Palace, Udaipur<br>
+          Rajasthan, India
+        </div>
+
+        <div>
+          <strong>Airports</strong><br>
+          Maharana Pratap Airport (40 mins)
+        </div>
+
+        <div>
+          <strong>By car</strong><br>
+          40 minutes from Udaipur city
+        </div>
+
+        <a
+          href="https://www.google.com/maps?q=Udai+Bagh+Palace+Udaipur"
+          target="_blank"
+          class="aman-directions"
+        >
+          Get directions
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEARBY RESORTS -->
+  <section class="aman-nearby-resorts">
+
+    <h2 class="aman-nearby-title">Nearby resorts</h2>
+
+    <div class="nearby-viewport">
+      <div class="nearby-track">
+
+        <a class="nearby-item" href="amargarh-udaipur.html">
+          <img src="../assets/images/nearby/amargarh.webp" alt="">
+          <span class="resort-location">UDAIPUR, INDIA</span>
+          <h3 class="resort-name">The Amargarh</h3>
+        </a>
+
+        <a class="nearby-item" href="hadi-rani-palace.html">
+          <img src="../assets/images/nearby/hadi-rani.webp" alt="">
+          <span class="resort-location">UDAIPUR, INDIA</span>
+          <h3 class="resort-name">Hotel Hadi Rani Palace</h3>
+        </a>
+
+      </div>
+    </div>
+
+  </section>
+<footer class="bayan-footer">
+
+  <div class="footer-inner">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <h3>BAYAN</h3>
+      <p>
+        Thoughtful hospitality rooted in heritage,
+        culture and calm luxury experiences.
+      </p>
+    </div>
+
+    <!-- FOOTER LINKS -->
+    <div class="footer-links">
+
+      <div class="footer-col">
+        <span class="footer-title">Bayan</span>
+        <a href="../about.html">About Bayan</a>
+        <a href="../hotels.html">Stays</a>
+        <a href="../experiences.html">Experiences</a>
+        <a href="../dining.html">Dining</a>
+        <a href="../wellness.html">Wellness</a>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-title">Explore</span>
+        <a href="../events-meetings.html">Events & Gatherings</a>
+        <a href="../journal.html">Journal</a>
+        <a href="../contact.html">Contact</a>
+        <a href="#">Careers</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-title">Get in Touch</span>
+        <p>
+          Rajasthan, India<br>
+          reservations@thebayanhotels.com<br>
+          +91 7426 257777
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="footer-bottom">
+    <span>© Bayan Hotels. All rights reserved.</span>
+
+    <div class="footer-social">
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/thebayanhotels/" target="_blank" aria-label="Instagram">
+    <i data-lucide="instagram"></i>
+  </a>
+
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/thebayanhotels" target="_blank" aria-label="Facebook">
+    <i data-lucide="facebook"></i>
+  </a>
+
+  <!-- Twitter / X -->
+  <a href="https://x.com/BayanHotels" target="_blank" aria-label="X">
+  <svg viewBox="0 0 24 24" width="22" height="22" stroke="#1a1a1a" fill="none" stroke-width="2" stroke-linecap="round">
+    <line x1="4" y1="4" x2="20" y2="20"></line>
+    <line x1="20" y1="4" x2="4" y2="20"></line>
+  </svg>
+</a>
+
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/company/thebayangroup/" target="_blank" aria-label="LinkedIn">
+    <i data-lucide="linkedin"></i>
+  </a>
+
+  <!-- Email -->
+  <a href="mailto:crs@thebayanhotels.com" aria-label="Email">
+    <i data-lucide="mail"></i>
+  </a>
+
+</div>
+
+
+
+</footer>
+<a
+  href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+  class="floating-book"
+  id="floatingBook"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  BOOK NOW
+</a>
+
+  <!-- SCRIPTS -->
+  <script src="../assets/js/subnav-scroll.js"></script>
+  <script src="../assets/js/innerpages-gallery.js"></script>
+  <script src="../assets/js/map.js"></script>
+  <script src="../assets/js/nearby-resorts.js"></script>
+  <script src="../assets/js/nearby-slider.js"></script>
+<script>
+  const menuOverlay = document.getElementById("menuOverlay");
+  const menuToggle = document.getElementById("menuToggle");
+  const menuClose = document.getElementById("menuCloseBtn");
+
+  if (menuToggle && menuOverlay) {
+    menuToggle.addEventListener("click", () => {
+      menuOverlay.classList.add("active");
+      document.body.classList.add("menu-open");
+    });
+  }
+
+  if (menuClose) {
+    menuClose.addEventListener("click", closeMenu);
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+
+  menuOverlay?.addEventListener("click", (e) => {
+    if (e.target === menuOverlay) closeMenu();
+  });
+
+  function closeMenu() {
+    menuOverlay.classList.remove("active");
+    document.body.classList.remove("menu-open");
+  }
+
+  /* ACTIVE NAV LINK */
+  document.querySelectorAll(".menu-nav a").forEach((link) => {
+    if (window.location.href.includes(link.getAttribute("href"))) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+</body>
+</html>

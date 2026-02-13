@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Jaibagh Palace, Jaipur | Bayan Group</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/hotel-detail.css" />
+    <!-- Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      defer
+    ></script>
+  </head>
+
+  <body class="hotel-page">
+    <div id="header"></div>
+    <!-- SUB NAV (DESKTOP ONLY) -->
+    <section class="hotel-subnav">
+      <div class="subnav-inner">
+        <div class="subnav-breadcrumb">
+          <span class="breadcrumb-current">THE JAIBAGH PALACE</span>
+          <span class="breadcrumb-separator">›</span>
+        </div>
+
+        <nav class="subnav-links">
+          <a href="#accommodation">Accommodation</a>
+          <a href="#experiences">Experiences</a>
+          <a href="#wellness">Wellness</a>
+          <a href="#dining">Dining</a>
+          <a href="#getting-here">Getting Here</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- HERO -->
+    <section class="hotel-hero">
+      <img
+        src="../assets/images/jaibagh/hero.webp"
+        alt="The Jaibagh Palace Jaipur"
+      />
+    </section>
+
+    <!-- INTRO -->
+    <section class="hotel-intro">
+      <span class="hotel-location">Jaipur, Rajasthan</span>
+      <h1>The Jaibagh Palace</h1>
+
+      <p class="hotel-tagline">
+        A heritage palace retreat inspired by Rajputana architecture, set amidst
+        the quiet hills on the outskirts of Jaipur.
+      </p>
+
+      <p class="hotel-description">
+        Designed to evoke the grandeur of a bygone era, The Jaibagh Palace
+        offers serene courtyards, refined interiors, and an atmosphere of calm
+        sophistication deeply rooted in place and tradition.
+      </p>
+    </section>
+
+    <!-- IMAGE STRIP -->
+
+    <!-- AMAN EDITORIAL GALLERY -->
+    <section class="aman-gallery-section">
+      <div class="aman-gallery-viewport">
+        <div class="aman-gallery-track" id="galleryTrack">
+          <!-- VERTICAL -->
+          <div class="gallery-item vertical">
+            <img src="../assets/images/jaibagh/g1.webp" alt="" />
+          </div>
+
+          <!-- SQUARE -->
+          <div class="gallery-item square">
+            <img src="../assets/images/jaibagh/g2.webp" alt="" />
+          </div>
+
+          <!-- HORIZONTAL -->
+          <div class="gallery-item horizontal">
+            <img src="../assets/images/jaibagh/g3.webp" alt="" />
+          </div>
+
+          <!-- VERTICAL -->
+          <div class="gallery-item vertical">
+            <img src="../assets/images/jaibagh/g4.webp" alt="" />
+          </div>
+
+          <!-- SQUARE -->
+          <div class="gallery-item square">
+            <img src="../assets/images/jaibagh/g5.webp" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDER (AMAN STYLE) -->
+      <div class="aman-slider-wrapper">
+        <div class="aman-slider-track" id="sliderTrack">
+          <!-- MAIN SEGMENTS -->
+          <span class="aman-segment"> <i></i><i></i><i></i> </span>
+          <span class="aman-segment"> <i></i><i></i><i></i> </span>
+          <span class="aman-segment"> <i></i><i></i><i></i> </span>
+          <span class="aman-segment"> <i></i><i></i><i></i> </span>
+          <span class="aman-segment"> <i></i><i></i><i></i> </span>
+
+          <!-- INDICATOR -->
+          <span class="aman-indicator" id="sliderIndicator"></span>
+        </div>
+      </div>
+    </section>
+    <!-- FEATURE IMAGE -->
+    <section class="hotel-feature">
+      <img
+        src="../assets/images/jaibagh/suite.webp"
+        alt="Suites at Jaibagh Palace"
+      />
+    </section>
+
+    <!-- ROOMS & SUITES -->
+    <section id="accommodation" class="hotel-content">
+      <span class="section-eyebrow">Rooms & Suites</span>
+      <h2>Spaces shaped by quiet elegance</h2>
+      <p>
+        Each room and suite at The Jaibagh Palace is designed with an emphasis
+        on space, light, and handcrafted detail. Soft palettes, natural
+        materials, and views over gardens and courtyards create an atmosphere of
+        calm retreat.
+      </p>
+    </section>
+
+    <!-- EDITORIAL GRID -->
+    <section id="experiences" class="hotel-editorial">
+      <div class="editorial-item">
+        <img src="../assets/images/jaibagh/dining.webp" alt="" />
+        <h3 id="dining">Moments in Dining</h3>
+        <p>
+          A refined culinary experience inspired by Rajasthani heritage,
+          seasonal ingredients, and understated presentation.
+        </p>
+      </div>
+
+      <div class="editorial-item">
+        <img src="../assets/images/jaibagh/experience.webp" alt="" />
+        <h3>A Gateway to Jaipur</h3>
+        <p>
+          Explore the cultural heart of Jaipur through curated journeys,
+          historic landmarks, and intimate local encounters.
+        </p>
+      </div>
+
+      <div class="editorial-item" id="wellness">
+        <img src="../assets/images/jaibagh/wellness.webp" alt="" />
+        <h3>Wellbeing & Stillness</h3>
+        <p>
+          Spaces dedicated to rest and renewal, blending traditional wellness
+          practices with modern comfort.
+        </p>
+      </div>
+    </section>
+    <!-- GETTING HERE -->
+    <section id="getting-here" class="hotel-location-info">
+      <h2>Getting here</h2>
+      <p>
+        The Jaibagh Palace is located approximately 45 minutes from Jaipur
+        International Airport, offering a tranquil retreat within easy reach of
+        the city.
+      </p>
+
+      <div class="aman-map-wrapper">
+        <div id="amanMap"></div>
+
+        <div class="aman-map-info">
+          <div>
+            <strong>Address</strong><br />
+            Jaibagh Palace, Jaipur<br />
+            Rajasthan, India
+          </div>
+
+          <div>
+            <strong>Airports</strong><br />
+            Jaipur International Airport (45 mins)
+          </div>
+
+          <div>
+            <strong>By car</strong><br />
+            45 minutes from Jaipur city
+          </div>
+          <a
+            href="https://www.google.com/maps?q=Jaibagh+Palace+Jaipur"
+            target="_blank"
+            class="aman-directions"
+          >
+            Get directions
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEARBY RESORTS -->
+    <!-- NEARBY RESORTS -->
+    <section class="aman-nearby-resorts">
+      <h2 class="aman-nearby-title">Nearby resorts</h2>
+
+      <div class="nearby-viewport">
+        <div class="nearby-track">
+          <a class="nearby-item" href="#">
+            <img src="../assets/images/nearby/bayan-elegance.webp" alt="" />
+            <span class="resort-location">JAIPUR, INDIA</span>
+            <h3 class="resort-name">The Bayan Elegance</h3>
+          </a>
+
+          <a class="nearby-item" href="#">
+            <img src="../assets/images/nearby/hadi-rani.webp" alt="" />
+            <span class="resort-location">Udaipur, INDIA</span>
+            <h3 class="resort-name">Hotel Hadi Rani Palace</h3>
+          </a>
+        </div>
+      </div>
+      <div id="footer"></div>
+    </section>
+    <!-- SUB NAV SCROLL SCRIPT (DESKTOP ONLY) -->
+    <script src="../assets/js/subnav-scroll.js"></script>
+    <script src="../assets/js/innerpages-gallery.js"></script>
+    <script src="../assets/js/map.js"></script>
+    <script src="../assets/js/nearby-resorts.js"></script>
+    <script src="../assets/js/nearby-slider.js"></script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+/* =====================================================
+   EXPERIENCE DETAIL – SHARED STYLES (BAYAN)
+   Inspired by Six Senses / Aman
+===================================================== */
+
+/* ================= HERO ================= */
+.expd-hero {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+}
+
+.expd-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.expd-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.05)
+  );
+}
+
+.expd-hero-content {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 760px;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.expd-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.expd-hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 400;
+  margin: 18px 0;
+}
+
+.expd-hero-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* ================= INTRO ================= */
+.expd-intro {
+  padding: 120px 20px 90px;
+  text-align: center;
+}
+
+.expd-intro-inner {
+  max-width: 760px;
+  margin: auto;
+}
+
+.expd-intro p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+/* ================= DETAILS GRID ================= */
+.expd-details {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px 120px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 80px;
+}
+
+.expd-detail h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.expd-detail p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* ================= GALLERY ================= */
+.expd-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.expd-gallery img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+/* ================= CTA ================= */
+.expd-cta {
+  padding: 140px 20px;
+  text-align: center;
+  background: var(--bg-ivory);
+}
+
+.expd-cta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+
+.expd-cta p {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  font-size: 15px;
+}
+
+.expd-btn {
+  display: inline-block;
+  padding: 14px 38px;
+  border: 1px solid var(--text-dark);
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  transition: all 0.3s ease;
+}
+
+.expd-btn:hover {
+  background: var(--text-dark);
+  color: #fff;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .expd-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .expd-details {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .expd-hero {
+    height: 80vh;
+  }
+
+  .expd-hero-content {
+    bottom: 50px;
+  }
+
+  .expd-hero-content h1 {
+    font-size: 30px;
+  }
+
+  .expd-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .expd-gallery img {
+    height: 300px;
+  }
+
+  .expd-cta {
+    padding: 100px 20px;
+  }
+}

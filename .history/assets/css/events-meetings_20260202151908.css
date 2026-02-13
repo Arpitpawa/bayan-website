@@ -1,0 +1,187 @@
+/* =====================================================
+   BAYAN – EVENTS & MEETINGS (SIX SENSES INSPIRED)
+===================================================== */
+
+/* HERO */
+.em-hero {
+  padding: 160px 20px 140px;
+  text-align: center;
+}
+
+.em-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.em-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 400;
+  margin: 24px 0;
+}
+
+.em-hero p {
+  max-width: 620px;
+  margin: auto;
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text-muted);
+}
+
+/* INTRO */
+.em-intro {
+  max-width: 760px;
+  margin: auto;
+  padding: 0 20px 140px;
+  text-align: center;
+}
+
+.em-intro p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--text-muted);
+}
+
+/* VENUES */
+.em-venue {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 160px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.em-venue.reverse {
+  direction: rtl;
+}
+
+.em-venue.reverse > * {
+  direction: ltr;
+}
+
+.em-image img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+}
+
+.em-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.em-content p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.em-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.em-specs li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: var(--text-muted);
+}
+
+/* CTA */
+.em-cta {
+  background: var(--bg-ivory);
+  padding: 160px 20px;
+}
+
+.em-cta-inner {
+  max-width: 640px;
+  margin: auto;
+  text-align: center;
+}
+
+.em-cta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.em-cta p {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+.em-form {
+  display: grid;
+  gap: 18px;
+}
+
+.em-form input,
+.em-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  border: 1px solid #ddd;
+}
+
+.em-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.em-form button {
+  align-self: center;
+  margin-top: 10px;
+  padding: 14px 42px;
+  border: 1px solid var(--text-dark);
+  background: none;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.em-form button:hover {
+  background: var(--text-dark);
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .em-venue {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .em-venue.reverse {
+    direction: ltr;
+  }
+
+  .em-image img {
+    height: 340px;
+  }
+
+  .em-hero h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .em-hero {
+    padding: 120px 20px 100px;
+  }
+
+  .em-cta {
+    padding: 120px 20px;
+  }
+}

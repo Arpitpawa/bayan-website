@@ -1,0 +1,206 @@
+:root {
+  --ivory: #f7f4ee;
+  --beige: #faf9f6;
+  --text-dark: #1c1c1c;
+  --overlay-bg: rgba(247, 244, 238, 0.88); /* subtle – Six Senses level */
+}
+
+/* ================= GLOBAL FIXES ================= */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* 🔥 KILLS horizontal bar */
+}
+
+/* ================= HEADER ================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 76px;
+  background: var(--ivory); /* ✅ SOLID like Six Senses */
+  z-index: 1000;
+}
+
+.nav-bar {
+  height: 100%;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.logo {
+  justify-self: center;
+  font-family: 'Libre Baskerville', serif;
+  letter-spacing: 0.28em;
+  font-size: 18px;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.nav-cta {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+/* LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.menu-toggle,
+.search-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-toggle svg,
+.search-toggle svg {
+  width: 18px;
+  stroke: var(--text-dark);
+  stroke-width: 1.4;
+  fill: none;
+}
+
+/* ================= MENU OVERLAY ================= */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay-bg); /* ✅ LESS BLUR */
+  backdrop-filter: blur(6px);     /* subtle like Six Senses */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 2000;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ================= MENU CONTAINER ================= */
+.menu-container {
+  display: flex;
+  height: 100%;
+}
+
+/* LEFT PANEL (MAIN MENU) */
+.menu-left {
+  width: 35vw;                 /* ✅ 30–40vw like RAAS */
+  min-width: 340px;
+  background: var(--ivory);
+  padding: 110px 70px;
+  position: relative;
+}
+
+/* CLOSE */
+.menu-close {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  width: 26px;
+  height: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-close span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--text-dark);
+}
+
+.menu-close span:first-child { transform: rotate(45deg); }
+.menu-close span:last-child  { transform: rotate(-45deg); }
+
+/* NAV LINKS */
+.menu-nav a {
+  display: block;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 26px;
+  color: var(--text-dark);
+  text-decoration: none;
+  margin-bottom: 28px;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.menu-nav a:hover {
+  transform: translateX(6px);
+  opacity: 0.85;
+}
+
+/* ================= DESTINATIONS ================= */
+.menu-destinations {
+  margin-top: 80px;
+}
+
+.menu-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #777;
+  display: block;
+  margin-bottom: 26px;
+}
+
+.menu-destinations a {
+  display: block;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.menu-destinations .coming {
+  font-size: 14px;
+  color: #999;
+  margin-top: 8px;
+  display: block;
+}
+
+/* ================= RIGHT BLANK SPACE ================= */
+.menu-right {
+  flex: 1;
+}
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 900px) {
+
+  .nav-bar {
+    padding: 0 24px;
+  }
+
+  .menu-container {
+    flex-direction: column;
+  }
+
+  .menu-left {
+    width: 100%;
+    min-width: unset;
+    padding: 96px 32px;
+  }
+
+  .menu-nav a {
+    font-size: 22px;
+  }
+
+  .menu-destinations a {
+    font-size: 18px;
+  }
+}

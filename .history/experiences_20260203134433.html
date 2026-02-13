@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bayan Experiences</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/experiences.css">
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/brand-skin.css" />
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="nav-bar">
+
+    <div class="nav-left">
+      <button class="menu-toggle" id="menuToggle">
+        <svg viewBox="0 0 24 10">
+          <line x1="0" y1="1" x2="24" y2="1"></line>
+          <line x1="0" y1="9" x2="24" y2="9"></line>
+        </svg>
+        <span>Menu</span>
+      </button>
+
+      <button class="search-toggle">
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="6"></circle>
+          <line x1="16" y1="16" x2="22" y2="22"></line>
+        </svg>
+      </button>
+    </div>
+
+    <a href="index.html" class="logo">BAYAN</a>
+
+    <a
+      href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+      class="nav-cta"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      BOOK NOW
+    </a>
+
+  </div>
+</header>
+
+<!-- ================= MENU OVERLAY ================= -->
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="menu-container">
+    <nav class="menu-nav">
+      <a href="index.html">Home</a>
+      <a href="hotels.html">Stays</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="wellness.html">Wellness</a>
+      <a href="dining.html">Dining</a>
+      <a href="about.html">About Bayan</a>
+    </nav>
+
+    <div class="menu-destinations">
+      <span class="menu-eyebrow">Discover Bayan In</span>
+      <a href="#">Jaipur</a>
+      <a href="#">Udaipur</a>
+      <a href="#">Kumbhalgarh</a>
+      <a href="#">Sawai Madhopur</a>
+      <span class="coming">Pushkar — Coming Soon</span>
+      <span class="coming">Jodhpur — Coming Soon</span>
+    </div>
+  </div>
+</div>
+
+<div class="nav-spacer"></div>
+
+<!-- ================= HERO ================= -->
+<section class="exp-hero">
+  <div class="exp-hero-inner">
+    <span class="exp-eyebrow">Bayan Experiences</span>
+    <h1>A thoughtful way to experience Rajasthan</h1>
+    <p>
+      At Bayan, experiences unfold naturally — shaped by place, culture,
+      landscape and time. Each moment is designed to feel unhurried,
+      meaningful and deeply rooted.
+    </p>
+  </div>
+</section>
+
+<!-- ================= FILTER ================= -->
+<section class="exp-filter">
+  <button class="active" data-filter="all">All</button>
+  <button data-filter="culture">Culture</button>
+  <button data-filter="nature">Nature</button>
+  <button data-filter="dining">Dining</button>
+  <button data-filter="wellness">Wellness</button>
+  <button data-filter="exploration">Exploration</button>
+</section>
+
+<!-- ================= GRID ================= -->
+<section class="exp-grid">
+
+  <article class="exp-card" data-category="culture">
+    <a href="experience-heritage-walk.html" class="exp-link">
+      <img src="assets/images/expriences/Heritage-walk.webp" alt="Heritage Walk">
+      <div class="exp-content">
+        <h3>Heritage Walks</h3>
+        <p>
+          Guided explorations through forts, palaces and historic quarters,
+          revealing stories shaped by centuries of Rajasthan.
+        </p>
+      </div>
+    </a>
+  </article>
+
+  <article class="exp-card" data-category="nature">
+    <a href="experience-sunset.html" class="exp-link">
+      <img src="assets/images/expriences/sunset-view.webp" alt="Sunset Experience">
+      <div class="exp-content">
+        <h3>Sunset Moments</h3>
+        <p>
+          Golden evenings enjoyed from serene viewpoints,
+          where nature and architecture meet quietly.
+        </p>
+      </div>
+    </a>
+  </article>
+
+  <article class="exp-card" data-category="dining">
+    <a href="experience-culinary.html" class="exp-link">
+      <img src="assets/images/expriences/" alt="Dining Experience">
+      <div class="exp-content">
+        <h3>Culinary Journeys</h3>
+        <p>
+          Local Rajasthani flavours and global comfort dishes,
+          crafted with simplicity and seasonal produce.
+        </p>
+      </div>
+    </a>
+  </article>
+
+  <article class="exp-card" data-category="wellness">
+    <a href="experience-wellness.html" class="exp-link">
+      <img src="images/wellness.webp" alt="Wellness">
+      <div class="exp-content">
+        <h3>Wellness & Leisure</h3>
+        <p>
+          Slow down with spa therapies, pools and peaceful spaces
+          designed for rest and restoration.
+        </p>
+      </div>
+    </a>
+  </article>
+
+  <article class="exp-card" data-category="exploration">
+    <a href="experience-exploration.html" class="exp-link">
+      <img src="images/sightseeing.webp" alt="Sightseeing">
+      <div class="exp-content">
+        <h3>Local Exploration</h3>
+        <p>
+          Discover lakes, wildlife zones, temples and towns
+          curated through our local knowledge.
+        </p>
+      </div>
+    </a>
+  </article>
+
+  <article class="exp-card" data-category="culture">
+    <a href="experience-celebrations.html" class="exp-link">
+      <img src="images/celebrations.webp" alt="Celebrations">
+      <div class="exp-content">
+        <h3>Celebrations & Gatherings</h3>
+        <p>
+          Intimate weddings and meaningful gatherings
+          set within calm and elegant Bayan settings.
+        </p>
+      </div>
+    </a>
+  </article>
+
+</section>
+<footer class="bayan-footer">
+
+  <div class="footer-inner">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <h3>BAYAN</h3>
+      <p>
+        Thoughtful hospitality rooted in heritage,
+        culture and calm luxury experiences.
+      </p>
+    </div>
+
+    <!-- FOOTER LINKS -->
+    <div class="footer-links">
+
+      <div class="footer-col">
+        <span class="footer-title">Bayan</span>
+        <a href="about.html">About Bayan</a>
+        <a href="hotels.html">Stays</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="dining.html">Dining</a>
+        <a href="wellness.html">Wellness</a>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-title">Explore</span>
+        <a href="events-meetings.html">Events & Gatherings</a>
+        <a href="journal.html">Journal</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Careers</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-title">Get in Touch</span>
+        <p>
+          Rajasthan, India<br>
+          reservations@thebayanhotels.com<br>
+          +91 7426 257777
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="footer-bottom">
+    <span>© Bayan Hotels. All rights reserved.</span>
+
+    <div class="footer-social">
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/thebayanhotels/" target="_blank" aria-label="Instagram">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.5.6.2 1 .6 1.4 1 .4.4.8.8 1 1.4.2.4.4 1 .5 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.5 2.2-.2.6-.6 1-1 1.4-.4.4-.8.8-1.4 1-.4.2-1 .4-2.2.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.5-.6-.2-1-.6-1.4-1-.4-.4-.8-.8-1-1.4-.2-.4-.4-1-.5-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.8.5-2.2.2-.6.6-1 1-1.4.4-.4.8-.8 1.4-1 .4-.2 1-.4 2.2-.5 1.3-.1 1.7-.1 4.9-.1zm0 3.2a6.6 6.6 0 100 13.2 6.6 6.6 0 000-13.2zm0 10.9a4.3 4.3 0 110-8.6 4.3 4.3 0 010 8.6zm6.8-11.4a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+    </svg>
+  </a>
+
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/thebayanhotels" target="_blank" aria-label="Facebook">
+    <svg viewBox="0 0 24 24">
+      <path d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0022 12z"/>
+    </svg>
+  </a>
+
+</div>
+
+
+</footer>
+
+<!-- ================= SCRIPTS (UNCHANGED) ================= -->
+<script>
+  const menuOverlay = document.getElementById("menuOverlay");
+  const menuToggle = document.getElementById("menuToggle");
+  const menuClose = document.getElementById("menuCloseBtn");
+
+  if (menuToggle && menuOverlay) {
+    menuToggle.addEventListener("click", () => {
+      menuOverlay.classList.add("active");
+      document.body.classList.add("menu-open");
+    });
+  }
+
+  if (menuClose) {
+    menuClose.addEventListener("click", closeMenu);
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+
+  menuOverlay?.addEventListener("click", (e) => {
+    if (e.target === menuOverlay) closeMenu();
+  });
+
+  function closeMenu() {
+    menuOverlay.classList.remove("active");
+    document.body.classList.remove("menu-open");
+  }
+
+  document.querySelectorAll(".menu-nav a").forEach((link) => {
+    if (window.location.href.includes(link.getAttribute("href"))) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+<script>
+  const filterButtons = document.querySelectorAll(".exp-filter button");
+  const cards = document.querySelectorAll(".exp-card");
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filter = btn.dataset.filter;
+
+      cards.forEach(card => {
+        card.classList.remove("hide");
+        if (filter !== "all" && card.dataset.category !== filter) {
+          card.classList.add("hide");
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

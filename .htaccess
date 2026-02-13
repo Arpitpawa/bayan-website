@@ -1,0 +1,25 @@
+RewriteEngine On
+
+# ---------------------------------------
+# 1️⃣ Redirect index.html to /
+# ---------------------------------------
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# ---------------------------------------
+# 2️⃣ Redirect example.html to example
+# ---------------------------------------
+RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+# ---------------------------------------
+# 3️⃣ Internally rewrite example → example.html
+# ---------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
+
+# ---------------------------------------
+# Default index
+# ---------------------------------------
+DirectoryIndex index.html

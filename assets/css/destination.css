@@ -1,0 +1,116 @@
+/* =====================================================
+   BAYAN DESTINATIONS – SIX SENSES / AMAN STYLE
+===================================================== */
+
+/* HERO */
+.dest-hero {
+  text-align: center;
+  max-width: 760px;
+  margin: auto;
+  padding: 140px 20px 120px;
+}
+
+.dest-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.dest-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 46px;
+  font-weight: 400;
+  margin: 22px 0;
+}
+
+.dest-hero p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text-muted);
+}
+
+/* LIST */
+.dest-list {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+}
+
+.dest-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.dest-item.reverse {
+  direction: rtl;
+}
+
+.dest-item.reverse > * {
+  direction: ltr;
+}
+
+/* TEXT */
+.dest-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.dest-text p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.dest-link {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--accent-gold);
+}
+
+/* IMAGE */
+.dest-image img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .dest-item {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .dest-item.reverse {
+    direction: ltr;
+  }
+
+  .dest-image img {
+    height: 380px;
+  }
+
+  .dest-hero h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dest-hero {
+    padding: 110px 20px 90px;
+  }
+
+  .dest-hero h1 {
+    font-size: 30px;
+  }
+}

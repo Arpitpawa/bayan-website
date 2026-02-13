@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Jaibagh Palace, Jaipur | Bayan Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/hotel-detail.css">
+     <link rel="stylesheet" href="../assets/css/style.css" />
+   <link rel="stylesheet" href="../assets/css/header.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/brand-skin.css" />
+  <!-- Leaflet -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  defer
+></script>
+
+</head>
+
+<body class="hotel-page">
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="nav-bar">
+
+    <!-- LEFT -->
+    <div class="nav-left">
+      <button class="menu-toggle" id="menuToggle">
+        <svg viewBox="0 0 24 10">
+          <line x1="0" y1="1" x2="24" y2="1"></line>
+          <line x1="0" y1="9" x2="24" y2="9"></line>
+        </svg>
+        <span>Menu</span>
+      </button>
+
+      <button class="search-toggle">
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="6"></circle>
+          <line x1="16" y1="16" x2="22" y2="22"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- CENTER -->
+    <a href="../index.html" class="logo">BAYAN</a>
+
+    <!-- RIGHT -->
+    <a
+      href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+      class="nav-cta"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      BOOK NOW
+    </a>
+
+  </div>
+</header>
+
+<!-- ================= MENU OVERLAY ================= -->
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="menu-container">
+    <nav class="menu-nav">
+  <a href="../index.html">Home</a>
+  <a href="../hotels.html">Stays</a>
+  <a href="../experiences.html">Experiences</a>
+  <a href="../wellness.html">Wellness</a>
+  <a href="../dining.html">Dining</a>
+  <a href="../about.html">About Bayan</a>
+</nav>
+
+
+    <div class="menu-destinations">
+      <span class="menu-eyebrow">Discover Bayan In</span>
+      <a href="#">Jaipur</a>
+      <a href="#">Udaipur</a>
+      <a href="#">Kumbhalgarh</a>
+      <a href="#">Sawai Madhopur</a>
+      <span class="coming">Pushkar — Coming Soon</span>
+      <span class="coming">Jodhpur — Coming Soon</span>
+    </div>
+  </div>
+</div>
+
+<div class="nav-spacer"></div>
+
+  <!-- SUB NAV (DESKTOP ONLY) -->
+  <section class="hotel-subnav">
+    <div class="subnav-inner">
+
+      <div class="subnav-breadcrumb">
+        <span class="breadcrumb-current">THE JAIBAGH PALACE</span>
+        <span class="breadcrumb-separator">›</span>
+      </div>
+
+      <nav class="subnav-links">
+        <a href="#accommodation">Accommodation</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#wellness">Wellness</a>
+        <a href="#dining">Dining</a>
+        <a href="#getting-here">Getting Here</a>
+      </nav>
+
+    </div>
+  </section>
+
+  <!-- HERO -->
+  <section class="hotel-hero">
+    <img src="../assets/images/jaibagh/jaibagh-jaipur.webp" alt="The Jaibagh Palace Jaipur">
+  </section>
+
+  <!-- INTRO -->
+  <section class="hotel-intro">
+    <span class="hotel-location">Jaipur, Rajasthan</span>
+    <h1>The Jaibagh Palace</h1>
+
+    <p class="hotel-tagline">
+      A heritage palace retreat inspired by Rajputana architecture,
+      set amidst the quiet hills on the outskirts of Jaipur.
+    </p>
+
+    <p class="hotel-description">
+      Designed to evoke the grandeur of a bygone era, The Jaibagh Palace
+      offers serene courtyards, refined interiors, and an atmosphere of
+      calm sophistication deeply rooted in place and tradition.
+    </p>
+  </section>
+
+  <!-- IMAGE STRIP -->
+  
+<!-- AMAN EDITORIAL GALLERY -->
+<section class="aman-gallery-section">
+
+  <div class="aman-gallery-viewport">
+    <div class="aman-gallery-track" id="galleryTrack">
+
+      <!-- VERTICAL -->
+      <div class="gallery-item vertical">
+        <img src="../assets/images/jaibagh/g1.webp" alt="">
+      </div>
+
+      <!-- SQUARE -->
+      <div class="gallery-item square">
+        <img src="../assets/images/jaibagh/g2.webp" alt="">
+      </div>
+
+      <!-- HORIZONTAL -->
+      <div class="gallery-item horizontal">
+        <img src="../assets/images/jaibagh/g3.webp" alt="">
+      </div>
+
+      <!-- VERTICAL -->
+      <div class="gallery-item vertical">
+        <img src="../assets/images/jaibagh/g4.webp" alt="">
+      </div>
+
+      <!-- SQUARE -->
+      <div class="gallery-item square">
+        <img src="../assets/images/jaibagh/g5.webp" alt="">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SLIDER (AMAN STYLE) -->
+  <div class="aman-slider-wrapper">
+  <div class="aman-slider-track" id="sliderTrack">
+
+    <!-- MAIN SEGMENTS -->
+    <span class="aman-segment">
+      <i></i><i></i><i></i>
+    </span>
+    <span class="aman-segment">
+      <i></i><i></i><i></i>
+    </span>
+    <span class="aman-segment">
+      <i></i><i></i><i></i>
+    </span>
+    <span class="aman-segment">
+      <i></i><i></i><i></i>
+    </span>
+    <span class="aman-segment">
+      <i></i><i></i><i></i>
+    </span>
+
+    <!-- INDICATOR -->
+    <span class="aman-indicator" id="sliderIndicator"></span>
+  </div>
+</div>
+</section>
+  <!-- FEATURE IMAGE -->
+  <section class="hotel-feature">
+    <img src="../assets/images/jaibagh/suite.webp" alt="Suites at Jaibagh Palace">
+  </section>
+
+  <!-- ROOMS & SUITES -->
+  <section id="accommodation" class="hotel-content">
+    <span class="section-eyebrow">Rooms & Suites</span>
+    <h2>Spaces shaped by quiet elegance</h2>
+    <p>
+      Each room and suite at The Jaibagh Palace is designed with an emphasis
+      on space, light, and handcrafted detail. Soft palettes, natural materials,
+      and views over gardens and courtyards create an atmosphere of calm retreat.
+    </p>
+  </section>
+
+  <!-- EDITORIAL GRID -->
+  <section id="experiences" class="hotel-editorial">
+
+    <div class="editorial-item">
+      <img src="../assets/images/expriences/dining.webp" alt="">
+      <h3 id="dining">Moments in Dining</h3>
+      <p>
+        A refined culinary experience inspired by Rajasthani heritage,
+        seasonal ingredients, and understated presentation.
+      </p>
+    </div>
+
+    <div class="editorial-item">
+      <img src="../assets/images/jaibagh/experience.webp" alt="">
+      <h3>A Gateway to Jaipur</h3>
+      <p>
+        Explore the cultural heart of Jaipur through curated journeys,
+        historic landmarks, and intimate local encounters.
+      </p>
+    </div>
+
+    <div class="editorial-item" id="wellness">
+      <img src="../assets/images/jaibagh/wellness.webp" alt="">
+      <h3>Wellbeing & Stillness</h3>
+      <p>
+        Spaces dedicated to rest and renewal, blending traditional
+        wellness practices with modern comfort.
+      </p>
+    </div>
+
+  </section>
+  <!-- GETTING HERE -->
+  <section id="getting-here" class="hotel-location-info">
+    <h2>Getting here</h2>
+    <p>
+      The Jaibagh Palace is located approximately 45 minutes from
+      Jaipur International Airport, offering a tranquil retreat
+      within easy reach of the city.
+    </p>
+
+   <div class="aman-map-wrapper">
+  <div id="amanMap"></div>
+
+  <div class="aman-map-info">
+    <div>
+      <strong>Address</strong><br>
+      Jaibagh Palace, Jaipur<br>
+      Rajasthan, India
+    </div>
+
+    <div>
+      <strong>Airports</strong><br>
+      Jaipur International Airport (45 mins)
+    </div>
+
+    <div>
+      <strong>By car</strong><br>
+      45 minutes from Jaipur city
+    </div>
+    <a
+      href="https://www.google.com/maps?q=Jaibagh+Palace+Jaipur"
+      target="_blank"
+      class="aman-directions"
+    >
+      Get directions
+    </a>
+  </div>
+</div>
+  </section>
+
+  <!-- NEARBY RESORTS -->
+<!-- NEARBY RESORTS -->
+<section class="aman-nearby-resorts">
+
+  <h2 class="aman-nearby-title">Nearby resorts</h2>
+
+  <div class="nearby-viewport">
+    <div class="nearby-track">
+
+      <a class="nearby-item" href="#">
+        <img src="../assets/images/bayan-elegance-jaipur.webp" alt="">
+        <span class="resort-location">JAIPUR, INDIA</span>
+        <h3 class="resort-name">The Bayan Elegance</h3>
+      </a>
+
+      <a class="nearby-item" href="#">
+        <img src="../assets/images/amargarh-udaipur.webp" alt="">
+        <span class="resort-location">Udaipur, INDIA</span>
+        <h3 class="resort-name">AmarPalace</h3>
+      </a>
+
+    </div>
+  </div>
+
+</section>
+<footer class="bayan-footer">
+
+  <div class="footer-inner">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <h3>BAYAN</h3>
+      <p>
+        Thoughtful hospitality rooted in heritage,
+        culture and calm luxury experiences.
+      </p>
+    </div>
+
+    <!-- FOOTER LINKS -->
+    <div class="footer-links">
+
+      <div class="footer-col">
+        <span class="footer-title">Bayan</span>
+        <a href="about.html">About Bayan</a>
+        <a href="hotels.html">Stays</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="dining.html">Dining</a>
+        <a href="wellness.html">Wellness</a>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-title">Explore</span>
+        <a href="events-meetings.html">Events & Gatherings</a>
+        <a href="journal.html">Journal</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Careers</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-title">Get in Touch</span>
+        <p>
+          Rajasthan, India<br>
+          reservations@thebayanhotels.com<br>
+          +91 7426 257777
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="footer-bottom">
+    <span>© Bayan Hotels. All rights reserved.</span>
+
+    <div class="footer-social">
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/thebayanhotels/" target="_blank" aria-label="Instagram">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.5.6.2 1 .6 1.4 1 .4.4.8.8 1 1.4.2.4.4 1 .5 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.5 2.2-.2.6-.6 1-1 1.4-.4.4-.8.8-1.4 1-.4.2-1 .4-2.2.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.5-.6-.2-1-.6-1.4-1-.4-.4-.8-.8-1-1.4-.2-.4-.4-1-.5-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.8.5-2.2.2-.6.6-1 1-1.4.4-.4.8-.8 1.4-1 .4-.2 1-.4 2.2-.5 1.3-.1 1.7-.1 4.9-.1zm0 3.2a6.6 6.6 0 100 13.2 6.6 6.6 0 000-13.2zm0 10.9a4.3 4.3 0 110-8.6 4.3 4.3 0 010 8.6zm6.8-11.4a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+    </svg>
+  </a>
+
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/thebayanhotels" target="_blank" aria-label="Facebook">
+    <svg viewBox="0 0 24 24">
+      <path d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0022 12z"/>
+    </svg>
+  </a>
+
+</div>
+
+
+</footer>
+<a
+  href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+  class="floating-book"
+  id="floatingBook"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  BOOK NOW
+</a>
+
+  <!-- SUB NAV SCROLL SCRIPT (DESKTOP ONLY) -->
+  <script src="../assets/js/subnav-scroll.js"></script>
+<script src="../assets/js/innerpages-gallery.js"></script>
+<script src="../assets/js/map.js"></script>
+<script src="../assets/js/nearby-resorts.js"></script>
+<script src="../assets/js/nearby-slider.js"></script>
+<script>
+  const menuOverlay = document.getElementById("menuOverlay");
+  const menuToggle = document.getElementById("menuToggle");
+  const menuClose = document.getElementById("menuCloseBtn");
+
+  if (menuToggle && menuOverlay) {
+    menuToggle.addEventListener("click", () => {
+      menuOverlay.classList.add("active");
+      document.body.classList.add("menu-open");
+    });
+  }
+
+  if (menuClose) {
+    menuClose.addEventListener("click", closeMenu);
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+
+  menuOverlay?.addEventListener("click", (e) => {
+    if (e.target === menuOverlay) closeMenu();
+  });
+
+  function closeMenu() {
+    menuOverlay.classList.remove("active");
+    document.body.classList.remove("menu-open");
+  }
+
+  /* ACTIVE NAV LINK */
+  document.querySelectorAll(".menu-nav a").forEach((link) => {
+    if (window.location.href.includes(link.getAttribute("href"))) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+</body>
+</html>

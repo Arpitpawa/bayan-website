@@ -1,0 +1,48 @@
+/* ======================================
+   BAYAN HOME PAGE SKIN
+   Based on Property Page Palette
+   SAFE OVERRIDE – BACKGROUNDS FIRST
+====================================== */
+
+/* ===== GLOBAL CANVAS ===== */
+html,
+body {
+  background-color: #F6F2EA !important;
+}
+
+/* ===== ALL MAIN HOME SECTIONS ===== */
+.intro-info,
+.legacy-section,
+.stays,
+.our-stays,
+.raas-stays,
+.moments-wrapper,
+.instagram-section {
+  background-color: #F6F2EA !important;
+}
+
+/* ===== SOFT VARIATION (VERY SUBTLE) ===== */
+.hotel-subnav,
+.aman-gallery-wrap,
+.aman-gallery-section {
+  background-color: #F6F1E9 !important;
+}
+
+/* ===== PAPER-LIKE FLOATING AREAS ===== */
+.center-card,
+.map-box,
+.editorial-card {
+  background-color: #F4F1EB !important;
+}
+
+/* ===== CINEMATIC SECTIONS ===== */
+.featured-slider,
+.destination-parallax {
+  background-color: #1C1C1C !important;
+}
+
+/* ===== OVERLAYS ===== */
+.hero-overlay,
+.destination-overlay {
+  background: rgba(0,0,0,0.45) !important;
+}

@@ -1,0 +1,104 @@
+<svg
+  width="920"
+  height="380"
+  viewBox="0 0 920 380"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <!-- Gold gradient -->
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#b8962e"/>
+    </linearGradient>
+
+    <!-- Soft glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+ <style>
+  .royal {
+    fill: none;
+    stroke: #4a4a4a;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1800;
+    stroke-dashoffset: 1800;
+    animation: draw 3s cubic-bezier(.6,0,.2,1) forwards;
+  }
+
+  .d1 { animation-delay: 0.15s; }
+  .d2 { animation-delay: 0.45s; }
+  .d3 { animation-delay: 0.9s; }
+  .d4 { animation-delay: 1.4s; }
+  .d5 { animation-delay: 1.9s; }
+
+  .gate {
+    animation:
+      draw 3s cubic-bezier(.6,0,.2,1) forwards,
+      openGate 0.9s ease forwards;
+    animation-delay: 1.9s, 3.1s;
+    transform-origin: center bottom;
+  }
+
+  .gold {
+    stroke: url(#gold);
+    stroke-width: 2.6;
+    filter: url(#glow);
+  }
+
+  @keyframes draw {
+    to { stroke-dashoffset: 0; }
+  }
+
+  @keyframes openGate {
+    to { transform: scaleY(0.08); opacity: 0.35; }
+  }
+</style>
+
+
+  <!-- Ground -->
+  <line class="royal d1" x1="60" y1="320" x2="860" y2="320"/>
+
+  <!-- Outer wall -->
+  <rect class="royal d1" x="140" y="170" width="640" height="150"/>
+
+  <!-- Towers -->
+  <rect class="royal d2" x="140" y="120" width="70" height="200"/>
+  <rect class="royal d2" x="710" y="120" width="70" height="200"/>
+
+  <!-- Tower domes -->
+  <path class="royal d3" d="M140 120 Q175 70 210 120"/>
+  <path class="royal d3" d="M710 120 Q745 70 780 120"/>
+
+  <!-- Battlements -->
+  <path class="royal d3" d="
+    M140 170
+    h55 v-18 h55 v18 h55 v-18 h55 v18
+    h55 v-18 h55 v18 h55 v-18 h55 v18
+  "/>
+
+  <!-- Central palace -->
+  <rect class="royal d4" x="330" y="135" width="260" height="185"/>
+
+  <!-- Main gold dome -->
+  <path class="royal gold d5" d="M330 135 Q460 20 590 135"/>
+  <line class="royal gold d5" x1="460" y1="20" x2="460" y2="3"/>
+
+  <!-- Side decorative domes -->
+  <path class="royal d5" d="M360 135 Q390 105 420 135"/>
+  <path class="royal d5" d="M500 135 Q530 105 560 135"/>
+
+  <!-- Main gate (opens) -->
+  <path class="royal gate" d="M410 320 V210 Q460 165 510 210 V320"/>
+
+  <!-- Inner arches -->
+  <path class="royal d5" d="M370 320 V235 Q400 210 430 235 V320"/>
+  <path class="royal d5" d="M490 320 V235 Q520 210 550 235 V320"/>
+</svg>

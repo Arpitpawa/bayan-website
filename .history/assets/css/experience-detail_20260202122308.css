@@ -1,0 +1,220 @@
+/* =====================================================
+   EXPERIENCE DETAIL – SINGLE IMAGE EDITORIAL LAYOUT
+   (Six Senses style override)
+===================================================== */
+
+/* ================= HERO LAYOUT ================= */
+.expd-hero {
+  position: relative;
+  height: auto;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 20px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+/* IMAGE RIGHT */
+.expd-hero img {
+  width: 100%;
+  height: 620px;
+  object-fit: cover;
+  grid-column: 2;
+}
+
+/* REMOVE DARK OVERLAY */
+.expd-hero::after {
+  display: none;
+}
+
+/* TEXT LEFT */
+.expd-hero-content {
+  position: static;
+  transform: none;
+  max-width: 520px;
+  padding: 0;
+  text-align: left;
+  color: var(--text-dark);
+  grid-column: 1;
+}
+
+.expd-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 18px;
+  display: inline-block;
+}
+
+.expd-hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 26px;
+}
+
+.expd-hero-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+/* ================= INTRO ================= */
+/* Keep intro but tighten spacing */
+.expd-intro {
+  padding: 0 20px 90px;
+  text-align: left;
+}
+
+.expd-intro-inner {
+  max-width: 520px;
+  margin-left: calc((100% - 1400px) / 2 + 20px);
+}
+
+.expd-intro p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+/* ================= DETAILS ================= */
+.expd-details {
+  max-width: 520px;
+  margin-left: calc((100% - 1400px) / 2 + 20px);
+  padding: 0 20px 120px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
+.expd-detail h3 {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.expd-detail p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* ================= GALLERY ================= */
+/* HIDE gallery completely (single image page) */
+.expd-gallery {
+  display: none;
+}
+
+/* ================= CTA ================= */
+.expd-cta {
+  padding: 120px 20px;
+  text-align: center;
+  background: var(--bg-ivory);
+}
+
+.expd-cta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+
+.expd-cta p {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.expd-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  border: 1px solid var(--text-dark);
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  transition: all 0.3s ease;
+}
+
+.expd-btn:hover {
+  background: var(--text-dark);
+  color: #fff;
+}
+
+/* ================= EXPERIENCE NAV ================= */
+.exp-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 20px;
+  border-top: 1px solid #e5e5e5;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.exp-nav-item {
+  text-decoration: none;
+  color: var(--text-dark);
+  max-width: 45%;
+}
+
+.exp-nav-label {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.exp-nav-item h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.exp-nav-item:hover h4 {
+  opacity: 0.6;
+}
+
+.exp-nav-item.next {
+  text-align: right;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .expd-hero {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 90px 20px;
+  }
+
+  .expd-hero img {
+    grid-column: 1;
+    height: 420px;
+  }
+
+  .expd-hero-content {
+    text-align: left;
+  }
+
+  .expd-intro-inner,
+  .expd-details {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 600px) {
+  .expd-hero-content h1 {
+    font-size: 30px;
+  }
+
+  .expd-cta {
+    padding: 90px 20px;
+  }
+}

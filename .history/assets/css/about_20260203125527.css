@@ -1,0 +1,321 @@
+/* ================= GRANDEUR INTRO (TAJ HEADING) ================= */
+.bayan-grandeur-intro {
+  padding: 80px 40px 120px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.grandeur-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 36px;
+}
+
+.grandeur-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #3a3a3a;
+}
+
+.grandeur-header .line {
+  width: 90px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.grandeur-desc {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.9;
+  color: #6f6f6f;
+}
+
+/* ================= BAYAN HOSPITALITY ================= */
+.bayan-hospitality {
+  background: #ffffff;
+  padding: 120px 40px 180px;
+}
+
+.hospitality-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  position: relative;
+}
+
+.hospitality-content {
+  position: relative;
+  background: #ffffff;
+  padding: 100px 90px;
+  z-index: 2;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+}
+
+.decor-line {
+  width: 60px;
+  height: 1px;
+  background: #b68c5a;
+  margin-bottom: 24px;
+}
+
+.hospitality-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  margin-bottom: 24px;
+}
+
+.hospitality-content p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #6f6f6f;
+  max-width: 420px;
+}
+
+.hospitality-svg {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 240px;
+  opacity: 0.06;
+}
+
+.hospitality-image {
+  margin-left: -120px;
+}
+
+.hospitality-image img {
+  width: 100%;
+}
+
+/* ================= MONUMENTAL VISION ================= */
+.monumental-vision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 140px 40px;
+}
+
+.monumental-vision h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 46px;
+}
+
+.monumental-vision p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #6f6f6f;
+}
+
+.monumental-vision img {
+  width: 100%;
+}
+
+/* ================= CINEMATIC ================= */
+.bayan-cinematic {
+  background: #0b0b0b;
+  color: #ffffff;
+  padding: 180px 0;
+}
+
+/* ================= HEADERS ================= */
+.feeling-header,
+.global-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.feeling-header h2,
+.global-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 44px;
+  letter-spacing: 0.14em;
+}
+
+.line {
+  width: 90px;
+  height: 1px;
+  background: rgba(255,255,255,0.4);
+}
+
+/* ================= FEELING ================= */
+.bayan-feeling-inner {
+  padding: 0 40px 160px;
+  text-align: center;
+}
+
+.feeling-desc {
+  max-width: 760px;
+  margin: 0 auto 80px;
+  font-size: 18px;
+  line-height: 1.9;
+  color: #d6d6d6;
+}
+
+/* ================= VIDEO ================= */
+.feeling-video {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.video-poster {
+  position: relative;
+}
+
+.video-poster img {
+  width: 100%;
+}
+
+.play-btn {
+  position: absolute;
+  inset: 0;
+  background: none;
+  border: none;
+  font-size: 84px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ================= SLICED SLIDER (FIXED) ================= */
+.bayan-sliced-slider {
+  margin-top: 120px;
+}
+
+.sliced-image {
+  position: relative;
+  height: 520px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  /* ✅ IMAGE */
+  background-image: url("https://images.unsplash.com/photo-1548013146-72479768bada");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sliced-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.45)
+  );
+}
+
+.slice {
+  border-left: 1px solid rgba(255,255,255,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.slice:first-child {
+  border-left: none;
+}
+
+.slice-content {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s ease;
+}
+
+.slice:hover .slice-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slice-content h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+}
+
+.slice-content p {
+  font-size: 15px;
+  color: #e0e0e0;
+}
+
+/* ================= PAATHYA ================= */
+.paathya-single {
+  background: #4a4a46;
+  padding: 160px 40px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.paathya-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  letter-spacing: 0.14em;
+}
+
+.paathya-desc {
+  max-width: 760px;
+  margin: 0 auto 120px;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* ================= HERO ================= */
+.taj-style-hero {
+  height: 100vh;
+  background-image: url("https://images.squarespace-cdn.com/content/v1/52ed3507e4b041396187d22b/1628227764541-AB49380K73DCLGRJ5LII/The+JaiBagh+Palace+jaipur+destination+wedding+1.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.55)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+}
+
+.page-label {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  color: #fff;
+}
+
+.hero-divider {
+  width: 60px;
+  height: 1px;
+  background: rgba(255,255,255,0.6);
+  margin: 20px auto;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .monumental-vision {
+    grid-template-columns: 1fr;
+  }
+
+  .sliced-image {
+    grid-template-columns: repeat(2, 1fr);
+    height: 300px;
+  }
+}

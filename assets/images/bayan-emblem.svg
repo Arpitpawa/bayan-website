@@ -1,0 +1,59 @@
+<svg
+  viewBox="0 0 200 200"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  <!-- Outer Circle -->
+  <circle
+    cx="100"
+    cy="100"
+    r="88"
+    fill="none"
+    stroke="#1C1C1C"
+    stroke-width="1"
+  />
+
+  <!-- Inner Circle -->
+  <circle
+    cx="100"
+    cy="100"
+    r="60"
+    fill="none"
+    stroke="#1C1C1C"
+    stroke-width="0.6"
+    opacity="0.6"
+  />
+
+  <!-- Vertical Axis -->
+  <line
+    x1="100"
+    y1="12"
+    x2="100"
+    y2="188"
+    stroke="#1C1C1C"
+    stroke-width="0.6"
+    opacity="0.5"
+  />
+
+  <!-- Horizontal Axis -->
+  <line
+    x1="12"
+    y1="100"
+    x2="188"
+    y2="100"
+    stroke="#1C1C1C"
+    stroke-width="0.6"
+    opacity="0.5"
+  />
+
+  <!-- Inner Path (Paathya) -->
+  <path
+    d="M 60 100
+       C 75 85, 125 85, 140 100
+       C 125 115, 75 115, 60 100 Z"
+    fill="none"
+    stroke="#1C1C1C"
+    stroke-width="0.8"
+    opacity="0.7"
+  />
+</svg>

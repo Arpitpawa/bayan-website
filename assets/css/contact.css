@@ -1,0 +1,118 @@
+/* ===========================
+   BAYAN CONTACT – SIX SENSES STYLE
+=========================== */
+
+.contact-wrap {
+  max-width: 1200px;
+  margin: auto;
+  padding: 140px 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 100px;
+}
+
+/* LEFT */
+.contact-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.contact-left h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 400;
+  margin: 18px 0;
+}
+
+.contact-subtext {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 50px;
+}
+
+/* FORM */
+.contact-form {
+  display: grid;
+  gap: 18px;
+  max-width: 520px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 14px;
+  border: 1px solid #e2e2e2;
+  font-family: "Inter", sans-serif;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-btn {
+  margin-top: 12px;
+  width: fit-content;
+  padding: 12px 36px;
+  background: var(--accent-gold, #6b2d5c);
+  color: #fff;
+  border: none;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+/* RIGHT */
+.contact-right h4 {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.contact-right p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.contact-right a {
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+/* SOCIAL ICONS */
+.contact-socials {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.contact-socials a {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+.contact-socials a:hover {
+  background: var(--text-dark);
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-wrap {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+}

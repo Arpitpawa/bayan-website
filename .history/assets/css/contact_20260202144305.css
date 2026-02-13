@@ -1,0 +1,119 @@
+/* ==========================
+   BAYAN CONTACT PAGE (LUXURY STYLE)
+=========================== */
+
+/* HERO */
+.contact-hero {
+  background: #f8f3e9;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.contact-hero-inner h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.contact-hero-inner p {
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+/* CONTACT INFO GRID */
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #e5e5e5;
+}
+
+.contact-card h2 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.contact-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.contact-card a {
+  color: var(--text-dark);
+  text-decoration: underline;
+}
+
+/* FORM SECTION */
+.contact-form-section {
+  max-width: 900px;
+  margin: auto;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.contact-form-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  background: var(--text-dark);
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 20px;
+}
+
+.contact-btn:hover {
+  background: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+}

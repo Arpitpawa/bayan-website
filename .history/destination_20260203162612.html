@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Destinations | Bayan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/brand-skin.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/destination.css">
+</head>
+
+<body>
+
+
+ <!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="nav-bar">
+
+    <!-- LEFT -->
+    <div class="nav-left">
+      <button class="menu-toggle" id="menuToggle">
+        <svg viewBox="0 0 24 10">
+          <line x1="0" y1="1" x2="24" y2="1"></line>
+          <line x1="0" y1="9" x2="24" y2="9"></line>
+        </svg>
+        <span>Menu</span>
+      </button>
+
+      <button class="search-toggle">
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="6"></circle>
+          <line x1="16" y1="16" x2="22" y2="22"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- CENTER -->
+    <a href="index.html" class="logo">BAYAN</a>
+
+    <!-- RIGHT -->
+    <a
+      href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+      class="nav-cta"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      BOOK NOW
+    </a>
+
+  </div>
+</header>
+
+<!-- ================= MENU OVERLAY ================= -->
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="menu-container">
+   <nav class="menu-nav">
+  <a href="index.html">Home</a>
+  <a href="hotels.html">Stays</a>
+  <a href="experiences.html">Experiences</a>
+  <a href="wellness.html">Wellness</a>
+  <a href="dining.html">Dining</a>
+  <a href="about.html">About Bayan</a>
+</nav>
+
+
+    <div class="menu-destinations">
+      <span class="menu-eyebrow">Discover Bayan In</span>
+      <a href="#">Jaipur</a>
+      <a href="#">Udaipur</a>
+      <a href="#">Kumbhalgarh</a>
+      <a href="#">Sawai Madhopur</a>
+      <span class="coming">Pushkar — Coming Soon</span>
+      <span class="coming">Jodhpur — Coming Soon</span>
+    </div>
+  </div>
+</div>
+
+<div class="nav-spacer"></div>
+
+<!-- HERO -->
+<section class="dest-hero">
+  <span class="dest-eyebrow">Bayan Destinations</span>
+  <h1>Places rooted in history and landscape</h1>
+  <p>
+    Each Bayan destination is chosen for its cultural depth,
+    natural beauty and sense of quiet belonging.
+  </p>
+</section>
+
+<!-- DESTINATION LIST -->
+<section class="dest-list">
+
+  <!-- DESTINATION -->
+  <article class="dest-item">
+    <div class="dest-text">
+      <h2>Jaipur</h2>
+      <p>
+        Set near the historic heart of Rajasthan, Bayan Jaipur
+        offers a refined base to explore palaces, craftsmanship
+        and living traditions.
+      </p>
+      <a href="jaibagh-palace.html" class="dest-link">Discover Jaipur</a>
+    </div>
+    <div class="dest-image">
+      <img src="https://media.holidify.com/images/cmsuploads/compressed/albert-hall-museum-jaipur-rajasthan-3-attr-hero_20250112221549_20250112221620.webp" alt="">
+    </div>
+  </article>
+
+  <!-- DESTINATION -->
+  <article class="dest-item reverse">
+    <div class="dest-text">
+      <h2>Udaipur</h2>
+      <p>
+        Surrounded by lakes and rolling hills, Bayan Udaipur
+        blends quiet luxury with romantic landscapes and
+        timeless architecture.
+      </p>
+      <a href="udai-bagh-palace.html" class="dest-link">Discover Udaipur</a>
+    </div>
+    <div class="dest-image">
+      <img src="data:image/jpeg;base64,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" alt="">
+    </div>
+  </article>
+
+  <!-- DESTINATION -->
+  <article class="dest-item">
+    <div class="dest-text">
+      <h2>Kumbhalgarh</h2>
+      <p>
+        Located near the great fort, Bayan Kumbhalgarh
+        is immersed in wilderness, history and
+        uninterrupted views of the Aravalli range.
+      </p>
+      <a href="kumbha-bagh-palace.html" class="dest-link">Discover Kumbhalgarh</a>
+    </div>
+    <div class="dest-image">
+      <img src="images/destination-kumbhalgarh.webp" alt="">
+    </div>
+  </article>
+
+  <!-- DESTINATION -->
+  <article class="dest-item reverse">
+    <div class="dest-text">
+      <h2>Sawai Madhopur</h2>
+      <p>
+        A gateway to Ranthambore National Park,
+        Bayan Sawai Madhopur connects guests
+        with wildlife, heritage and raw landscapes.
+      </p>
+      <a href="sawai-bagh.html" class="dest-link">Discover Sawai Madhopur</a>
+    </div>
+    <div class="dest-image">
+      <img src="images/destination-sawai.webp" alt="">
+    </div>
+  </article>
+
+</section>
+<footer class="bayan-footer">
+
+  <div class="footer-inner">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <h3>BAYAN</h3>
+      <p>
+        Thoughtful hospitality rooted in heritage,
+        culture and calm luxury experiences.
+      </p>
+    </div>
+
+    <!-- FOOTER LINKS -->
+    <div class="footer-links">
+
+      <div class="footer-col">
+        <span class="footer-title">Bayan</span>
+        <a href="about.html">About Bayan</a>
+        <a href="hotels.html">Stays</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="dining.html">Dining</a>
+        <a href="wellness.html">Wellness</a>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-title">Explore</span>
+        <a href="events-meetings.html">Events & Gatherings</a>
+        <a href="journal.html">Journal</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Careers</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-title">Get in Touch</span>
+        <p>
+          Rajasthan, India<br>
+          reservations@thebayanhotels.com<br>
+          +91 7426 257777
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="footer-bottom">
+    <span>© Bayan Hotels. All rights reserved.</span>
+
+    <div class="footer-social">
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/thebayanhotels/" target="_blank" aria-label="Instagram">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.5.6.2 1 .6 1.4 1 .4.4.8.8 1 1.4.2.4.4 1 .5 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.5 2.2-.2.6-.6 1-1 1.4-.4.4-.8.8-1.4 1-.4.2-1 .4-2.2.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.5-.6-.2-1-.6-1.4-1-.4-.4-.8-.8-1-1.4-.2-.4-.4-1-.5-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.8.5-2.2.2-.6.6-1 1-1.4.4-.4.8-.8 1.4-1 .4-.2 1-.4 2.2-.5 1.3-.1 1.7-.1 4.9-.1zm0 3.2a6.6 6.6 0 100 13.2 6.6 6.6 0 000-13.2zm0 10.9a4.3 4.3 0 110-8.6 4.3 4.3 0 010 8.6zm6.8-11.4a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+    </svg>
+  </a>
+
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/thebayanhotels" target="_blank" aria-label="Facebook">
+    <svg viewBox="0 0 24 24">
+      <path d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0022 12z"/>
+    </svg>
+  </a>
+
+</div>
+
+
+</footer>
+<script>
+  const menuOverlay = document.getElementById("menuOverlay");
+  const menuToggle = document.getElementById("menuToggle");
+  const menuClose = document.getElementById("menuCloseBtn");
+
+  if (menuToggle && menuOverlay) {
+    menuToggle.addEventListener("click", () => {
+      menuOverlay.classList.add("active");
+      document.body.classList.add("menu-open");
+    });
+  }
+
+  if (menuClose) {
+    menuClose.addEventListener("click", closeMenu);
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+
+  menuOverlay?.addEventListener("click", (e) => {
+    if (e.target === menuOverlay) closeMenu();
+  });
+
+  function closeMenu() {
+    menuOverlay.classList.remove("active");
+    document.body.classList.remove("menu-open");
+  }
+
+  document.querySelectorAll(".menu-nav a").forEach((link) => {
+    if (window.location.href.includes(link.getAttribute("href"))) {
+      link.classList.add("active");
+    }
+  });
+</script>
+</body>
+</html>
