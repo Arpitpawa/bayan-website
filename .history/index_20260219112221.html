@@ -1,0 +1,1193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bayan Group | Rooted Luxury Hospitality</title>
+    <meta
+      name="description"
+      content="Bayan Group is a collection of heritage-inspired luxury stays across Rajasthan, blending timeless hospitality with modern comfort."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+<link rel="shortcut icon" href="../assets/favicon/favicon.ico">
+<link rel="manifest" href="../assets/favicon/site.webmanifest">
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/brand-skin.css" />
+  </head>
+  <body>
+    <div id="loader">
+      <div class="loader-content">
+        <div class="fort-wrapper">
+          <object
+            id="fortSvg"
+            type="image/svg+xml"
+            data="assets/images/fort.svg"
+          ></object>
+        </div>
+
+        <h1>BAYAN</h1>
+        <p>Heritage • Luxury • Experiences</p>
+      </div>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+      <div class="nav-bar">
+        <!-- LEFT -->
+        <div class="nav-left">
+          <button class="menu-toggle" id="menuToggle">
+            <svg viewBox="0 0 24 10">
+              <line x1="0" y1="1" x2="24" y2="1"></line>
+              <line x1="0" y1="9" x2="24" y2="9"></line>
+            </svg>
+            <span>Menu</span>
+          </button>
+
+          <button class="search-toggle">
+            <svg viewBox="0 0 24 24" class="icon">
+              <circle cx="11" cy="11" r="6"></circle>
+              <line x1="16" y1="16" x2="22" y2="22"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- CENTER -->
+        <a href="index.html" class="logo">BAYAN</a>
+
+        <!-- RIGHT -->
+        <a
+  href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+  class="nav-cta"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  BOOK NOW
+</a>
+
+
+      </div>
+    </header>
+
+    <!-- ================= MENU OVERLAY ================= -->
+    <!-- ================= MENU OVERLAY ================= -->
+    <div class="menu-overlay" id="menuOverlay">
+      <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="menu-container">
+        <!-- NAV -->
+        <nav class="menu-nav">
+  <a href="index.html">Home</a>
+  <a href="hotels.html">Stays</a>
+  <a href="experiences.html">Experiences</a>
+  <a href="wellness.html">Wellness</a>
+  <a href="dining.html">Dining</a>
+  <a href="about.html">About Bayan</a>
+</nav>
+
+        <!-- DESTINATIONS -->
+        <div class="menu-destinations">
+          <span class="menu-eyebrow">Discover Bayan In</span>
+
+          <a href="hotels.html">Jaipur</a>
+          <a href="hotels.html">Udaipur</a>
+          <a href="hotels.html">Kumbhalgarh</a>
+          <a href="hotels.html">Sawai Madhopur</a>
+
+          <span class="coming">Pushkar — Coming Soon</span>
+          <span class="coming">Jodhpur — Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-spacer"></div>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <video
+  class="hero-video"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="none"
+  poster="assets/images/hero-poster.webp"
+>
+  <source src="assets/videos/hero.mp4" type="video/mp4" />
+</video>
+
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-center">
+  <span class="hero-eyebrow">BAYAN GROUP</span>
+
+  <h1>
+    Heritage Stays.<br>
+    Timeless Rajasthan.
+  </h1>
+
+  <p class="hero-subtext">
+    Restored palaces and immersive experiences
+    across Jaipur, Udaipur, Kumbhalgarh and beyond.
+  </p>
+
+  <div class="hero-cta">
+  <a href="hotels.html" class="hero-btn hero-btn-outline">
+    Explore Stays
+  </a>
+
+  <a href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+     target="_blank"
+     class="hero-btn hero-btn-solid">
+     Book Your Stay
+  </a>
+</div>
+
+</div>
+
+
+      <!-- ================= LUXURY BOOKING BAR ================= -->
+<form id="bookingForm" class="lux-booking-bar">
+
+  <!-- Check-in -->
+  <div class="lux-field">
+    <label>Check-in</label>
+    <input type="text" id="checkIn" placeholder="Check-in">
+  </div>
+
+  <div class="lux-separator"></div>
+
+  <!-- Check-out -->
+  <div class="lux-field">
+    <label>Check-out</label>
+    <input type="text" id="checkOut" placeholder="Check-out">
+  </div>
+
+  <div class="lux-separator"></div>
+
+  <!-- Guests -->
+<div class="lux-field lux-guests-inline">
+
+
+
+  <div class="guest-inline">
+
+    <!-- Adults -->
+    <div class="guest-type">
+      <span class="guest-label">Adults</span>
+
+      <div class="counter">
+        <button type="button" class="minus" data-type="adult">−</button>
+        <span id="adultCount">2</span>
+        <button type="button" class="plus" data-type="adult">+</button>
+      </div>
+    </div>
+
+    <!-- Children -->
+    <div class="guest-type">
+      <span class="guest-label">Children</span>
+
+      <div class="counter">
+        <button type="button" class="minus" data-type="child">−</button>
+        <span id="childCount">0</span>
+        <button type="button" class="plus" data-type="child">+</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+  <!-- Search -->
+  <button type="submit" class="lux-search-btn">
+    SEARCH
+  </button>
+
+</form>
+
+
+
+
+
+    </section>
+
+    <!-- ================= INTRO DETAILS (SIX SENSES STYLE) ================= -->
+    <section class="intro-info six-style">
+      <div class="intro-container">
+        <!-- LEFT CONTENT -->
+        <div class="intro-text">
+          <h2 class="intro-title">
+            Rooted in Rajasthan,<br />
+            Crafted for Timeless Living
+          </h2>
+
+          <p class="intro-desc">
+            Bayan Group is a thoughtful collection of heritage-led stays across
+            Rajasthan, where restored palaces, cultural narratives, and warm
+            hospitality come together to create deeply rooted luxury
+            experiences.
+          </p>
+
+          <div class="intro-meta">
+            <!-- LOCAL TIME -->
+            <span class="meta-item">
+              <span class="icon icon-time"></span>
+              <strong>LOCAL TIME</strong>
+              <span id="localTime">12:47 PM</span>
+            </span>
+
+            <!-- HOW TO GET THERE -->
+            <span class="meta-item">
+              <span class="icon icon-map"></span>
+              <a href="javascript:void(0)" id="openMap">HOW TO GET THERE</a>
+            </span>
+
+            <!-- EXPERIENCES -->
+            <span class="meta-item">
+              <span class="icon icon-book"></span>
+              <a href="experiences.html">4 EXPERIENCES</a>
+            </span>
+          </div>
+        </div>
+
+        <!-- RIGHT CONTACT -->
+        <div class="intro-contact">
+          <span class="contact-label">CONTACT</span>
+          <p>
+            PLOT NO 13, HIRAN MAGRI SECTOR 4,<br />
+            UDAIPUR, RAJASTHAN 313002
+          </p>
+          <p>
+            Bayan Group Hospitality<br />
+            Rajasthan, India
+          </p>
+          <p>
+            <a href="mailto:info@thebayangroup.com">info@thebayangroup.com</a
+            ><br />
+            <a href="tel:+91-8306300610 , +91-8306300609"
+              >+91-8306300610 , +91-8306300609</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="lux-divider"></div>
+<div class="section-divider"></div>
+
+    <section class="legacy-section reveal-group">
+      <div class="legacy-container">
+        <!-- LEFT CONTENT -->
+        <div class="legacy-text">
+          <span class="legacy-eyebrow reveal-item">Our Legacy</span>
+
+          <h2 class="reveal-item">
+            Rewilding landscapes,<br />
+            reviving stories of place
+          </h2>
+
+          <p class="reveal-item">
+            At Bayan, each property begins with respect for its land, history,
+            and people. Restored heritage structures sit gently within their
+            surroundings.
+          </p>
+
+          <p class="reveal-item">
+            Working closely with local communities and craftsmen, Bayan nurtures
+            ecosystems and preserves cultural memory.
+          </p>
+
+          <a href="#" class="legacy-link reveal-item">READ MORE →</a>
+
+          <img
+            src="assets/images/legacy-illustration.webp"
+            class="legacy-illustration reveal-item"
+            alt=""
+          />
+        </div>
+
+        <!-- RIGHT IMAGES -->
+        <div class="legacy-images">
+          <div class="legacy-image main reveal-image">
+            <img src="assets/images/legacy-main.webp" alt="" />
+          </div>
+
+          <div class="legacy-image secondary reveal-image delay">
+            <img src="assets/images/legacy-secondary.webp" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OUR STAYS (RAAS STYLE) ================= -->
+<!-- =========================================
+     IN THE SPOTLIGHT – FEATURED PROPERTIES
+========================================== -->
+
+<section class="spotlight-section">
+
+  <div class="spotlight-header">
+    <h2>In the spotlight: featured properties</h2>
+    <a href="hotels.html" class="spotlight-viewall">
+      WHERE NEXT: VIEW ALL HOTELS AND RESORTS →
+    </a>
+  </div>
+
+  <div class="spotlight-slider">
+
+    <!-- LEFT ARROW -->
+    <button class="spotlight-nav prev" id="spotPrev">
+      ‹
+    </button>
+
+    <!-- MAIN SLIDE WRAPPER -->
+    <div class="spotlight-track" id="spotTrack">
+
+      <!-- SLIDE 1 -->
+      <div class="spotlight-slide active">
+
+        <div class="spotlight-image-wrapper">
+          <img src="assets/images/jaibagh-jaipur2.webp" alt="Jaibagh Palace">
+        </div>
+
+        <div class="spotlight-content">
+
+          <div class="spotlight-left">
+            <span class="spotlight-location">JAIPUR</span>
+            <h3 class="spotlight-title">Jaibagh Palace</h3>
+          </div>
+
+          <div class="spotlight-right">
+            <p class="spotlight-desc">
+              Perched high above the Aravallis, Jaibagh Palace offers sweeping
+              fort views, expansive courtyards, and a rare sense of elevation and silence.
+            </p>
+            <a href="properties/jaibagh-palace.html" class="spotlight-link">
+              EXPLORE PROPERTY →
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- SLIDE 2 -->
+      <div class="spotlight-slide">
+
+        <div class="spotlight-image-wrapper">
+          <img src="assets/images/bayan-elegance-jaipur.webp" alt="The Bayan Elegance">
+        </div>
+
+        <div class="spotlight-content">
+
+          <div class="spotlight-left">
+            <span class="spotlight-location">JAIPUR</span>
+            <h3 class="spotlight-title">The Bayan Elegance</h3>
+          </div>
+
+          <div class="spotlight-right">
+            <p class="spotlight-desc">
+              A contemporary urban retreat blending modern architecture with
+              refined hospitality in the heart of Jaipur.
+            </p>
+            <a href="properties/the-bayan-elegance.html" class="spotlight-link">
+              EXPLORE PROPERTY →
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- SLIDE 3 -->
+      <div class="spotlight-slide">
+
+        <div class="spotlight-image-wrapper">
+          <img src="assets/images/amar-garh.jpeg" alt="The Amargarh">
+        </div>
+
+        <div class="spotlight-content">
+
+          <div class="spotlight-left">
+            <span class="spotlight-location">UDAIPUR</span>
+            <h3 class="spotlight-title">The Amargarh</h3>
+          </div>
+
+          <div class="spotlight-right">
+            <p class="spotlight-desc">
+              A heritage retreat overlooking lakes and rolling hills,
+              where timeless Rajasthan meets quiet luxury.
+            </p>
+            <a href="properties/the-amargarh.html" class="spotlight-link">
+              EXPLORE PROPERTY →
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- SLIDE 4 -->
+      <div class="spotlight-slide">
+
+        <div class="spotlight-image-wrapper">
+          <img src="assets/images/DSC04951.JPG" alt="Udai Bagh Palace">
+        </div>
+
+        <div class="spotlight-content">
+
+          <div class="spotlight-left">
+            <span class="spotlight-location">UDAIPUR</span>
+            <h3 class="spotlight-title">Udai Bagh Palace</h3>
+          </div>
+
+          <div class="spotlight-right">
+            <p class="spotlight-desc">
+              Set amidst expansive green lawns and serene countryside,
+              Udai Bagh Palace offers tranquility and heritage charm.
+            </p>
+            <a href="properties/udai-bagh-palace.html" class="spotlight-link">
+              EXPLORE PROPERTY →
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- SLIDE 5 -->
+      <div class="spotlight-slide">
+
+        <div class="spotlight-image-wrapper">
+          <img src="assets/images/kumbha-bagh-palace.DNG" alt="Kumbha Bagh Palace">
+        </div>
+
+        <div class="spotlight-content">
+
+          <div class="spotlight-left">
+            <span class="spotlight-location">KUMBHALGARH</span>
+            <h3 class="spotlight-title">Kumbha Bagh Palace</h3>
+          </div>
+
+          <div class="spotlight-right">
+            <p class="spotlight-desc">
+              Wake up to breathtaking fort views and the dramatic landscape
+              of the Aravallis at Kumbha Bagh Palace.
+            </p>
+            <a href="properties/kumbha-bagh-palace.html" class="spotlight-link">
+              EXPLORE PROPERTY →
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- SLIDE 6 -->
+      <div class="spotlight-slide">
+
+        <div class="spotlight-image-wrapper">
+          <img src="assets/images/sawai-bagh.webp" alt="The Sawai Bagh">
+        </div>
+
+        <div class="spotlight-content">
+
+          <div class="spotlight-left">
+            <span class="spotlight-location">SAWAI MADHOPUR</span>
+            <h3 class="spotlight-title">The Sawai Bagh</h3>
+          </div>
+
+          <div class="spotlight-right">
+            <p class="spotlight-desc">
+              On the edge of the wild, Sawai Bagh offers immersive stays
+              inspired by nature, silence, and slow luxury.
+            </p>
+            <a href="properties/the-sawai-bagh.html" class="spotlight-link">
+              EXPLORE PROPERTY →
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT ARROW -->
+    <button class="spotlight-nav next" id="spotNext">
+      ›
+    </button>
+
+  </div>
+
+</section>
+
+
+
+    <section class="featured-slider">
+      <!-- BACKGROUND FADE -->
+      <div class="slider-bg">
+        <div class="bg-layer active"></div>
+        <div class="bg-layer"></div>
+      </div>
+      <!-- TAJ STYLE HEADING -->
+      <div class="featured-heading">
+        <span class="featured-eyebrow">EXCLUSIVELY AT BAYAN</span>
+
+        <h2 class="featured-title">
+          What awaits you<br />
+          at every Bayan stay
+        </h2>
+
+        <p class="featured-desc">
+          From fort-top panoramas and forest edges to living heritage
+          landscapes, each property offers experiences shaped by its
+          surroundings.
+        </p>
+      </div>
+
+      <!-- LEFT CARD -->
+      <div class="side-card left">
+        <span id="prevTitle"></span>
+      </div>
+
+      <!-- CENTER CARD -->
+      <div class="center-card">
+        <div class="center-image">
+          <img id="centerImage" src="" alt="" />
+        </div>
+
+        <div class="center-content">
+          <h3 id="centerTitle" class="fade"></h3>
+          <p id="centerText" class="fade"></p>
+          <a href="#" class="more-btn">MORE →</a>
+        </div>
+      </div>
+
+      <!-- RIGHT CARD -->
+      <div class="side-card right">
+        <span id="nextTitle"></span>
+      </div>
+
+      <!-- NAV -->
+      <button class="nav prev" id="prevBtn">‹</button>
+      <button class="nav next" id="nextBtn">›</button>
+    </section>
+
+    <!-- ================= MOMENTS AT BAYAN ================= -->
+    <section class="moments-wrapper">
+      <!-- SECTION HEADING -->
+      <div class="moments-header">
+        <h2>Moments at Bayan</h2>
+        <p>
+          Thoughtfully crafted spaces, flavours, and experiences rooted in
+          place.
+        </p>
+        <span class="moments-divider"></span>
+      </div>
+
+      <!-- ACCOMMODATION -->
+      <div class="moments-row reveal lux-hover">
+        <div class="moments-image">
+          <img
+            src="https://www.trulyy.in/wp-content/uploads/2024/08/best-resorts-n-jaipur.jpg"
+            alt="Accommodation at Bayan"
+          />
+        </div>
+
+        <div class="moments-content">
+          <h3 class="lux-title">Accommodation</h3>
+          <p>
+            Enjoy private sanctuaries crafted with heritage detailing, serene
+            views, and refined comfort inspired by Rajasthan’s timeless
+            elegance.
+          </p>
+          <span class="lux-cta">VIEW ALL ACCOMMODATION →</span>
+        </div>
+      </div>
+
+      <!-- DINING (REVERSED) -->
+      <div class="moments-row reverse reveal lux-hover">
+        <div class="moments-image">
+          <img
+            src="https://cdn.tajhotels.com/images/ocl5w36p/prod5/16936d90b99cc1233addd5a7442892be4386e357-1280x1024.heif?w=3840"
+            alt="Dining at Bayan"
+          />
+        </div>
+
+        <div class="moments-content">
+          <h3 class="lux-title">Dining</h3>
+          <p>
+            Thoughtfully curated menus rooted in regional flavours, seasonal
+            produce, and slow, soulful culinary rituals.
+          </p>
+          <span class="lux-cta">DISCOVER DINING →</span>
+        </div>
+      </div>
+
+      <!-- EXPERIENCES -->
+      <div class="moments-row reveal lux-hover">
+        <div class="moments-image">
+          <img
+            src="https://cdn.tajhotels.com/images/ocl5w36p/prod5/8458083aed28ec653b7d55ebe021378a6fe40b17-1400x1080.jpg?w=1366"
+            alt="Experiences at Bayan"
+          />
+        </div>
+
+        <div class="moments-content">
+          <h3 class="lux-title">Experiences</h3>
+          <p>
+            From forest walks to cultural immersions, each experience invites
+            connection with place, people, and tradition.
+          </p>
+          <span class="lux-cta">VIEW EXPERIENCES →</span>
+        </div>
+      </div>
+    </section>
+<!-- ================= VOICES FROM BAYAN ================= -->
+<section class="voices-section">
+
+  <div class="voices-inner">
+
+    <span class="voices-eyebrow">VOICES FROM BAYAN</span>
+
+    <div class="voices-slider">
+
+      <div class="voice active">
+        <p class="voice-text">
+          “An unforgettable palace stay overlooking the Aravallis.
+          Silence, space, and soul in every detail.”
+        </p>
+        <span class="voice-author">— Guest, Mumbai</span>
+      </div>
+
+      <div class="voice">
+        <p class="voice-text">
+          “From the heritage architecture to the warm hospitality,
+          every moment felt thoughtfully curated.”
+        </p>
+        <span class="voice-author">— Guest, Delhi</span>
+      </div>
+
+      <div class="voice">
+        <p class="voice-text">
+          “A rare blend of luxury and authenticity.
+          Waking up to fort views was magical.”
+        </p>
+        <span class="voice-author">— Guest, London</span>
+      </div>
+
+    </div>
+
+    <!-- DOTS -->
+    <div class="voices-dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+    </div>
+
+  </div>
+
+</section>
+
+
+    <!-- ================= DESTINATIONS (PARALLAX – RAAS STYLE) ================= -->
+    <section class="destination-parallax">
+      <!-- FIXED BACKGROUND -->
+      <div class="parallax-bg"></div>
+
+      <!-- OVERLAY -->
+      <div class="destination-overlay"></div>
+
+      <!-- CONTENT -->
+      <div class="destination-content">
+        <span class="destination-eyebrow">Destinations</span>
+
+        <h2>
+          Choose the destination,<br />
+          Bayan will be there for you
+        </h2>
+
+        <p>
+          From royal cities to forested retreats, our stays are rooted in place,
+          culture, and timeless hospitality.
+        </p>
+
+        <a href="destination.html" class="lux-link">
+          EXPLORE DESTINATIONS <span>→</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="instagram-section">
+      <!-- LEFT TEXT -->
+      <div class="instagram-text">
+        <span class="insta-eyebrow">FOLLOW US ON INSTAGRAM</span>
+        <a
+          href="https://instagram.com/bayangroup"
+          target="_blank"
+          class="insta-handle"
+        >
+          @bayangroup
+        </a>
+      </div>
+
+      <!-- RIGHT SLIDER -->
+      <div class="instagram-slider">
+        <button class="insta-nav prev">‹</button>
+
+        <div class="insta-track">
+          <div class="insta-card">
+            <img
+              src="assets/images/sawaibaghreel.webp"
+              alt="Sawai Bagh Reel Thumbnail"
+              class="insta-thumb"
+            />
+            <video 
+  data-src="assets/videos/reel1.mp4" 
+  muted 
+  loop 
+  preload="none"
+  playsinline
+></video>
+
+          </div>
+
+          <div class="insta-card">
+            <img
+              src="assets/images/jaibaghreel.webp"
+              alt="Sawai Bagh Reel Thumbnail"
+              class="insta-thumb"
+            />
+            <video src="assets/videos/reel2.mp4" muted loop></video>
+          </div>
+
+          <div class="insta-card">
+            <img
+              src="assets/images/udaibaghreel.webp"
+              alt="Sawai Bagh Reel Thumbnail"
+              class="insta-thumb"
+            />
+            <video src="assets/videos/reel3.mp4" muted loop></video>
+          </div>
+
+          <div class="insta-card">
+            <img
+              src="assets/images/amargarhreel.webp"
+              alt="Sawai Bagh Reel Thumbnail"
+              class="insta-thumb"
+            />
+            <video src="assets/videos/reel4.mp4" muted loop></video>
+          </div>
+        </div>
+
+        <button class="insta-nav next">›</button>
+      </div>
+    </section>
+
+    <footer class="bayan-footer">
+
+  <div class="footer-inner">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <h3>BAYAN</h3>
+      <p>
+        Thoughtful hospitality rooted in heritage,
+        culture and calm luxury experiences.
+      </p>
+    </div>
+
+    <!-- FOOTER LINKS -->
+    <div class="footer-links">
+
+      <div class="footer-col">
+        <span class="footer-title">Bayan</span>
+        <a href="about.html">About Bayan</a>
+        <a href="hotels.html">Stays</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="dining.html">Dining</a>
+        <a href="wellness.html">Wellness</a>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-title">Explore</span>
+        <a href="events-meetings.html">Events & Gatherings</a>
+        <a href="journal.html">Journal</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Careers</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-title">Get in Touch</span>
+        <p>
+          Rajasthan, India<br>
+          reservations@thebayanhotels.com<br>
+          +91 7426 257777
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="footer-bottom">
+    <span>© Bayan Hotels. All rights reserved.</span>
+
+    <div class="footer-social">
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/thebayanhotels/" target="_blank" aria-label="Instagram">
+    <i data-lucide="instagram"></i>
+  </a>
+
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/thebayanhotels" target="_blank" aria-label="Facebook">
+    <i data-lucide="facebook"></i>
+  </a>
+
+  <!-- Twitter / X -->
+  <a href="https://x.com/BayanHotels" target="_blank" aria-label="X">
+  <svg viewBox="0 0 24 24" width="22" height="22" stroke="#1a1a1a" fill="none" stroke-width="2" stroke-linecap="round">
+    <line x1="4" y1="4" x2="20" y2="20"></line>
+    <line x1="20" y1="4" x2="4" y2="20"></line>
+  </svg>
+</a>
+
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/company/thebayangroup/" target="_blank" aria-label="LinkedIn">
+    <i data-lucide="linkedin"></i>
+  </a>
+
+  <!-- Email -->
+  <a href="mailto:crs@thebayanhotels.com" aria-label="Email">
+    <i data-lucide="mail"></i>
+  </a>
+
+</div>
+
+
+
+</footer>
+<a
+  href="https://wa.me/918306300610?text=Hi%20I%20would%20like%20to%20check%20availability%20at%20Bayan."
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <svg viewBox="0 0 24 24" class="wa-icon">
+  <path d="M12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.7 5.9L0 24l6.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 11.9-5.3 11.9-11.9S18.6 0 12 0zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm5.4-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2s-.8 1-.9 1.2c-.2.2-.3.2-.6.1s-1.4-.5-2.6-1.6c-.9-.8-1.6-1.8-1.8-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6 0-.2-.7-1.6-1-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.1 1-1.1 2.4s1.1 2.7 1.3 2.9c.2.2 2.2 3.3 5.4 4.6.8.3 1.4.5 1.9.6.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"
+        fill="white"/>
+</svg>
+
+</a>
+
+
+
+
+
+    <!-- ================= MAP OVERLAY ================= -->
+    <div class="map-overlay" id="mapOverlay">
+      <button class="map-close" id="closeMap">×</button>
+
+      <div class="map-box">
+        <h4 class="map-title">How to Get There</h4>
+
+        <!-- PROPERTY SELECTOR -->
+        <select id="propertySelect" class="map-select">
+          <option value="jaipur">Jaipur</option>
+          <option value="udaipur">Udaipur</option>
+          <option value="kumbhalgarh">Kumbhalgarh</option>
+          <option value="sawai">Sawai Madhopur</option>
+        </select>
+
+        <!-- MAP -->
+        <div class="map-wrapper">
+          <iframe id="mapFrame" loading="lazy" allowfullscreen> </iframe>
+        </div>
+      </div>
+    </div>
+    <!-- Swiftbook Engine Container (Hidden) -->
+    <div style="display: none">
+      <div id="quickbook-widget"></div>
+    </div>
+<a
+  href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+  class="floating-book"
+  id="floatingBook"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  BOOK NOW
+</a>
+<!-- ================= LUXURY PROMO POPUP ================= -->
+<div class="lux-popup" id="luxPopup">
+
+  <button class="lux-popup-close" id="luxPopupClose">
+    ×
+  </button>
+
+  <div class="lux-popup-content">
+  <h3>Plan Your Stay</h3>
+
+  <p>
+    Experience refined hospitality across our heritage destinations.
+    Reserve your stay and discover quiet luxury with Bayan.
+  </p>
+
+  <a href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y" 
+     class="lux-popup-btn" 
+     target="_blank">
+    Reserve Now
+  </a>
+</div>
+
+
+</div>
+
+<script 
+  src="https://www.swiftbook.io/plugin/js/booking-service.min.js" 
+  id="propInfo"
+  groupid="341NlfplxPrIg9W3WZzfdTQ5Njg="
+  cal-rendererId="quickbook-widget"
+  JDRN="Y"
+  location="off">
+</script>
+<script>
+  window.addEventListener("load", function () {
+    lucide.createIcons();
+  });
+</script>
+
+
+
+
+    <script src="assets/js/main.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        const fort = document.querySelector(".fort-wrapper");
+        const content = document.querySelector(".loader-content");
+
+        if (!loader || !fort || !content) return;
+
+        /* ---------------------------
+     SESSION CHECK
+  ---------------------------- */
+        const hasSeenLoader = sessionStorage.getItem("bayanLoaderSeen");
+
+        /* ---------------------------
+     NETWORK CHECK
+  ---------------------------- */
+        const connection =
+          navigator.connection ||
+          navigator.mozConnection ||
+          navigator.webkitConnection;
+
+        const isFastNetwork =
+          connection &&
+          (connection.effectiveType === "4g" || connection.downlink >= 10);
+
+        /* ---------------------------
+     SKIP CONDITIONS
+  ---------------------------- */
+        if (hasSeenLoader && isFastNetwork) {
+          loader.remove();
+          return;
+        }
+
+        /* ---------------------------
+     MARK AS SEEN
+  ---------------------------- */
+        sessionStorage.setItem("bayanLoaderSeen", "true");
+
+        /* ---------------------------
+     TIMINGS (SYNCED)
+  ---------------------------- */
+        const ZOOM_START = 3000; // SVG done
+        const REMOVE_TIME = 4200; // after zoom
+
+        /* Start deep zoom */
+        setTimeout(() => {
+          fort.classList.add("scale-up");
+          content.classList.add("fade-text");
+        }, ZOOM_START);
+
+        /* Remove loader */
+        setTimeout(() => {
+          loader.style.opacity = "0";
+          document.body.classList.remove("is-locked"); // 🔥 FORCE RESET
+          setTimeout(() => loader.remove(), 600);
+        }, REMOVE_TIME);
+      });
+    </script>
+    <script>
+      /* ===============================
+   SIX SENSES – LEGACY REVEAL
+================================ */
+
+      const revealGroups = document.querySelectorAll(".reveal-group");
+
+      const groupObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target); // reveal once only
+            }
+          });
+        },
+        {
+          threshold: 0.25,
+          rootMargin: "0px 0px -120px 0px",
+        },
+      );
+
+      revealGroups.forEach((group) => groupObserver.observe(group));
+    </script>
+    <script>
+      /* ===============================
+   RAAS – STAYS REVEAL
+================================ */
+
+      const stayItems = document.querySelectorAll(".stay-reveal");
+
+      const stayObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+          rootMargin: "0px 0px -120px 0px",
+        },
+      );
+
+      stayItems.forEach((item) => stayObserver.observe(item));
+    </script>
+    <script>
+      const menuOverlay = document.getElementById("menuOverlay");
+      const menuToggle = document.getElementById("menuToggle");
+      const menuClose = document.getElementById("menuCloseBtn");
+
+      /* OPEN MENU */
+      menuToggle.addEventListener("click", () => {
+        menuOverlay.classList.add("active");
+        document.body.classList.add("menu-open");
+      });
+
+      /* CLOSE MENU */
+      menuClose.addEventListener("click", closeMenu);
+
+      /* ESC KEY CLOSE */
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+
+      /* CLICK OUTSIDE (OPTIONAL – feels premium) */
+      menuOverlay.addEventListener("click", (e) => {
+        if (e.target === menuOverlay) closeMenu();
+      });
+
+      function closeMenu() {
+        menuOverlay.classList.remove("active");
+        document.body.classList.remove("menu-open");
+      }
+    </script>
+
+    <script>
+      document.querySelectorAll(".menu-nav a").forEach((link) => {
+        if (window.location.href.includes(link.getAttribute("href"))) {
+          link.classList.add("active");
+        }
+      });
+    </script>
+<script>
+  const floatingBook = document.getElementById("floatingBook");
+  const heroSection = document.querySelector(".hero");
+
+  if (floatingBook && heroSection) {
+    const heroHeight = heroSection.offsetHeight;
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > heroHeight * 0.6) {
+        floatingBook.textContent = "CHECK AVAILABILITY";
+      } else {
+        floatingBook.textContent = "BOOK NOW";
+      }
+    });
+  }
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.querySelector(".hero-video");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          video.play();
+        }
+      });
+    });
+
+    observer.observe(video);
+  });
+</script>
+<script>
+  document.querySelectorAll(".insta-card").forEach(card => {
+    const video = card.querySelector("video");
+    const thumb = card.querySelector(".insta-thumb");
+
+    card.addEventListener("mouseenter", () => {
+      if (!video.src) {
+        video.src = video.dataset.src;
+      }
+      thumb.style.opacity = "0";
+      video.play();
+    });
+
+    card.addEventListener("mouseleave", () => {
+      video.pause();
+      thumb.style.opacity = "1";
+    });
+  });
+</script>
+
+  </body>
+</html>

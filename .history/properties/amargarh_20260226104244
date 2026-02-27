@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Amar Garh Palace, Udaipur | Bayan Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/hotel-detail.css">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/header.css" />
+  <link rel="stylesheet" href="../assets/css/footer.css" />
+  <link rel="stylesheet" href="../assets/css/brand-skin.css" />
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="hotel-page">
+    <section class="property-subnav">
+  <div class="property-subnav-inner">
+    <div class="property-breadcrumb">
+      THE AMAR GARH PALACE
+    </div>
+
+    <nav class="property-links">
+      <a href="#overview">Overview</a>
+      <a href="#accommodation">Accommodation</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#dining">Dining</a>
+      <a href="#wellness">Wellness</a>
+      <a href="#getting-here">Getting Here</a>
+    </nav>
+  </div>
+</section>
+<section class="hotel-hero">
+  <img src="../assets/images/amargarh/amargarh-hero.webp"
+       alt="The Amar Garh Palace Udaipur">
+
+  <!-- BOOKING BAR (same as Jaibagh) -->
+  <!-- keep your existing booking form here -->
+</section>

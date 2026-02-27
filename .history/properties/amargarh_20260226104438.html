@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Amar Garh Palace, Udaipur | Bayan Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/hotel-detail.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
+  <link rel="stylesheet" href="../assets/css/brand-skin.css">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="hotel-page">
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="nav-bar">
+
+    <div class="nav-left">
+      <button class="menu-toggle" id="menuToggle">
+        <svg viewBox="0 0 24 10">
+          <line x1="0" y1="1" x2="24" y2="1"></line>
+          <line x1="0" y1="9" x2="24" y2="9"></line>
+        </svg>
+        <span>Menu</span>
+      </button>
+    </div>
+
+    <a href="../index.html" class="logo">
+      <span class="logo-main">BAYAN</span>
+      <span class="logo-sub">GROUP OF HOTELS & RESORTS</span>
+    </a>
+
+    <a href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+       class="nav-cta" target="_blank">
+      <span class="cta-desktop">BOOK NOW</span>
+      <span class="cta-mobile">RESERVE</span>
+    </a>
+
+  </div>
+</header>
+
+<!-- ================= PROPERTY SUB NAV ================= -->
+<section class="property-subnav">
+  <div class="property-subnav-inner">
+
+    <div class="property-breadcrumb">
+      THE AMAR GARH PALACE
+    </div>
+
+    <nav class="property-links">
+      <a href="#overview">Overview</a>
+      <a href="#accommodation">Accommodation</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#dining">Dining</a>
+      <a href="#wellness">Wellness</a>
+      <a href="#getting-here">Getting Here</a>
+    </nav>
+
+  </div>
+</section>
+
+<!-- ================= HERO ================= -->
+<section class="hotel-hero">
+  <img src="../assets/images/amar-garh/amargarh-hero.webp"
+       alt="The Amar Garh Palace Udaipur">
+
+  <!-- Booking Bar (same as Jaibagh) -->
+  <form id="bookingForm" class="lux-booking-bar">
+    <div class="lux-field">
+      <label>Check-in</label>
+      <input type="text" id="checkIn" placeholder="Check-in">
+    </div>
+
+    <div class="lux-separator"></div>
+
+    <div class="lux-field">
+      <label>Check-out</label>
+      <input type="text" id="checkOut" placeholder="Check-out">
+    </div>
+
+    <div class="lux-separator"></div>
+
+    <div class="lux-field lux-guests">
+      <label>Guests</label>
+      <div class="guest-display" id="guestToggle">
+        <span id="guestSummary">2 Adults, 0 Children</span>
+      </div>
+
+      <div class="guest-dropdown" id="guestDropdown">
+        <div class="guest-row">
+          <span>Adults</span>
+          <div class="counter">
+            <button type="button" class="minus" data-type="adult">−</button>
+            <span id="adultCount">2</span>
+            <button type="button" class="plus" data-type="adult">+</button>
+          </div>
+        </div>
+
+        <div class="guest-row">
+          <span>Children</span>
+          <div class="counter">
+            <button type="button" class="minus" data-type="child">−</button>
+            <span id="childCount">0</span>
+            <button type="button" class="plus" data-type="child">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="lux-search-btn">SEARCH</button>
+  </form>
+</section>
+
+<!-- ================= INTRO + DISCOVER ================= -->
+<section class="hotel-intro-discover" id="overview">
+
+  <div class="hotel-intro-block">
+    <span class="hotel-location">Udaipur, Rajasthan</span>
+    <h1>The Amar Garh Palace</h1>
+
+    <p class="hotel-intro-text">
+      A majestic hilltop palace overlooking the timeless lakes of Udaipur.
+      Inspired by Rajputana fort architecture, Amar Garh offers sweeping
+      valley views, regal courtyards and elevated luxury deeply rooted in heritage.
+    </p>
+  </div>
+
+  <div class="discover-header">
+    <span class="discover-eyebrow">HILLTOP GRANDEUR</span>
+    <h2>Panoramic views and royal architecture</h2>
+    <p>
+      Sunset terraces, infinity views and timeless elegance define every stay.
+    </p>
+  </div>
+
+  <div class="discover-slider">
+    <button class="discover-nav prev">&#10094;</button>
+
+    <div class="discover-viewport">
+      <div class="discover-track" id="discoverTrack">
+
+        <div class="discover-slide"><img src="../assets/images/amar-garh/g1.webp"><span>Hilltop Arrival</span></div>
+        <div class="discover-slide"><img src="../assets/images/amar-garh/g2.webp"><span>Sunset Views</span></div>
+        <div class="discover-slide"><img src="../assets/images/amar-garh/g3.webp"><span>Grand Courtyard</span></div>
+        <div class="discover-slide"><img src="../assets/images/amar-garh/g4.webp"><span>Infinity Pool</span></div>
+        <div class="discover-slide"><img src="../assets/images/amar-garh/g5.webp"><span>Royal Suite</span></div>
+
+      </div>
+    </div>
+
+    <button class="discover-nav next">&#10095;</button>
+  </div>
+
+  <div class="discover-progress">
+    <div class="discover-progress-bar" id="discoverProgress"></div>
+  </div>
+
+</section>
+
+<!-- ================= ROOMS ================= -->
+<section id="accommodation" class="rooms-section">
+
+  <div class="rooms-header">
+    <span class="section-eyebrow">Rooms & Suites</span>
+    <h2>Royal spaces overlooking the Aravallis</h2>
+  </div>
+
+  <button class="room-nav prev" id="roomPrev">‹</button>
+  <button class="room-nav next" id="roomNext">›</button>
+
+  <div class="rooms-slider">
+    <div class="rooms-track" id="roomsTrack">
+
+      <div class="room-slide">
+        <div class="room-image">
+          <img src="../assets/images/amar-garh/deluxe.webp">
+        </div>
+        <div class="room-content">
+          <h3>Deluxe Room</h3>
+          <p>Spacious rooms with panoramic hill views and refined interiors.</p>
+          <ul class="room-meta">
+            <li>Valley View</li>
+            <li>2 Adults</li>
+          </ul>
+          <a href="#" class="room-btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="room-slide">
+        <div class="room-image">
+          <img src="../assets/images/amar-garh/suite.webp">
+        </div>
+        <div class="room-content">
+          <h3>Royal Suite</h3>
+          <p>Expansive suites with private terraces and panoramic vistas.</p>
+          <ul class="room-meta">
+            <li>Panoramic View</li>
+            <li>2–4 Adults</li>
+          </ul>
+          <a href="#" class="room-btn">View Details</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="rooms-progress">
+    <div class="rooms-progress-bar" id="roomsProgressBar"></div>
+  </div>
+
+</section>
+
+<!-- ================= GETTING HERE ================= -->
+<section id="getting-here" class="hotel-location-info">
+  <h2>Getting here</h2>
+  <p>
+    Located 45 minutes from Maharana Pratap Airport,
+    offering elevated access to Udaipur’s lakes and heritage sites.
+  </p>
+
+  <div class="aman-map-wrapper">
+    <div id="amanMap"></div>
+
+    <div class="aman-map-info">
+      <div>
+        <strong>Address</strong><br>
+        Amar Garh Palace, Udaipur<br>
+        Rajasthan, India
+      </div>
+
+      <div>
+        <strong>Airport</strong><br>
+        Maharana Pratap Airport (45 mins)
+      </div>
+
+      <a href="https://www.google.com/maps?q=Amar+Garh+Udaipur"
+         target="_blank"
+         class="aman-directions">
+         Get directions
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bayan-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>BAYAN</h3>
+      <p>Thoughtful hospitality rooted in heritage and calm luxury.</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© Bayan Hotels. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/subnav-scroll.js"></script>
+<script src="../assets/js/innerpages-gallery.js"></script>
+<script src="../assets/js/map.js"></script>
+<script src="../assets/js/roomscategories.js"></script>
+
+</body>
+</html>

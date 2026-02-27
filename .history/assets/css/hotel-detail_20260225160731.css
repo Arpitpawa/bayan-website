@@ -1,0 +1,2381 @@
+body.hotel-page {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f6f2ea;
+  color: #111;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* HERO */
+.hotel-hero img {
+  height: 90vh;
+  object-fit: cover;
+}
+
+/* INTRO */
+.hotel-intro {
+  max-width: 760px;
+  margin: 120px auto;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.hotel-location {
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.hotel-intro h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 46px;
+  font-weight: 400;
+  margin: 16px 0 28px;
+}
+
+.hotel-tagline {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.hotel-description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* IMAGE STRIP */
+.hotel-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 0 80px 140px;
+}
+
+.hotel-gallery img {
+  height: 260px;
+  object-fit: cover;
+}
+
+/* FEATURE IMAGE */
+.hotel-feature img {
+  height: 75vh;
+  object-fit: cover;
+  margin-bottom: 140px;
+}
+
+/* CONTENT */
+.hotel-content {
+  max-width: 720px;
+  margin: 0 auto 160px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.section-eyebrow {
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.hotel-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin: 18px 0 28px;
+}
+
+.hotel-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* EDITORIAL GRID */
+.hotel-editorial {
+  max-width: 1400px;
+  margin: 0 auto 180px;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+
+.editorial-item img {
+  height: 260px;
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+
+.editorial-item h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.editorial-item p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* GETTING HERE */
+.hotel-location-info {
+  max-width: 760px;
+  margin: 0 auto 180px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.hotel-location-info h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.map-placeholder {
+  height: 260px;
+  background: #e5e5e5;
+  margin-top: 40px;
+}
+
+/* NEARBY */
+.nearby-hotels {
+  max-width: 1400px;
+  margin: 0 auto 200px;
+  padding: 0 80px;
+}
+
+.nearby-hotels h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.nearby-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  margin-top: 60px;
+}
+
+.nearby-item img {
+  height: 260px;
+  object-fit: cover;
+}
+
+.nearby-item span {
+  display: block;
+  margin-top: 12px;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .hotel-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hotel-editorial {
+    grid-template-columns: 1fr;
+  }
+
+  .nearby-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hotel-feature img {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 640px) {
+  .hotel-hero img {
+    height: 70vh;
+  }
+
+  .hotel-gallery {
+    grid-template-columns: 1fr;
+    padding: 0 24px 100px;
+  }
+
+  .hotel-editorial,
+  .nearby-hotels {
+    padding: 0 24px;
+  }
+
+  .hotel-intro h1 {
+    font-size: 36px;
+  }
+}
+
+/* -----------------------------------------
+   HERO IMAGE (CONSTRAINED LIKE AMAN)
+----------------------------------------- */
+.hotel-hero {
+  background: var(--aman-bg);
+  padding: 80px 0 0;
+}
+
+.hotel-hero img {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 70vh;
+  object-fit: cover;
+}
+.hotel-intro {
+  max-width: 720px;
+  margin: 60px auto 0px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+/* ===============================
+   AMAN STYLE SUB NAV
+================================ */
+
+.hotel-subnav {
+  background: #f6f1e9; /* Aman paper tone */
+  border-top: 1px solid rgba(0,0,0,0.12);
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+.subnav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ======================================
+   AMAN SUB NAV – FINAL & CLEAN
+====================================== */
+
+.hotel-subnav {
+  background: #f6f1e9;
+  border-top: 1px solid rgba(0,0,0,0.18);   /* TOP LINE */
+  border-bottom: 1px solid rgba(0,0,0,0.18);/* BOTTOM LINE */
+}
+
+.subnav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT BREADCRUMB */
+.subnav-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #1c1c1c;
+}
+
+.breadcrumb-separator {
+  font-size: 14px;
+  opacity: 0.6;
+  position: relative;
+  top: -1px;
+}
+
+/* NAV LINKS */
+.subnav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.subnav-links a {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #1c1c1c;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+/* SINGLE UNDERLINE (AMAN STYLE) */
+.subnav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #1c1c1c;
+  transition: width 0.35s ease;
+}
+
+.subnav-links a:hover::after {
+  width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .subnav-inner {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .subnav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* ======================================
+   HIDE SUB NAV ON MOBILE
+====================================== */
+@media (max-width: 900px) {
+  .hotel-subnav {
+    display: none;
+  }
+}
+/* ======================================
+   STICKY SUB NAV (DESKTOP)
+====================================== */
+.hotel-subnav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/* Active section underline */
+.subnav-links a.active::after {
+  width: 100%;
+}
+/* =========================================
+   AMAN HORIZONTAL GALLERY
+========================================= */
+
+.aman-gallery-wrap {
+  padding: 120px 0 80px;
+  background: #f6f2ea;
+}
+
+/* Scroll container */
+.aman-gallery {
+  display: flex;
+  gap: 80px;
+  overflow-x: auto;
+  padding: 0 80px 40px;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none; /* Firefox */
+}
+
+.aman-gallery::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+/* Base image styles */
+.aman-gallery figure {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.aman-gallery img {
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Aspect ratios (AMAN STYLE) */
+.img-vertical img {
+  width: 320px;
+}
+
+.img-square img {
+  width: 420px;
+}
+
+.img-horizontal img {
+  width: 620px;
+}
+
+/* Progress bar */
+.gallery-progress {
+  width: 260px;
+  height: 1px;
+  background: rgba(0,0,0,0.2);
+  margin: 0 auto;
+  position: relative;
+}
+
+.gallery-progress-bar {
+  height: 1px;
+  width: 0%;
+  background: #111;
+  display: block;
+  transition: width 0.2s linear;
+}
+
+/* Desktop only */
+@media (max-width: 900px) {
+  .aman-gallery-wrap {
+    display: none;
+  }
+}
+/* =========================================
+   AMAN EDITORIAL GALLERY (LOCKED)
+========================================= */
+
+.aman-gallery-section {
+  background: #f6f2ea;
+  padding: 140px 0 100px;
+}
+
+/* BASE ITEM */
+.gallery-item {
+  flex: 0 0 auto;
+  background: transparent;
+}
+
+/* IMAGE */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* SHAPES (AMAN ACCURATE) */
+.gallery-item.vertical {
+  width: 320px;
+  height: 460px;
+}
+
+.gallery-item.square {
+  width: 420px;
+  height: 420px;
+}
+
+.gallery-item.horizontal {
+  width: 620px;
+  height: 360px;
+}
+
+/* SLIDER */
+.aman-gallery-slider {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-track {
+  width: 260px;
+  height: 1px;
+  background: rgba(0,0,0,0.25);
+  position: relative;
+}
+
+.slider-handle {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 18px;
+  height: 9px;
+  background: #111;
+  cursor: pointer;
+}
+/* =========================================
+   AMAN MINIMAL SLIDER
+========================================= */
+
+.aman-gallery-slider {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-track {
+  width: 260px;
+  height: 1px;
+  background: rgba(0,0,0,0.18);
+  position: relative;
+  cursor: pointer;
+}
+
+/* moving indicator */
+.slider-indicator {
+  position: absolute;
+  top: -0.5px;
+  left: 0;
+  width: 42px;              /* THIS is the Aman magic */
+  height: 2px;
+  background: #111;
+  transition: left 0.12s linear;
+}
+/* =========================================
+   AMAN INTERACTIVE SLIDER
+========================================= */
+
+.aman-gallery-slider {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-track {
+  width: 260px;
+  height: 1px;
+  background: rgba(0,0,0,0.18);
+  position: relative;
+  cursor: pointer;
+}
+
+/* Light hover overlay */
+.slider-hover {
+  position: absolute;
+  top: -0.5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(0,0,0,0.08);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.slider-track:hover .slider-hover {
+  opacity: 1;
+}
+
+/* Moving dark indicator */
+.slider-indicator {
+  position: absolute;
+  top: -0.5px;
+  left: 0;
+  width: 42px;
+  height: 2px;
+  background: #111;
+  transition: left 0.15s linear;
+}
+/* =========================================
+   AMAN INTERACTIVE SLIDER
+========================================= */
+
+.aman-gallery-slider {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-track {
+  width: 260px;
+  height: 1px;
+  background: rgba(0,0,0,0.18);
+  position: relative;
+  cursor: pointer;
+}
+
+/* Light hover overlay */
+.slider-hover {
+  position: absolute;
+  top: -0.5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(0,0,0,0.08);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.slider-track:hover .slider-hover {
+  opacity: 1;
+}
+
+/* Moving dark indicator */
+.slider-indicator {
+  position: absolute;
+  top: -0.5px;
+  left: 0;
+  width: 42px;
+  height: 2px;
+  background: #111;
+  transition: left 0.15s linear;
+}
+/* =========================================
+   AMAN INTERACTIVE SLIDER
+========================================= */
+
+.aman-gallery-slider {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-track {
+  width: 260px;
+  height: 1px;
+  background: rgba(0,0,0,0.18);
+  position: relative;
+  cursor: pointer;
+}
+
+/* Light hover overlay */
+.slider-hover {
+  position: absolute;
+  top: -0.5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(0,0,0,0.08);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.slider-track:hover .slider-hover {
+  opacity: 1;
+}
+
+/* Moving dark indicator */
+.slider-indicator {
+  position: absolute;
+  top: -0.5px;
+  left: 0;
+  width: 42px;
+  height: 2px;
+  background: #111;
+  transition: left 0.15s linear;
+}
+/* ===============================
+   AMAN STYLE GALLERY SLIDER
+================================ */
+
+/* Desktop only */
+@media (max-width: 768px) {
+  .aman-slider-wrapper {
+    display: none;
+  }
+}
+
+.aman-slider-wrapper {
+  margin: 80px auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* MAIN LINE */
+.aman-slider-track {
+  position: relative;
+  width: 280px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.25); /* 👈 BASE LINE (VISIBLE) */
+  display: flex;
+  cursor: pointer;
+}
+
+/* SEGMENTS */
+.aman-segment {
+  flex: 1;
+  height: 3px;
+  background: transparent;
+  position: relative;
+}
+
+/* hover reveal (Aman feel) */
+.aman-slider-track:hover .aman-segment {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.aman-segment:hover {
+  background: rgba(0, 0, 0, 0.14);
+}
+
+/* ACTIVE INDICATOR */
+.aman-indicator {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 42px;
+  height: 3px;
+  background: #111;
+  pointer-events: none;
+  transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.aman-gallery-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.aman-gallery-track {
+  display: flex;
+  gap: 80px;
+  will-change: transform;
+}
+/* =========================================
+   AMAN LOOPED SEGMENTED SLIDER
+========================================= */
+
+.aman-slider-wrapper {
+  margin: 80px auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* BASE LINE */
+.aman-slider-track {
+  width: 280px;
+  height: 1px;
+  background: rgba(0,0,0,0.22);
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+
+/* MAIN SEGMENT */
+.aman-segment {
+  flex: 1;
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* SUB SEGMENTS */
+.aman-segment i {
+  flex: 1;
+  height: 3px;
+  background: rgba(0,0,0,0.08);
+}
+
+/* SHOW STRUCTURE ON HOVER */
+.aman-slider-track:hover .aman-segment {
+  opacity: 1;
+}
+
+.aman-segment:hover i {
+  background: rgba(0,0,0,0.14);
+}
+
+/* INDICATOR */
+.aman-indicator {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 42px;
+  height: 3px;
+  background: #111;
+  pointer-events: none;
+  transition: left 0.28s cubic-bezier(0.4,0,0.2,1);
+}
+/* =========================================
+   AMAN EDGE CONTINUITY EFFECT
+========================================= */
+
+.aman-gallery-viewport {
+  overflow: hidden;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
+/* allow peeking images */
+.aman-gallery-track {
+  margin-left: -140px;
+  margin-right: -140px;
+}
+/* =========================================
+   FEATURE IMAGE (AMAN CONSTRAINED)
+========================================= */
+
+.hotel-feature {
+  background: var(--aman-bg, #f6f1e9);
+  padding: 0 0 160px;
+}
+
+.hotel-feature img {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 70vh;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 768px) {
+  .hotel-feature img {
+    height: 55vh;
+  }
+}
+html, body {
+  overflow-x: hidden;
+}
+/* =========================================
+   AMAN GALLERY – NO HORIZONTAL SCROLL
+========================================= */
+
+.aman-gallery-section {
+  overflow: hidden;
+}
+
+.aman-gallery-viewport {
+  overflow: hidden;
+}
+
+.aman-gallery-track {
+  display: flex;
+  gap: 80px;
+  padding: 0 140px;
+  box-sizing: border-box;
+}
+body {
+  max-width: 100vw;
+}
+/* =========================================
+   AMAN GALLERY – MOBILE BEHAVIOUR
+========================================= */
+
+@media (max-width: 768px) {
+
+  /* Hide slider on mobile */
+  .aman-slider-wrapper {
+    display: none;
+  }
+
+  /* Mobile swipe gallery */
+  .aman-gallery-viewport {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .aman-gallery-track {
+    padding: 0 24px;
+    gap: 24px;
+  }
+
+  .gallery-item {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+  }
+
+  /* Image sizes simplified */
+  .gallery-item.vertical {
+    width: 70vw;
+    height: 80vw;
+  }
+
+  .gallery-item.square {
+    width: 70vw;
+    height: 70vw;
+  }
+
+  .gallery-item.horizontal {
+    width: 80vw;
+    height: 55vw;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (max-width: 768px) {
+  .hotel-subnav {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .hotel-subnav {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+
+  .aman-gallery-viewport::before,
+  .aman-gallery-viewport::after {
+    width: 60px;
+  }
+
+}
+/* ===============================
+   AMAN MAP STYLE
+================================ */
+.aman-map-wrapper {
+  max-width: 1200px;
+  margin: 0 auto 160px;
+  padding: 0 24px;
+}
+
+#amanMap {
+  height: 420px;
+  border-radius: 2px;
+  background: #eee;
+  margin-bottom: 40px;
+}
+
+/* Remove Leaflet default look */
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.leaflet-control-zoom a {
+  background: #fff !important;
+  color: #111 !important;
+  border: 1px solid rgba(0,0,0,0.15) !important;
+  border-radius: 2px !important;
+}
+
+.leaflet-container {
+  font-family: "Inter", sans-serif;
+}
+
+/* Info row */
+.aman-map-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+
+  font-size: 13px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.aman-map-info strong {
+  font-weight: 500;
+  color: #111;
+}
+
+.aman-directions {
+  align-self: start;
+  text-decoration: none;
+  color: #111;
+  font-size: 13px;
+  border-bottom: 1px solid #111;
+  width: fit-content;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .aman-map-info {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #amanMap {
+    height: 300px;
+  }
+}
+/* Aman-style map label */
+.aman-map-label {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: #1c1c1c;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  padding: 0;
+}
+/* ======================================
+   AMAN NEARBY RESORTS
+====================================== */
+
+.aman-nearby-resorts {
+  max-width: 1400px;
+  margin: 0 auto 200px;
+  padding: 0 80px;
+  text-align: center;
+}
+
+.aman-nearby-title {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 80px;
+}
+
+/* GRID */
+.aman-nearby-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+  align-items: start;
+}
+
+/* ITEM */
+.nearby-resort {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.nearby-resort img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+/* TEXT */
+.resort-location {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.resort-name {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* ACTIVE */
+.nearby-resort.active img {
+  opacity: 1;
+}
+
+/* INACTIVE (AMAN FADE) */
+.nearby-resort.inactive {
+  pointer-events: none;
+}
+
+.nearby-resort.inactive img {
+  opacity: 0.35;
+}
+
+.nearby-resort.inactive .resort-location,
+.nearby-resort.inactive .resort-name {
+  opacity: 0.4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .aman-nearby-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .aman-nearby-resorts {
+    padding: 0 24px;
+    margin-bottom: 140px;
+  }
+}
+/* ======================================
+   AMAN NEARBY RESORTS
+====================================== */
+
+.aman-nearby-resorts {
+  max-width: 1400px;
+  margin: 0 auto 200px;
+  padding: 0 80px;
+  text-align: center;
+  overflow: hidden; /* kills horizontal bar */
+}
+
+.aman-nearby-title {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 80px;
+}
+
+/* TRACK */
+.aman-nearby-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+
+/* ITEM */
+.nearby-resort {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.nearby-resort img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+/* TEXT */
+.resort-location {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.resort-name {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* FADED STATE */
+.nearby-resort.is-muted {
+  pointer-events: none;
+}
+
+.nearby-resort.is-muted img {
+  opacity: 0.35;
+}
+
+.nearby-resort.is-muted .resort-location,
+.nearby-resort.is-muted .resort-name {
+  opacity: 0.4;
+}
+
+/* REVEALED */
+.nearby-resort.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======================================
+   MOBILE – HORIZONTAL SCROLL (AMAN)
+====================================== */
+@media (max-width: 1024px) {
+
+  .aman-nearby-resorts {
+    padding: 0 24px;
+  }
+
+  .aman-nearby-track {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nearby-resort {
+    min-width: 75%;
+    scroll-snap-align: center;
+  }
+
+  .aman-nearby-track::-webkit-scrollbar {
+    display: none;
+  }
+}
+/* ======================================
+   NEARBY RESORTS – AMAN SLIDER
+====================================== */
+
+.aman-nearby-resorts {
+  max-width: 1400px;
+  margin: 0 auto 200px;
+  padding: 0 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.aman-nearby-title {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 80px;
+}
+
+/* VIEWPORT */
+.nearby-viewport {
+  overflow: hidden;
+}
+
+/* TRACK */
+.nearby-track {
+  display: flex;
+  gap: 80px;
+  transition: transform 0.8s ease;
+}
+
+/* ITEM */
+.nearby-item {
+  min-width: 420px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nearby-item img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+.resort-location {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #777;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.resort-name {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* MUTED */
+.nearby-item.is-muted {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* ======================================
+   SLIDER
+====================================== */
+
+.nearby-slider {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-track {
+  position: relative;
+  width: 260px;
+  height: 1px;
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.slider-segment {
+  width: 40px;
+  height: 1px;
+  background: transparent;
+  position: relative;
+}
+
+.slider-segment::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+}
+
+.slider-segment:hover {
+  background: rgba(0,0,0,0.4);
+}
+
+/* INDICATOR */
+.slider-indicator {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #111;
+  transition: left 0.6s ease;
+}
+
+/* ======================================
+   MOBILE
+====================================== */
+@media (max-width: 1024px) {
+
+  .aman-nearby-resorts {
+    padding: 0 24px;
+  }
+
+  .nearby-track {
+    gap: 40px;
+  }
+
+  .nearby-item {
+    min-width: 80%;
+  }
+}
+/* ======================================
+   NEARBY RESORTS – AMAN SIMPLE
+====================================== */
+
+.aman-nearby-resorts {
+  max-width: 1400px;
+  margin: 0 auto 200px;
+  padding: 0 80px;
+  text-align: center;
+}
+
+.aman-nearby-title {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 80px;
+}
+
+.nearby-viewport {
+  overflow: hidden;
+}
+
+.nearby-track {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.nearby-item {
+  max-width: 420px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nearby-item img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  margin-bottom: 24px;
+  transition: transform 0.6s ease;
+}
+
+.nearby-item:hover img {
+  transform: scale(1.02);
+}
+
+.resort-location {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #777;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.resort-name {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* MOBILE */
+@media (max-width: 1024px) {
+  .aman-nearby-resorts {
+    padding: 0 24px;
+  }
+
+  .nearby-track {
+    gap: 40px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .nearby-item {
+    min-width: 80%;
+    scroll-snap-align: center;
+  }
+}
+/* ======================================
+   AMAN-STYLE STACKED STICKY SUBNAV
+====================================== */
+
+.hotel-subnav {
+  position: sticky;
+  top: 76px; /* 👈 SAME AS HEADER HEIGHT */
+  z-index: 1100;
+
+  background: #f6f1e9;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+.hotel-hero {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.aman-progress {
+  width: 300px;
+  height: 1px;
+  background: rgba(0,0,0,0.2);
+  margin: 60px auto 0;
+  position: relative;
+}
+
+.aman-progress-bar {
+  height: 1px;
+  width: 0%;
+  background: #000;
+  transition: width 0.3s ease;
+}
+/* =========================================
+   AMAN CENTERED EDITORIAL GALLERY
+========================================= */
+
+.aman-gallery-section {
+  background: #f6f2ea;
+  padding: 10px 0 100px;
+  overflow: hidden;
+}
+
+.aman-gallery-container {
+  position: relative;
+}
+
+.aman-gallery-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.aman-gallery-track {
+  display: flex;
+  align-items: center;
+  
+  transition: transform 1.4s cubic-bezier(0.16,1,0.3,1);
+}
+
+/* Gallery items */
+.gallery-item {
+  flex: 0 0 auto;
+  opacity: 0.4;
+  transform: scale(0.92);
+  transition: all 1.4s cubic-bezier(0.16,1,0.3,1);
+}
+
+/* Active */
+.gallery-item.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Image sizes */
+.gallery-item.vertical img {
+  width: 360px;
+}
+
+.gallery-item.square img {
+  width: 460px;
+}
+
+.gallery-item.horizontal img {
+  width: 720px;
+}
+/* =========================================
+   SIX SENSES STYLE CURSOR
+========================================= */
+
+.aman-gallery-viewport {
+  cursor: default;
+}
+
+.aman-gallery-viewport.edge-left {
+  cursor: url("data:image/svg+xml;utf8,\
+  <svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'>\
+  <path d='M15 18l-6-6 6-6'/>\
+  </svg>") 20 20, auto;
+}
+
+.aman-gallery-viewport.edge-right {
+  cursor: url("data:image/svg+xml;utf8,\
+  <svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'>\
+  <path d='M9 6l6 6-6 6'/>\
+  </svg>") 20 20, auto;
+}
+
+
+/* =========================================
+   AMAN EXACT PROPORTION SYSTEM
+========================================= */
+
+.gallery-item {
+  flex: 0 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Vertical (dominant tall) */
+.gallery-item.vertical {
+  height: 560px;
+  width: 420px;
+}
+
+/* Square */
+.gallery-item.square {
+  height: 480px;
+  width: 480px;
+}
+
+/* Horizontal (shorter elegant) */
+.gallery-item.horizontal {
+  height: 420px;
+  width: 720px;
+}
+
+/* Image fit */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aman-gallery-viewport {
+  overflow: hidden;
+  padding: 120px 0;
+}
+.gallery-item {
+  opacity: 0.45;
+  transform: scale(0.94);
+  transition: all 1.2s cubic-bezier(0.16,1,0.3,1);
+}
+
+.gallery-item.active {
+  opacity: 1;
+  transform: scale(1);
+}
+.gallery-item.vertical {
+  height: 600px;
+  width: 450px;
+}
+/* ===== BASE ===== */
+.gallery-item {
+  flex: 0 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== VERTICAL (Dominant) ===== */
+.gallery-item.vertical {
+  height: 620px;
+  width: 460px;
+}
+
+/* ===== SQUARE ===== */
+.gallery-item.square {
+  height: 420px;
+  width: 520px;
+}
+
+/* ===== HORIZONTAL (Clearly Shorter) ===== */
+.gallery-item.horizontal {
+  height: 350px;
+  width: 760px;
+}
+
+
+/* Image Fit */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.aman-gallery-track {
+  display: flex;
+  align-items: center;
+  gap: 1px;   /* 🔥 Perfect balance */
+}
+
+.lux-popup {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 340px;
+  background: #f6f1ea;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.6s ease;
+  z-index: 9999;
+}
+
+.lux-popup.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.lux-popup-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+header {
+    padding: 0px 0px; /* reduce this */
+}
+.sub-nav {
+    padding: 10px 0;  /* reduce vertical spacing */
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.sub-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero {
+    margin-top: 0;
+}
+/* =========================================
+   INTRO – AMAN ELEGANT SINGLE PARAGRAPH
+========================================= */
+
+.hotel-intro {
+  max-width: 680px;
+  margin: 70px auto 10px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.hotel-location {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 14px;
+}
+
+.hotel-intro h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 400;
+  margin: 0 0 20px;
+  line-height: 1.15;
+}
+
+.hotel-intro-text {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #444;
+  margin: 0;
+}
+/* =========================================
+   ROOMS SLIDER – LUXURY MINIMAL
+========================================= */
+
+.rooms-section {
+  position: relative;
+  max-width: 1200px;
+  margin: 0px auto 40px;  
+  padding: 0 24px;
+}
+
+.rooms-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.rooms-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-top: 16px;
+}
+
+.rooms-slider {
+  overflow: hidden;
+}
+
+.rooms-track {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.16,1,0.3,1);
+}
+
+.room-slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.room-image img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+}
+
+.room-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.room-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  color: #555;
+}
+
+.room-meta {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.room-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid #111;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+.room-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* ===== Minimal White Space Arrows ===== */
+
+.room-nav {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 32px;
+  font-weight: 300;
+  cursor: pointer;
+  color: #111;
+  z-index: 50;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.room-nav:hover {
+  opacity: 0.6;
+  transform: translateY(-50%) scale(1.15);
+}
+
+.room-nav.prev {
+  left: 5vw;
+}
+
+.room-nav.next {
+  right: 5vw;
+}
+
+/* ===== Mobile ===== */
+
+@media (max-width: 900px) {
+
+  .room-slide {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .room-image img {
+    height: 300px;
+  }
+
+  .room-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .room-nav {
+    display: none;
+  }
+}
+  /* =========================================
+   ROOMS PROGRESS LINE
+========================================= */
+
+.rooms-progress {
+  width: 300px;
+  height: 1px;
+  background: rgba(0,0,0,0.2);
+  margin: 60px auto 0;
+  position: relative;
+}
+
+.rooms-progress-bar {
+  height: 1px;
+  width: 0%;
+  background: #111;
+  transition: width 0.6s ease;
+}
+  /* ================= CELEBRATIONS SECTION ================= */
+
+.hotel-celebrations {
+  padding: 120px 8%;
+  background: #f6f4ef;
+}
+
+.celebration-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 80px;
+}
+
+.celebration-intro h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  margin: 20px 0;
+}
+
+.celebration-intro p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* FEATURE */
+
+.celebration-feature {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.celebration-image img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+.celebration-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin: 15px 0;
+}
+
+.venue-capacity {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.celebration-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  border: 1px solid #1a1a1a;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+}
+
+.celebration-btn:hover {
+  background: #1a1a1a;
+  color: white;
+}
+
+/* LIST */
+
+.celebration-list {
+  border-top: 1px solid #ddd;
+}
+
+.celebration-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .celebration-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .celebration-image img {
+    height: 320px;
+  }
+
+  .celebration-row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+}
+  /* ================= CELEBRATIONS SECTION ================= */
+
+.venue-section {
+  padding: 120px 8%;
+  background: #f6f4ef;
+}
+
+.venue-heading {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  margin-bottom: 70px;
+}
+
+/* ROW */
+
+.venue-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr auto;
+  padding: 28px 0;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+
+.venue-name {
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.venue-capacity {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #777;
+}
+
+.venue-toggle {
+  background: none;
+  border: none;
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #a67c52;
+  transition: 0.3s;
+}
+
+.venue-toggle:hover {
+  color: #000;
+}
+
+/* EXPAND */
+
+.venue-expand {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease, padding 0.5s ease;
+}
+
+.venue-item.active .venue-expand {
+  max-height: 900px;
+  padding: 60px 0;
+}
+
+.venue-expand-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.venue-image img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+.venue-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.venue-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.venue-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  border: 1px solid #1a1a1a;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+  transition: 0.3s;
+}
+
+.venue-btn:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .venue-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .venue-expand-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .venue-image img {
+    height: 300px;
+  }
+
+}
+  /* ===== Reduce gap before Event Spaces on Mobile ===== */
+@media (max-width: 768px) {
+
+  /* Reduce top padding of venue section */
+  .venue-section {
+    padding-top:0px !important;
+  }
+
+  /* Reduce bottom spacing of experiences section */
+  .hotel-editorial {
+    padding-bottom: -230px !important;
+  }
+
+  /* Reduce heading margin */
+  .venue-heading {
+    margin-bottom: 0px !important;
+  }
+
+}
+  /* ===== Reduce spacing between Experiences & Event Spaces (Desktop) ===== */
+
+.hotel-editorial {
+  padding-bottom: 0px;   /* was probably 120px+ */
+}
+
+.venue-section {
+  padding-top: 0px;      /* reduce from 120px */
+}
+
+.venue-heading {
+  margin-bottom: 30px;    /* reduce heading gap */
+}
+  /* =========================================
+   UNIFORM EDITORIAL GALLERY
+========================================= */
+
+.gallery-item {
+  flex: 0 0 auto;
+  width: 460px;
+  height: 620px;
+  overflow: hidden;
+  position: relative;
+
+  opacity: 0.4;
+  transform: scale(0.94);
+  transition: all 1.2s cubic-bezier(0.16,1,0.3,1);
+}
+
+.gallery-item.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* spacing */
+.aman-gallery-track {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+  /* =====================================
+   DISCOVER SECTION
+===================================== */
+
+.discover-gallery {
+  background: #f6f2ea;
+  padding: 140px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Header */
+.discover-header {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  padding: 0 24px;
+}
+
+.discover-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #777;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.discover-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.discover-header p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Slider */
+.discover-slider {
+  overflow: hidden;
+}
+
+.discover-track {
+  display: flex;
+  gap: 40px;
+  transition: transform 1.2s cubic-bezier(0.16,1,0.3,1);
+}
+
+/* Slides */
+.discover-slide {
+  min-width: 420px;
+  height: 560px;
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.discover-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.4s ease;
+}
+
+.discover-slide:hover img {
+  transform: scale(1.05);
+}
+
+/* Caption */
+.discover-caption {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+/* Dark overlay */
+.discover-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 60%);
+}
+  /* ==============================
+   DISCOVER LUXURY SLIDER
+============================== */
+
+.discover-gallery {
+  background: #f6f2ea;
+  padding: 160px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Header */
+.discover-header {
+  max-width: 900px;
+  margin: 0 auto 100px;
+  padding: 0 24px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.2s ease;
+}
+
+.discover-header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.discover-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #777;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.discover-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 44px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.discover-header p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Slider */
+.discover-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.discover-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.discover-track {
+  display: flex;
+  gap: 60px;
+  transition: transform 1.2s cubic-bezier(0.16,1,0.3,1);
+}
+
+.discover-slide {
+  flex: 0 0 auto;
+  width: 420px;
+  height: 560px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0.4;
+  transform: scale(0.9);
+  transition: all 1.2s cubic-bezier(0.16,1,0.3,1);
+}
+
+.discover-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.discover-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Caption */
+.discover-slide span {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  color: white;
+  z-index: 2;
+}
+
+.discover-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 60%);
+}
+
+/* Arrows */
+.discover-nav {
+  background: none;
+  border: none;
+  font-size: 34px;
+  cursor: pointer;
+  padding: 0 40px;
+  color: #111;
+  transition: 0.3s;
+}
+
+.discover-nav:hover {
+  opacity: 0.5;
+}
+
+/* Progress */
+.discover-progress {
+  width: 300px;
+  height: 1px;
+  background: rgba(0,0,0,0.2);
+  margin: 80px auto 0;
+  position: relative;
+}
+
+.discover-progress-bar {
+  height: 1px;
+  width: 0%;
+  background: #111;
+  transition: width 0.6s ease;
+}
+  .discover-gallery {
+  background: #f6f2ea;
+  padding: 0px 0 0px; /* 👈 reduced top spacing */
+  text-align: center;
+  overflow: hidden;
+}
+  .hotel-intro {
+  margin-bottom: 0;
+}
+  .aman-gallery-viewport {
+  overflow: hidden;
+  padding: 0;
+}
+  /* ======================================
+   INTRO + DISCOVER SECTION
+====================================== */
+
+.hotel-intro-discover {
+  background: #f6f2ea;
+  padding: 0px 0 0px;
+  text-align: center;
+}
+
+/* Intro block */
+.hotel-intro-block {
+  max-width: 760px;
+  margin: 0 auto 0px;
+  padding: 0 24px;
+}
+
+/* Discover header spacing */
+.hotel-intro-discover .discover-header {
+  max-width: 900px;
+  margin: 0 auto 0px;
+  padding: 0 24px;
+}

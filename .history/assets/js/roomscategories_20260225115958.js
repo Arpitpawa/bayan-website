@@ -1,0 +1,34 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+  const track = document.getElementById("roomsTrack");
+  const slides = document.querySelectorAll(".room-slide");
+  const prevBtn = document.getElementById("roomPrev");
+  const nextBtn = document.getElementById("roomNext");
+
+  if (!track || slides.length === 0) return;
+
+  let currentIndex = 0;
+
+  function updateSlider() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[currentIndex].classList.add("active");
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlider();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlider();
+    });
+  }
+
+  updateSlider();
+});

@@ -1,0 +1,42 @@
+.mice-hero {
+  padding: 60px 40px 0;
+}
+
+.mice-hero-inner {
+  position: relative;
+  max-width: 1400px;
+  margin: auto;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.mice-hero-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mice-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.mice-overlay h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  font-weight: 400;
+  max-width: 800px;
+}
+
+.mice-overlay span {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  margin-top: 15px;
+}
