@@ -1,0 +1,984 @@
+/* ===============================
+   BAYAN – ALL HOTELS PAGE
+   Aman-style editorial layout
+   =============================== */
+
+/* PAGE RESET (LOCAL ONLY) */
+.hotels-page,
+.hotels-page * {
+  box-sizing: border-box;
+}
+
+/* REMOVE DEFAULT LINK STYLES (ONLY FOR THIS PAGE) */
+.hotels-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===============================
+   HEADER SPACING (USES EXISTING HEADER)
+   =============================== */
+.hotels-page {
+  background: #ffffff;
+}
+
+/* ===============================
+   INTRO SECTION
+   =============================== */
+.hotels-intro {
+  max-width: 720px;
+  margin: 120px auto 100px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.hotels-intro h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.hotels-intro p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* ===============================
+   HOTELS GRID
+   =============================== */
+.hotels-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 90px 60px;
+}
+
+/* HOTEL CARD */
+.hotel-card {
+  display: block;
+}
+
+/* IMAGE */
+.hotel-image {
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.hotel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+.hotel-card:hover img {
+  opacity: 0.9;
+}
+
+/* TEXT */
+.hotel-info {
+  margin-top: 18px;
+}
+
+.hotel-location {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.hotel-info h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+
+.hotel-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  max-width: 90%;
+}
+
+/* ===============================
+   LOAD MORE
+   =============================== */
+.load-more {
+  text-align: center;
+  margin: 100px 0 140px;
+}
+
+.load-more button {
+  background: transparent;
+  border: 1px solid #cfcfcf;
+  padding: 14px 46px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.load-more button:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* ===============================
+   EDITORIAL STRIP (THE BAYAN WAY)
+   =============================== */
+.editorial-strip {
+  max-width: 1400px;
+  margin: 0 auto 160px;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.editorial-text span {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.editorial-text h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  font-weight: 400;
+  margin: 14px 0 26px;
+}
+
+.editorial-text a {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+
+/* IMAGE */
+.editorial-image {
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+}
+
+.editorial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width: 1200px) {
+  .hotels-grid {
+    padding: 0 48px;
+    gap: 70px 40px;
+  }
+
+  .editorial-strip {
+    padding: 0 48px;
+    gap: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hotels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .editorial-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .editorial-image {
+    height: 380px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hotels-intro {
+    margin: 90px auto 70px;
+  }
+
+  .hotels-intro h2 {
+    font-size: 34px;
+  }
+
+  .hotels-grid {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+  }
+
+  .editorial-strip {
+    padding: 0 24px;
+    gap: 50px;
+  }
+
+  .editorial-image {
+    height: 300px;
+  }
+}
+/* PAGE WRAPPER */
+.hotels-page {
+  background: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+/* RESET LINKS */
+.hotels-page a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* INTRO */
+.hotels-intro {
+  max-width: 720px;
+  margin: 120px auto 90px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.hotels-intro h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.hotels-intro p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* FILTERS */
+.hotel-filters {
+  max-width: 1400px;
+  margin: 0 68px 60px;
+  padding: 0 80px;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #777;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.filter-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.filter-btn.active {
+  color: #111;
+}
+
+.filter-btn.active::after {
+  width: 100%;
+}
+
+/* GRID */
+.hotels-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 80px 160px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 90px 60px;
+}
+
+/* CARD */
+.hotel-image {
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.hotel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hotel-info {
+  margin-top: 18px;
+}
+
+.hotel-location {
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.hotel-info h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 6px 0 8px;
+}
+
+.hotel-info p {
+  font-size: 14px;
+  color: #666;
+  max-width: 90%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .hotels-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 48px 140px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hotels-grid {
+    grid-template-columns: 1fr;
+    padding: 0 24px 120px;
+  }
+
+  .hotels-intro h2 {
+    font-size: 34px;
+  }
+}
+/* SORT */
+.hotel-sort {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 120px;
+}
+
+.sort-btn {
+  background: none;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  color: #777;
+  position: relative;
+  padding-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.sort-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.sort-btn.active {
+  color: #111;
+}
+
+.sort-btn.active::after {
+  width: 100%;
+}
+/* CONTROLS WRAPPER */
+.hotel-controls {
+  max-width: 1400px;
+  margin: 0 auto 120px;
+  padding: 0 80px;
+  position: relative;
+}
+
+/* THIN DIVIDER LINE */
+.controls-line {
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+}
+
+/* SORT DROPDOWN */
+.sort-dropdown {
+  position: absolute;
+  right: 80px;
+  top: -14px;
+  background: #fff;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-dropdown label {
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #777;
+}
+
+/* SELECT STYLE (AMAN CLEAN) */
+.sort-dropdown select {
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  color: #111;
+  cursor: pointer;
+  appearance: none;
+  padding-right: 18px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M0 0 L5 6 L10 0' fill='none' stroke='black' stroke-width='1.2'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.sort-dropdown select:focus {
+  outline: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .sort-dropdown {
+    right: 24px;
+  }
+
+  .hotel-controls {
+    padding: 0 24px;
+  }
+}
+/* ===============================
+   BAYAN EDITORIAL FEATURE SECTION
+   =============================== */
+
+.bayan-editorial {
+  max-width: 1400px;
+  margin: 160px auto;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 120px;
+  align-items: stretch;
+}
+
+/* TEXT SIDE */
+.editorial-content {
+  background: #ffffff;
+  padding: 80px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.editorial-eyebrow {
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 18px;
+}
+
+.editorial-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+
+.editorial-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 22px;
+  max-width: 420px;
+}
+
+.editorial-link {
+  font-size: 14px;
+  margin-top: 12px;
+  align-self: flex-start;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 3px;
+}
+
+/* IMAGE SIDE */
+.editorial-media {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.editorial-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+@media (max-width: 1024px) {
+  .bayan-editorial {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .editorial-content {
+    padding: 60px 48px;
+  }
+
+  .editorial-content p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .bayan-editorial {
+    margin: 120px auto;
+    padding: 0 24px;
+  }
+
+  .editorial-content {
+    padding: 48px 32px;
+  }
+
+  .editorial-content h3 {
+    font-size: 28px;
+  }
+}
+body.aman-hotel {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f6f2ea;
+  color: #111;
+}
+
+/* HERO */
+.aman-hero img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+}
+
+/* INTRO */
+.aman-intro {
+  max-width: 760px;
+  margin: 120px auto;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.intro-eyebrow {
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.aman-intro h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 46px;
+  font-weight: 400;
+  margin: 16px 0 28px;
+}
+
+.intro-text {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.intro-text.small {
+  font-size: 15px;
+  color: #555;
+}
+
+/* GALLERY STRIP */
+.aman-gallery-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 0 80px 140px;
+}
+
+.aman-gallery-strip img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* FEATURE */
+.aman-feature img {
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+  margin-bottom: 140px;
+}
+
+/* CONTENT */
+.aman-content {
+  max-width: 720px;
+  margin: 0 auto 160px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.section-eyebrow {
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.aman-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin: 18px 0 28px;
+}
+
+/* EDITORIAL GRID */
+.aman-editorial-grid {
+  max-width: 1400px;
+  margin: 0 auto 180px;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+
+.aman-editorial-grid img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+
+.aman-editorial-grid h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.aman-editorial-grid p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* LOCATION */
+.aman-location {
+  max-width: 760px;
+  margin: 0 auto 180px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.map-placeholder {
+  height: 260px;
+  background: #e5e5e5;
+  margin-top: 40px;
+}
+
+/* NEARBY */
+.aman-nearby {
+  max-width: 1400px;
+  margin: 0 auto 200px;
+  padding: 0 80px;
+}
+
+.nearby-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  margin-top: 60px;
+}
+
+.nearby-grid img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.nearby-grid span {
+  display: block;
+  margin-top: 12px;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .aman-gallery-strip,
+  .aman-editorial-grid,
+  .nearby-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aman-feature img {
+    height: 60vh;
+  }
+}
+.hotels-intro {
+  margin: 80px auto 50px;
+}
+.hotel-filters {
+  margin-bottom: 30px;
+}
+.hotel-controls {
+  margin: 0 auto 60px;
+}
+.hotel-filters {
+  justify-content: flex-start;
+  overflow-x: auto;
+  padding: 0 24px;
+  gap: 24px;
+  margin-bottom: 40px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.hotel-filters::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+.filter-btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-size: 13px;
+}
+@media (max-width: 640px) {
+  .hotel-controls {
+    display: none;
+  }
+  /* Reduce space between properties and editorial (mobile) */
+
+.hotels-grid {
+  padding: 0 24px 40px;
+}
+
+.bayan-editorial {
+  margin: 40px auto;
+}
+/* Reduce space between property cards on mobile */
+
+.hotels-grid {
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+}
+@media (max-width: 768px) {
+
+  /* FILTERS */
+  .hotel-filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 0 24px;
+    gap: 24px;
+    margin-bottom: 40px;
+    scrollbar-width: none;
+  }
+
+  .hotel-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 13px;
+  }
+
+  /* REMOVE SORT ON MOBILE */
+  .hotel-controls {
+    display: none;
+  }
+
+}
+.hotels-grid {
+  padding: 0 80px 0px;
+}
+.bayan-editorial {
+  margin: 80px auto;
+}
+@media (max-width: 640px) {
+
+  .hotels-grid {
+    padding: 0 16px 40px;
+  }
+
+}
+/* ====================================
+   INNER PAGE HERO (BAYAN SIGNATURE)
+==================================== */
+
+.inner-hero {
+  position: relative;
+  padding: 160px 20px 140px;
+  text-align: center;
+  background-color: #f6f2ea;
+  overflow: hidden;
+}
+
+.inner-hero {
+  padding: 160px 20px 140px;
+  text-align: center;
+  background:
+    url("/assets/images/textured1.jpg") center/cover no-repeat,
+    #f6f2ea;
+}
+
+.inner-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.inner-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+
+.inner-hero p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+}
+@media (max-width: 640px) {
+  .inner-hero {
+    padding: 120px 24px 100px;
+  }
+
+  .inner-hero h1 {
+    font-size: 36px;
+  }
+}
+.inner-hero {
+  padding: 160px 20px 140px;
+  text-align: center;
+
+  background:
+    linear-gradient(rgba(247,244,234,0.82), rgba(247,244,234,0.82)),
+    url("/assets/images/textured1.jpg") center/cover no-repeat;
+}
+.inner-hero h1 {
+  font-size: 58px;
+  font-weight: 500;
+  color: #3f4a3c;  /* muted olive heritage */
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+.inner-hero p {
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #7b8374; /* soft olive grey */
+}
+.inner-hero {
+  padding: 160px 20px 140px;
+  text-align: center;
+  background: url("/assets/images/textured1.jpg") center/cover no-repeat;
+}
+.inner-hero h1 {
+  font-size: 58px;
+  font-weight: 500;
+  color: #2e2a24;   /* deep warm charcoal */
+  margin-bottom: 24px;
+}
+.inner-hero p {
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #6b6258;   /* muted warm grey */
+}
+/* Outer wrapper gives page background */
+.inner-hero-outer {
+  background: #f6f2ea;   /* your main site bg */
+  padding: 40px 60px 0;  /* LEFT & RIGHT SPACE */
+}
+
+/* Actual textured block */
+.inner-hero {
+  background: url("/assets/images/textured1.jpg") center/cover no-repeat;
+  padding: 160px 20px 140px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+/* Content styling */
+.inner-hero h1 {
+  font-size: 56px;
+  color: #2e2a24;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.inner-hero p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #6b6258;
+}
+@media (max-width: 768px) {
+  .inner-hero-outer {
+    padding: 20px 20px 0;
+  }
+
+  .inner-hero {
+    padding: 120px 20px 100px;
+  }
+}
+.inner-hero {
+  min-height: 100vh;   /* Full screen height */
+  display: flex;
+  align-items: center; /* Vertical center */
+  justify-content: center; /* Horizontal center */
+  text-align: center;
+
+  background: url("/assets/images/textured1.jpg") center/cover no-repeat;
+  padding: 0 20px; /* Remove big vertical padding */
+}
+.inner-hero-outer {
+  background: #f6f2ea;
+  padding: 40px 20px 0;
+}
+.inner-hero {
+  transition: transform 0.4s ease;
+}
+.hotel-filters {
+  margin-top: 60px;
+}
+.inner-hero h1 {
+  font-size: 64px;
+}
+.hero-divider {
+  width: 60px;
+  height: 1px;
+  background: #c8c2b6;
+  margin: 60px auto 0;
+}
