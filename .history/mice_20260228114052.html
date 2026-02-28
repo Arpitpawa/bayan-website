@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MICE & Events | Bayan Group</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+<link rel="shortcut icon" href="../assets/favicon/favicon.ico">
+<link rel="manifest" href="../assets/favicon/site.webmanifest">
+
+  <!-- About Page CSS -->
+   <!-- Global CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/about.css" />
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/brand-skin.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+<style>
+
+/* ================= GLOBAL ================= */
+
+body{
+margin:0;
+font-family:"Inter",sans-serif;
+background:#f5f3ee;
+color:#1a1a1a;
+}
+
+h1,h2,h3{
+font-family:"Playfair Display",serif;
+font-weight:400;
+}
+
+.property-section{
+max-width:1100px;
+margin:auto;
+padding:120px 20px 40px;
+}
+
+.property-title{
+text-align:center;
+font-size:32px;
+margin-bottom:60px;
+}
+
+/* ================= VENUE ROW ================= */
+
+.venue-item{
+border-top:1px solid #ddd;
+}
+
+.venue-row{
+display:grid;
+grid-template-columns:2fr 1fr 1fr auto;
+align-items:center;
+padding:28px 0;
+}
+
+.venue-name{
+font-size:18px;
+}
+
+.venue-area,
+.venue-capacity{
+font-size:14px;
+color:#6f6f6f;
+}
+
+.venue-toggle{
+background:none;
+border:none;
+font-size:12px;
+letter-spacing:0.15em;
+text-transform:uppercase;
+cursor:pointer;
+}
+
+/* ================= EXPAND ================= */
+
+.venue-expand{
+max-height:0;
+overflow:hidden;
+transition:max-height 0.5s ease;
+}
+
+.venue-expand-inner{
+padding:30px 0 50px;
+}
+
+.venue-content h3{
+margin-bottom:10px;
+font-size:22px;
+}
+
+.venue-content p{
+font-size:14px;
+line-height:1.8;
+color:#6f6f6f;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+.venue-row{
+grid-template-columns:1fr;
+row-gap:8px;
+}
+}
+/* ================= HERO ================= */
+
+.mice-hero{
+padding:60px 40px 0;
+}
+
+.mice-hero-inner{
+position:relative;
+max-width:1400px;
+margin:auto;
+height:75vh;
+overflow:hidden;
+border-radius:4px;
+}
+
+.mice-hero-inner img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.mice-overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(
+  to bottom,
+  rgba(0,0,0,0.25),
+  rgba(0,0,0,0.55)
+);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:#fff;
+padding:0 20px;
+}
+
+.mice-eyebrow{
+font-size:11px;
+letter-spacing:0.35em;
+text-transform:uppercase;
+margin-bottom:20px;
+opacity:0.9;
+}
+
+.mice-overlay h1{
+font-size:44px;
+max-width:850px;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.mice-overlay p{
+max-width:650px;
+font-size:15px;
+line-height:1.8;
+opacity:0.9;
+}
+
+/* Add breathing space below hero */
+.mice-hero + .property-section{
+margin-top:120px;
+}
+
+/* Responsive */
+@media(max-width:900px){
+.mice-overlay h1{
+font-size:28px;
+}
+.mice-hero-inner{
+height:60vh;
+}
+}
+/* ================= CONTACT CTA ================= */
+
+.mice-contact{
+margin:160px 0;
+padding:0 20px;
+}
+
+.mice-contact-inner{
+max-width:900px;
+margin:auto;
+text-align:center;
+padding:80px 60px;
+background:#ebe7df;
+border-radius:6px;
+}
+
+.mice-contact h2{
+font-size:34px;
+margin-bottom:20px;
+}
+
+.mice-contact p{
+font-size:15px;
+line-height:1.8;
+color:#6f6f6f;
+max-width:650px;
+margin:0 auto 40px;
+}
+
+.mice-contact-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+/* Buttons */
+
+.mice-btn{
+display:inline-block;
+padding:14px 34px;
+font-size:12px;
+letter-spacing:0.15em;
+text-transform:uppercase;
+text-decoration:none;
+transition:0.3s;
+}
+
+.mice-btn.primary{
+background:#1a1a1a;
+color:#fff;
+}
+
+.mice-btn.primary:hover{
+background:#000;
+}
+
+.mice-btn.outline{
+border:1px solid #1a1a1a;
+color:#1a1a1a;
+}
+
+.mice-btn.outline:hover{
+background:#1a1a1a;
+color:#fff;
+}
+
+/* Responsive */
+@media(max-width:900px){
+.mice-contact-inner{
+padding:60px 30px;
+}
+.mice-contact h2{
+font-size:26px;
+}
+}
+</style>
+</head>
+
+<body>
+  <!-- ================= HEADER ================= -->
+    <header class="site-header">
+      <div class="nav-bar">
+        <!-- LEFT -->
+        <div class="nav-left">
+          <button class="menu-toggle" id="menuToggle">
+            <svg viewBox="0 0 24 10">
+              <line x1="0" y1="1" x2="24" y2="1"></line>
+              <line x1="0" y1="9" x2="24" y2="9"></line>
+            </svg>
+            <span>Menu</span>
+          </button>
+
+          
+        </div>
+
+        <!-- CENTER -->
+        <a href="index.html" class="logo">
+  <span class="logo-main">BAYAN</span>
+  <span class="logo-sub">GROUP OF HOTELS & RESORTS</span>
+</a>
+
+        <!-- RIGHT -->
+        <a
+  href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+  class="nav-cta"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span class="cta-desktop">BOOK NOW</span>
+  <span class="cta-mobile">RESERVE</span>
+</a>
+
+
+      </div>
+    </header>
+
+    <!-- ================= MENU OVERLAY ================= -->
+    <!-- ================= MENU OVERLAY ================= -->
+    <div class="menu-overlay" id="menuOverlay">
+      <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="menu-container">
+        <!-- NAV -->
+        <nav class="menu-nav">
+  <a href="index.html">Home</a>
+  <a href="hotels.html">Stays</a>
+  <a href="experiences.html">Experiences</a>
+  <a href="offers.html">Offers</a>
+  <a href="wellness.html">Wellness</a>
+  <a href="dining.html">Dining</a>
+  <a href="about.html">About Bayan</a>
+</nav>
+
+        <!-- DESTINATIONS -->
+        <div class="menu-destinations">
+          <span class="menu-eyebrow">Discover Bayan In</span>
+
+          <a href="hotels.html">Jaipur</a>
+          <a href="hotels.html">Udaipur</a>
+          <a href="hotels.html">Kumbhalgarh</a>
+          <a href="hotels.html">Sawai Madhopur</a>
+
+          <span class="coming">Pushkar — Coming Soon</span>
+          <span class="coming">Jodhpur — Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-spacer"></div>
+<!-- ================= HERO ================= -->
+
+<section class="mice-hero">
+  <div class="mice-hero-inner">
+    <img src="assets/images/mice/mice-hero.webp" alt="MICE at Bayan">
+
+    <div class="mice-overlay">
+      <span class="mice-eyebrow">MICE AT BAYAN GROUP</span>
+      <h1>Meetings, Incentives, Conferences & Grand Celebrations</h1>
+      <p>
+        Versatile event spaces across Rajasthan, designed for
+        unforgettable corporate gatherings and destination weddings.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- ================= THE JAI BAGH ================= -->
+
+<section class="property-section">
+<h2 class="property-title">The Jai Bagh</h2>
+
+<div class="venue-item">
+<div class="venue-row">
+<span class="venue-name">Conference Room</span>
+<span class="venue-area">5000 Sq Ft</span>
+<span class="venue-capacity">250 Pax</span>
+<button class="venue-toggle">Discover More</button>
+</div>
+<div class="venue-expand">
+<div class="venue-expand-inner">
+<div class="venue-content">
+<h3>Conference Room</h3>
+<p>
+A refined 5000 sq ft indoor venue ideal for executive meetings,
+corporate seminars and strategic conferences, accommodating up to 250 guests.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="venue-item">
+<div class="venue-row">
+<span class="venue-name">Central Courtyard</span>
+<span class="venue-area">2500 Sq Ft</span>
+<span class="venue-capacity">100–200 Pax</span>
+<button class="venue-toggle">Discover More</button>
+</div>
+<div class="venue-expand">
+<div class="venue-expand-inner">
+<div class="venue-content">
+<h3>Central Courtyard</h3>
+<p>
+An elegant open-air courtyard spanning 2500 sq ft,
+perfect for intimate celebrations and curated corporate gatherings.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="venue-item">
+<div class="venue-row">
+<span class="venue-name">Front Lawn</span>
+<span class="venue-area">20000 Sq Ft</span>
+<span class="venue-capacity">800–1000 Pax</span>
+<button class="venue-toggle">Discover More</button>
+</div>
+<div class="venue-expand">
+<div class="venue-expand-inner">
+<div class="venue-content">
+<h3>Front Lawn</h3>
+<p>
+A grand landscaped lawn offering 20000 sq ft of space,
+ideal for large-scale weddings and outdoor corporate celebrations.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="venue-item">
+<div class="venue-row">
+<span class="venue-name">Back Lawn</span>
+<span class="venue-area">25000 Sq Ft</span>
+<span class="venue-capacity">900–1100 Pax</span>
+<button class="venue-toggle">Discover More</button>
+</div>
+<div class="venue-expand">
+<div class="venue-expand-inner">
+<div class="venue-content">
+<h3>Back Lawn</h3>
+<p>
+A magnificent 25000 sq ft outdoor venue suited for
+destination weddings and grand gala events.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+
+<!-- ================= THE AMARGARH RESORT ================= -->
+
+<section class="property-section">
+<h2 class="property-title">The Amargarh Resort</h2>
+
+<div class="venue-item">
+<div class="venue-row">
+<span class="venue-name">Conference Room 1</span>
+<span class="venue-area">2000 Sq Ft</span>
+<span class="venue-capacity">100–150 Pax</span>
+<button class="venue-toggle">Discover More</button>
+</div>
+<div class="venue-expand">
+<div class="venue-expand-inner">
+<div class="venue-content">
+<h3>Conference Room 1</h3>
+<p>
+A 2000 sq ft indoor venue ideal for mid-scale meetings,
+corporate sessions and executive discussions.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="venue-item">
+<div class="venue-row">
+<span class="venue-name">Conference Room 2</span>
+<span class="venue-area">3500 Sq Ft</span>
+<span class="venue-capacity">150–500 Pax</span>
+<button class="venue-toggle">Discover More</button>
+</div>
+<div class="venue-expand">
+<div class="venue-expand-inner">
+<div class="venue-content">
+<h3>Conference Room 2</h3>
+<p>
+A spacious 3500 sq ft conference venue designed for
+large gatherings, exhibitions and corporate celebrations.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="venue-item">
+<div class="venue-row">
+<span class="venue-name">Lower Deck Lawn</span>
+<span class="venue-area">7000 Sq Ft</span>
+<span class="venue-capacity">1000 Pax</span>
+<button class="venue-toggle">Discover More</button>
+</div>
+<div class="venue-expand">
+<div class="venue-expand-inner">
+<div class="venue-content">
+<h3>Lower Deck Lawn</h3>
+<p>
+A landscaped 7000 sq ft lawn offering a charming outdoor setting
+for weddings and celebrations.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="venue-item">
+<div class="venue-row">
+<span class="venue-name">Upper Deck Lawn</span>
+<span class="venue-area">15000 Sq Ft</span>
+<span class="venue-capacity">2500 Pax</span>
+<button class="venue-toggle">Discover More</button>
+</div>
+<div class="venue-expand">
+<div class="venue-expand-inner">
+<div class="venue-content">
+<h3>Upper Deck Lawn</h3>
+<p>
+A magnificent 15000 sq ft lawn suited for grand-scale
+destination weddings and large events.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+
+<!-- ================= THE UDAI BAGH ================= -->
+
+<section class="property-section">
+<h2 class="property-title">The Udai Bagh Resort</h2>
+
+<div class="venue-item">
+<div class="venue-row">
+<span class="venue-name">New Banquet</span>
+<span class="venue-area">12000 Sq Ft</span>
+<span class="venue-capacity">800 Pax</span>
+<button class="venue-toggle">Discover More</button>
+</div>
+<div class="venue-expand">
+<div class="venue-expand-inner">
+<div class="venue-content">
+<h3>New Banquet</h3>
+<p>
+A 12000 sq ft grand banquet hall ideal for conferences,
+exhibitions and large-scale wedding receptions.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="venue-item">
+<div class="venue-row">
+<span class="venue-name">Durbar Pre Function + Conference Hall</span>
+<span class="venue-area">1200 + 4000 Sq Ft</span>
+<span class="venue-capacity">200–450 Pax</span>
+<button class="venue-toggle">Discover More</button>
+</div>
+<div class="venue-expand">
+<div class="venue-expand-inner">
+<div class="venue-content">
+<h3>Durbar Hall</h3>
+<p>
+A versatile venue combining pre-function space with a conference hall,
+perfect for structured corporate events and social celebrations.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+<section class="property-section">
+<h2 class="property-title">The Kumbha Bagh Resort</h2>
+
+<!-- Darbaar Conference Room -->
+<div class="venue-item">
+  <div class="venue-row">
+    <span class="venue-name">Darbaar Conference Room</span>
+    <span class="venue-area">2850 Sq Ft</span>
+    <span class="venue-capacity">Up to 200 Guests</span>
+    <button class="venue-toggle">Discover More</button>
+  </div>
+
+  <div class="venue-expand">
+    <div class="venue-expand-inner">
+      <div class="venue-content">
+        <h3>Darbaar Conference Room</h3>
+        <p>
+          A refined 2850 sq ft indoor venue designed for executive
+          meetings, corporate seminars and structured conferences.
+          Equipped for seamless presentations, it comfortably
+          accommodates up to 200 guests.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- The Bagh (Inside Lawn) -->
+<div class="venue-item">
+  <div class="venue-row">
+    <span class="venue-name">The Bagh (Inside Lawn)</span>
+    <span class="venue-area">7250 Sq Ft</span>
+    <span class="venue-capacity">Up to 500 Guests</span>
+    <button class="venue-toggle">Discover More</button>
+  </div>
+
+  <div class="venue-expand">
+    <div class="venue-expand-inner">
+      <div class="venue-content">
+        <h3>The Bagh (Inside Lawn)</h3>
+        <p>
+          Spanning 7250 sq ft, this landscaped indoor lawn offers
+          an elegant open-air ambience ideal for weddings, gala dinners
+          and social celebrations with a capacity of up to 500 guests.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+<section class="property-section">
+<h2 class="property-title">The Sawai Bagh</h2>
+
+<!-- Darbar Conference Room -->
+<div class="venue-item">
+  <div class="venue-row">
+    <span class="venue-name">Darbar Conference Room</span>
+    <span class="venue-area">3500 Sq Ft</span>
+    <span class="venue-capacity">Up to 150 Guests</span>
+    <button class="venue-toggle">Discover More</button>
+  </div>
+
+  <div class="venue-expand">
+    <div class="venue-expand-inner">
+      <div class="venue-content">
+        <h3>Darbar Conference Room</h3>
+        <p>
+          A 3500 sq ft indoor venue thoughtfully designed for
+          business meetings, strategy sessions and corporate gatherings.
+          The space comfortably hosts up to 150 guests.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Lawn -->
+<div class="venue-item">
+  <div class="venue-row">
+    <span class="venue-name">Main Lawn</span>
+    <span class="venue-area">10000 Sq Ft</span>
+    <span class="venue-capacity">600–700 Guests</span>
+    <button class="venue-toggle">Discover More</button>
+  </div>
+
+  <div class="venue-expand">
+    <div class="venue-expand-inner">
+      <div class="venue-content">
+        <h3>Main Lawn</h3>
+        <p>
+          Spanning 10000 sq ft, the Main Lawn provides a
+          picturesque outdoor setting for large-scale celebrations,
+          wedding ceremonies and gala evenings for up to 700 guests.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Back Lawn -->
+<div class="venue-item">
+  <div class="venue-row">
+    <span class="venue-name">Back Lawn</span>
+    <span class="venue-area">2500 Sq Ft</span>
+    <span class="venue-capacity">100–150 Guests</span>
+    <button class="venue-toggle">Discover More</button>
+  </div>
+
+  <div class="venue-expand">
+    <div class="venue-expand-inner">
+      <div class="venue-content">
+        <h3>Back Lawn</h3>
+        <p>
+          A more intimate 2500 sq ft outdoor venue ideal for
+          curated gatherings, private functions and networking events
+          for 100–150 guests.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+<!-- ================= CONTACT CTA ================= -->
+
+<section class="mice-contact">
+  <div class="mice-contact-inner">
+
+    <h2>Plan Your Next Event With Bayan</h2>
+
+    <p>
+      Whether it’s a corporate conference, incentive retreat,
+      destination wedding or grand celebration — our team is
+      ready to curate a seamless experience for you.
+    </p>
+
+    <div class="mice-contact-buttons">
+
+      <a href="contact.html" class="mice-btn primary">
+        Make an Enquiry
+      </a>
+
+      <a href="https://wa.me/917426257777"
+         target="_blank"
+         class="mice-btn outline">
+        WhatsApp Us
+      </a>
+
+    </div>
+
+  </div>
+</section>
+<footer class="bayan-footer">
+
+  <div class="footer-inner">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <h3>BAYAN</h3>
+      <p>
+        Thoughtful hospitality rooted in heritage,
+        culture and calm luxury experiences.
+      </p>
+    </div>
+
+    <!-- FOOTER LINKS -->
+    <div class="footer-links">
+
+      <div class="footer-col">
+        <span class="footer-title">Bayan</span>
+        <a href="about.html">About Bayan</a>
+        <a href="hotels.html">Stays</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="dining.html">Dining</a>
+        <a href="wellness.html">Wellness</a>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-title">Explore</span>
+        <a href="events-meetings.html">Events & Gatherings</a>
+        <a href="journal.html">Journal</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Careers</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-title">Get in Touch</span>
+        <p>
+          Rajasthan, India<br>
+          reservations@thebayanhotels.com<br>
+          +91 7426 257777
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <!-- FOOTER BOTTOM -->
+<div class="footer-bottom">
+
+  <div class="footer-bottom-left">
+    © Bayan Hotels. All rights reserved.
+  </div>
+
+  <div class="footer-bottom-center footer-social">
+    <a href="https://www.instagram.com/bayangroupofhotelsandresorts/" target="_blank">
+      <i data-lucide="instagram"></i>
+    </a>
+
+    <a href="https://www.facebook.com/TheBayanGroupofHotelsandResorts/" target="_blank">
+      <i data-lucide="facebook"></i>
+    </a>
+
+    <a href="https://x.com/BayanHotels" target="_blank">
+      <i data-lucide="twitter"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/company/thebayangroup/" target="_blank">
+      <i data-lucide="linkedin"></i>
+    </a>
+
+    <a href="mailto:crs@thebayanhotels.com">
+      <i data-lucide="mail"></i>
+    </a>
+  </div>
+
+  <div class="footer-bottom-right">
+   <a href="https://www.swiftbook.io/inst/#group?groupId=341NlfplxPrIg9W3WZzfdTQ5Njg=&JDRN=Y"
+       class="footer-check-btn"
+       target="_blank">
+       CHECK AVAILABILITY
+    </a>
+  </div>
+
+</div>
+</footer>
+<!-- ================= JS ================= -->
+ <script src="assets/js/main.js"></script>
+<script>
+document.querySelectorAll(".venue-toggle").forEach(button => {
+
+button.addEventListener("click", function () {
+
+const currentItem = this.closest(".venue-item");
+const expandSection = currentItem.querySelector(".venue-expand");
+
+// Close all others
+document.querySelectorAll(".venue-item").forEach(item => {
+if(item !== currentItem){
+item.classList.remove("active");
+const otherExpand = item.querySelector(".venue-expand");
+if(otherExpand){
+otherExpand.style.maxHeight = null;
+}
+item.querySelector(".venue-toggle").textContent = "Discover More";
+}
+});
+
+// Toggle current
+if(currentItem.classList.contains("active")){
+currentItem.classList.remove("active");
+expandSection.style.maxHeight = null;
+this.textContent = "Discover More";
+}else{
+currentItem.classList.add("active");
+expandSection.style.maxHeight = expandSection.scrollHeight + "px";
+this.textContent = "Close";
+}
+
+});
+
+});
+</script>
+<script>
+  const menuOverlay = document.getElementById("menuOverlay");
+  const menuToggle = document.getElementById("menuToggle");
+  const menuClose = document.getElementById("menuCloseBtn");
+
+  if (menuToggle && menuOverlay) {
+    menuToggle.addEventListener("click", () => {
+      menuOverlay.classList.add("active");
+      document.body.classList.add("menu-open");
+    });
+  }
+
+  if (menuClose) {
+    menuClose.addEventListener("click", closeMenu);
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+
+  menuOverlay?.addEventListener("click", (e) => {
+    if (e.target === menuOverlay) closeMenu();
+  });
+
+  function closeMenu() {
+    menuOverlay.classList.remove("active");
+    document.body.classList.remove("menu-open");
+  }
+
+  /* ACTIVE NAV LINK */
+  document.querySelectorAll(".menu-nav a").forEach((link) => {
+    if (window.location.href.includes(link.getAttribute("href"))) {
+      link.classList.add("active");
+    }
+  });
+</script>
+</body>
+</html>
