@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquiry | Bayan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/enquiry.css">
+</head>
+
+<body>
+
+<section class="enquiry-hero">
+  <h1>Plan Your Event With Bayan</h1>
+  <p>Luxury venues across Rajasthan for weddings, corporate events & celebrations.</p>
+</section>
+
+<section class="enquiry-section">
+
+  <div class="enquiry-image">
+    <img src="assets/images/jaibagh-jaipur2.webp" alt="">
+  </div>
+
+  <div class="enquiry-form">
+
+    <h2>Event Enquiry</h2>
+
+    <form id="enquiryForm"
+          action="https://formsubmit.co/crs@thebayanhotels.com"
+          method="POST">
+
+      <!-- Hidden fields -->
+      <input type="hidden" name="_subject" value="New Event Enquiry - Bayan">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="Name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="tel" name="Phone" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="Email">
+      </div>
+
+      <div class="form-group">
+        <label>Property</label>
+        <input type="text" id="property" name="Property" readonly>
+      </div>
+
+      <div class="form-group">
+        <label>Event Space</label>
+        <input type="text" id="space" name="Event Space" readonly>
+      </div>
+
+      <div class="form-group">
+        <label>Event Type</label>
+        <select id="eventType" name="Event Type">
+          <option>Wedding</option>
+          <option>Corporate</option>
+          <option>Private Party</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Guests</label>
+        <input type="number" name="Guests">
+      </div>
+
+      <div class="form-group">
+        <label>Event Date</label>
+        <input type="date" name="Event Date">
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <textarea name="Message"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Enquiry</button>
+
+    </form>
+
+  </div>
+<div class="success-popup" id="successPopup">
+  <div class="popup-box">
+    <h3>Thank You</h3>
+    <p>Your enquiry has been received.  
+    Our team will contact you shortly.</p>
+
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+</section>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+document.getElementById("property").value = params.get("property") || "";
+document.getElementById("space").value = params.get("space") || "";
+
+const type = params.get("type");
+if(type){
+  document.getElementById("eventType").value = type;
+}
+
+// FORM SUBMIT
+document.getElementById("enquiryForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const form = this;
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+  })
+  .then(() => {
+    document.getElementById("successPopup").style.display = "flex";
+    form.reset();
+
+    // keep auto-filled values
+    document.getElementById("property").value = params.get("property") || "";
+    document.getElementById("space").value = params.get("space") || "";
+  })
+  .catch(() => {
+    alert("Something went wrong. Please try again.");
+  });
+});
+
+function closePopup(){
+  document.getElementById("successPopup").style.display = "none";
+}
+</script>
+
+</body>
+</html>

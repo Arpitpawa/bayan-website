@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enquiry | Bayan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/enquiry.css">
+</head>
+
+<body>
+
+<!-- ================= HERO ================= -->
+<section class="enquiry-hero">
+  <span class="eyebrow">BAYAN EVENTS</span>
+  <h1>Plan your celebration with us</h1>
+  <p>
+    Share your details and our team will curate a refined experience tailored to your occasion.
+  </p>
+</section>
+
+<!-- ================= FORM ================= -->
+<section class="enquiry-form-section">
+
+  <form id="enquiryForm">
+
+    <!-- REQUEST TYPE -->
+    <div class="form-group">
+      <select id="eventType">
+        <option value="">Please choose your request</option>
+        <option>Wedding</option>
+        <option>Corporate Event</option>
+        <option>Private Celebration</option>
+      </select>
+    </div>
+
+    <!-- NAME -->
+    <div class="form-row">
+      <input type="text" id="name" placeholder="Full name" required>
+    </div>
+
+    <!-- PHONE -->
+    <div class="form-row">
+      <input type="tel" id="phone" placeholder="Phone number" required>
+    </div>
+
+    <!-- EMAIL -->
+    <div class="form-row">
+      <input type="email" id="email" placeholder="Email address">
+    </div>
+
+    <!-- AUTO FILLED -->
+    <div class="form-row">
+      <input type="text" id="property" placeholder="Property" readonly>
+    </div>
+
+    <div class="form-row">
+      <input type="text" id="space" placeholder="Event space" readonly>
+    </div>
+
+    <!-- MESSAGE -->
+    <div class="form-row">
+      <textarea id="message" placeholder="Tell us more"></textarea>
+    </div>
+
+    <!-- BUTTON -->
+    <button type="button" class="submit-btn" onclick="sendWhatsApp()">
+      Send Enquiry →
+    </button>
+
+  </form>
+
+</section>
+
+<!-- JS -->
+<script>
+
+/* AUTO FILL */
+const params = new URLSearchParams(window.location.search);
+document.getElementById("property").value = params.get("property") || "";
+document.getElementById("space").value = params.get("space") || "";
+
+/* WHATSAPP */
+function sendWhatsApp() {
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value;
+  const property = document.getElementById("property").value;
+  const space = document.getElementById("space").value;
+  const type = document.getElementById("eventType").value;
+  const message = document.getElementById("message").value;
+
+  if (!name || !phone) {
+    alert("Please fill Name and Phone");
+    return;
+  }
+
+  const text = `New Enquiry - Bayan
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+
+Property: ${property}
+Event Space: ${space}
+Event Type: ${type}
+
+Message:
+${message}`;
+
+  const whatsappURL = `https://wa.me/918306300609?text=${encodeURIComponent(text)}`;
+  window.open(whatsappURL, "_blank");
+}
+
+</script>
+
+</body>
+</html>

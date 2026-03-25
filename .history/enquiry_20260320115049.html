@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enquiry | Bayan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+/* BASE */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f8f5f0;
+  color: #1a1a1a;
+}
+
+/* HERO */
+.enquiry-hero {
+  max-width: 1100px;
+  margin: 120px auto 60px;
+  padding: 0 20px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+.enquiry-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin: 15px 0;
+}
+
+.enquiry-hero p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* WRAPPER */
+.enquiry-wrapper {
+  display: flex;
+  gap: 80px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px 100px;
+}
+
+/* LEFT */
+.enquiry-left {
+  flex: 2;
+}
+
+/* RIGHT */
+.enquiry-right {
+  flex: 1;
+  padding-top: 20px;
+}
+
+.enquiry-right h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.enquiry-right p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* CONTACT BLOCK */
+.contact-block {
+  margin-bottom: 25px;
+}
+
+.contact-block span {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #888;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-block a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+/* FORM */
+.form-group {
+  margin-bottom: 20px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-bottom: 1px solid #b89b5e;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+/* BUTTON */
+.submit-btn {
+  margin-top: 40px;
+  padding: 14px 28px;
+  border: 1px solid #1a1a1a;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .enquiry-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .enquiry-hero h1 {
+    font-size: 32px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="enquiry-hero">
+  <span class="eyebrow">BAYAN EVENTS</span>
+  <h1>Plan your celebration with us</h1>
+  <p>
+    Share your details and our team will curate a refined experience tailored to your occasion.
+  </p>
+</section>
+
+<!-- MAIN -->
+<section class="enquiry-wrapper">
+
+  <!-- LEFT FORM -->
+  <div class="enquiry-left">
+
+    <form id="enquiryForm">
+
+      <div class="form-group">
+        <select id="eventType">
+          <option value="">Please choose your request</option>
+          <option>Wedding</option>
+          <option>Corporate Event</option>
+          <option>Private Celebration</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Full name" required>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" id="phone" placeholder="Phone number" required>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Email address">
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="property" placeholder="Property" readonly>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="space" placeholder="Event space" readonly>
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" placeholder="Tell us more"></textarea>
+      </div>
+
+      <button type="button" class="submit-btn" onclick="sendWhatsApp()">
+        Send Enquiry →
+      </button>
+
+    </form>
+
+  </div>
+
+  <!-- RIGHT DETAILS -->
+  <div class="enquiry-right">
+
+    <h3>Contact our team</h3>
+
+    <p>
+      Our team will respond shortly to assist you with planning your event.
+    </p>
+
+    <div class="contact-block">
+      <span>Email</span>
+      <a href="mailto:crs@thebayanhotels.com">
+        crs@thebayanhotels.com
+      </a>
+    </div>
+
+    <div class="contact-block">
+      <span>Phone</span>
+      <a href="tel:+918306300609">+91 8306300609</a><br>
+      <a href="tel:+918306300610">+91 8306300610</a>
+    </div>
+
+    <div class="contact-block">
+      <span>Location</span>
+      <p>Rajasthan, India</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- JS -->
+<script>
+
+/* AUTO FILL */
+const params = new URLSearchParams(window.location.search);
+document.getElementById("property").value = params.get("property") || "";
+document.getElementById("space").value = params.get("space") || "";
+
+/* WHATSAPP */
+function sendWhatsApp() {
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value;
+  const property = document.getElementById("property").value;
+  const space = document.getElementById("space").value;
+  const type = document.getElementById("eventType").value;
+  const message = document.getElementById("message").value;
+
+  if (!name || !phone) {
+    alert("Please fill Name and Phone");
+    return;
+  }
+
+  const text = `New Enquiry - Bayan
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+
+Property: ${property}
+Event Space: ${space}
+Event Type: ${type}
+
+Message:
+${message}`;
+
+  const whatsappURL = `https://wa.me/918306300609?text=${encodeURIComponent(text)}`;
+
+  window.open(whatsappURL, "_blank");
+}
+
+</script>
+
+</body>
+</html>

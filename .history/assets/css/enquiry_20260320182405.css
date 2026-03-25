@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f6f3ee;
+  color: #1a1a1a;
+}
+
+/* HERO */
+.enquiry-hero {
+  max-width: 1100px;
+  margin: 120px auto 40px;
+  padding: 0 20px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+.enquiry-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+}
+
+/* WRAPPER */
+.enquiry-wrapper {
+  display: flex;
+  gap: 80px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px 100px;
+}
+
+/* LEFT */
+.enquiry-left {
+  flex: 2;
+  padding: 40px;
+  background: #f1ede7;
+}
+
+/* RIGHT */
+.enquiry-right {
+  flex: 1;
+}
+
+.contact-divider {
+  width: 40px;
+  height: 1px;
+  background: #b89b5e;
+  margin: 20px 0;
+}
+
+/* FORM */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  font-size: 12px;
+  color: #b89b5e;
+  margin-bottom: 6px;
+}
+
+/* INPUT STYLE */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 14px;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* REMOVE UGLY ARROW */
+.form-group select {
+  appearance: none;
+  background-image: none;
+}
+
+/* PLACEHOLDER STYLE */
+::placeholder {
+  color: #999;
+  font-size: 13px;
+}
+
+/* FOCUS */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #b89b5e;
+}
+
+/* BUTTON */
+.submit-btn {
+  padding: 14px 28px;
+  border: 1px solid #1a1a1a;
+  background: transparent;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #1a1a1a;
+  color: white;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* STEPS */
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+  .enquiry-wrapper {
+    flex-direction: column;
+  }
+
+  .enquiry-hero h1 {
+    font-size: 32px;
+  }
+}

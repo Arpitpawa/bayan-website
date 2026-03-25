@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery | Bayan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+
+<section class="gallery-section">
+
+  <div class="gallery-header">
+    <span class="section-eyebrow">Gallery</span>
+    <h1>Moments across Bayan</h1>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="gallery-filters">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="wedding">Weddings</button>
+    <button data-filter="jaibagh">Jaibagh</button>
+    <button data-filter="udaibagh">Udai Bagh</button>
+    <button data-filter="amargarh">Amar Garh</button>
+    <button data-filter="sawai">Sawai Bagh</button>
+    <button data-filter="kumbha">Kumbha Bagh</button>
+  </div>
+
+  <!-- GRID -->
+  <div class="gallery-grid">
+
+    <!-- IMAGE ITEM -->
+    <div class="gallery-item wedding jaibagh">
+      <img src="assets/images/gallery/1.jpg">
+    </div>
+
+    <div class="gallery-item udaibagh">
+      <img src="assets/images/gallery/2.jpg">
+    </div>
+
+    <div class="gallery-item wedding sawai">
+      <img src="assets/images/gallery/3.jpg">
+    </div>
+
+    <div class="gallery-item amargarh">
+      <img src="assets/images/gallery/4.jpg">
+    </div>
+
+    <div class="gallery-item kumbha">
+      <img src="assets/images/gallery/5.jpg">
+    </div>
+
+    <div class="gallery-item wedding udaibagh">
+      <img src="assets/images/gallery/6.jpg">
+    </div>
+
+  </div>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="close">&times;</span>
+  <img id="lightbox-img">
+</div>
+
+<script src="gallery.js"></script>
+
+</body>
+</html>

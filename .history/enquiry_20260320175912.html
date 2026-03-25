@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enquiry | Bayan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<!-- CALENDAR -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<style>
+
+/* BASE */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f6f3ee;
+  color: #1a1a1a;
+}
+
+/* HERO */
+.enquiry-hero {
+  max-width: 1100px;
+  margin: 120px auto 40px;
+  padding: 0 20px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+.enquiry-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin: 15px 0;
+}
+
+.enquiry-hero p {
+  color: #666;
+}
+
+/* WRAPPER */
+.enquiry-wrapper {
+  display: flex;
+  gap: 80px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px 100px;
+}
+
+/* LEFT */
+.enquiry-left {
+  flex: 2;
+  padding: 40px;
+  background: #f1ede7;
+}
+
+/* RIGHT */
+.enquiry-right {
+  flex: 1;
+  padding-top: 20px;
+}
+
+.enquiry-right h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.contact-divider {
+  width: 40px;
+  height: 1px;
+  background: #b89b5e;
+  margin: 20px 0;
+}
+
+/* FORM */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+/* LABEL */
+.form-group label {
+  font-size: 12px;
+  color: #b89b5e;
+  margin-bottom: 6px;
+}
+
+/* INPUT */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 14px;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* FOCUS */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #b89b5e;
+}
+
+/* SELECT */
+.form-group select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+/* ONLY SELECT ARROW */
+.form-group.select-group {
+  position: relative;
+}
+
+.form-group.select-group::after {
+  content: "⌄";
+  position: absolute;
+  right: 14px;
+  top: 38px;
+  pointer-events: none;
+  color: #555;
+}
+
+/* STEPS */
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+/* BUTTON */
+.submit-btn {
+  margin-top: 20px;
+  padding: 14px 30px;
+  border: 1px solid #1a1a1a;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #1a1a1a;
+  color: white;
+}
+
+.back-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* ACTIONS */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+  .enquiry-wrapper {
+    flex-direction: column;
+  }
+
+  .enquiry-hero h1 {
+    font-size: 32px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="enquiry-hero">
+  <span class="eyebrow">BAYAN EVENTS</span>
+  <h1>Plan your celebration with us</h1>
+  <p>Share your details and our team will curate a refined experience.</p>
+</section>
+
+<!-- MAIN -->
+<section class="enquiry-wrapper">
+
+  <!-- LEFT -->
+  <div class="enquiry-left">
+
+    <form id="enquiryForm">
+
+      <!-- STEP 1 -->
+      <div class="form-step active" id="step1">
+
+        <div class="form-group select-group">
+  <label>Title</label>
+  <select id="salutation">
+    <option>Select Title</option>
+    <option>Mr.</option>
+    <option>Mrs.</option>
+    <option>Ms.</option>
+  </select>
+</div>
+
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" id="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email">
+        </div>
+
+        <button type="button" class="submit-btn" onclick="nextStep(2)">
+          Continue →
+        </button>
+
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="form-step" id="step2">
+
+        <div class="form-group">
+          <label>Property</label>
+          <input type="text" id="property">
+        </div>
+
+        <div class="form-group">
+          <label>Event Space</label>
+          <input type="text" id="space">
+        </div>
+
+        <div class="form-group">
+          <label>Guests</label>
+          <input type="number" id="guests">
+        </div>
+
+        <div class="form-group">
+          <label>Event Date</label>
+          <input type="text" id="date">
+        </div>
+
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="message"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="back-btn" onclick="nextStep(1)">
+            ← Back
+          </button>
+
+          <button type="button" class="submit-btn" onclick="sendWhatsApp()">
+            Send Enquiry →
+          </button>
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="enquiry-right">
+    <h3>Contact our team</h3>
+    <p>We’ll assist you in planning your perfect event.</p>
+
+    <div class="contact-divider"></div>
+
+    <p><strong>Email</strong><br>crs@thebayanhotels.com</p>
+    <p><strong>Phone</strong><br>+91 8306300609</p>
+  </div>
+
+</section>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script>
+
+/* STEP */
+function nextStep(step) {
+  document.querySelectorAll(".form-step").forEach(s => s.classList.remove("active"));
+  document.getElementById("step" + step).classList.add("active");
+}
+
+/* CALENDAR */
+flatpickr("#date", {
+  minDate: "today",
+  dateFormat: "d M, Y"
+});
+
+/* AUTO FILL */
+const params = new URLSearchParams(window.location.search);
+document.getElementById("property").value = params.get("property") || "";
+document.getElementById("space").value = params.get("space") || "";
+
+/* WHATSAPP */
+function sendWhatsApp() {
+
+  const salutation = document.getElementById("salutation").value;
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const property = document.getElementById("property").value;
+  const space = document.getElementById("space").value;
+
+  const text = `New Enquiry - Bayan
+
+Name: ${salutation} ${name}
+Phone: ${phone}
+
+Property: ${property}
+Space: ${space}`;
+
+  const url = `https://wa.me/918306300609?text=${encodeURIComponent(text)}`;
+
+  window.open(url, "_blank");
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquiry | Bayan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/enquiry.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="enquiry-hero">
+  <h1>Plan Your Event With Bayan</h1>
+  <p>Luxury venues across Rajasthan for weddings, corporate events & celebrations.</p>
+</section>
+
+<!-- MAIN -->
+<section class="enquiry-section">
+
+  <!-- LEFT IMAGE -->
+  <div class="enquiry-image">
+    <img src="assets/images/jaibagh-jaipur2.webp" alt="">
+  </div>
+
+  <!-- FORM -->
+  <div class="enquiry-form">
+
+    <h2>Event Enquiry</h2>
+
+    <form id="enquiryForm">
+
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="tel" placeholder="Enter your phone" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email">
+      </div>
+
+      <div class="form-group">
+        <label>Property</label>
+        <input type="text" id="property" readonly>
+      </div>
+
+      <div class="form-group">
+        <label>Event Space</label>
+        <input type="text" id="space" readonly>
+      </div>
+
+      <div class="form-group">
+        <label>Event Type</label>
+        <select>
+          <option>Wedding</option>
+          <option>Corporate</option>
+          <option>Private Party</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Guests</label>
+        <input type="number" placeholder="Number of guests">
+      </div>
+
+      <div class="form-group">
+        <label>Event Date</label>
+        <input type="date">
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <textarea rows="4" placeholder="Tell us about your event"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Enquiry</button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<!-- JS AUTO FILL -->
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById("property").value = params.get("property") || "";
+document.getElementById("space").value = params.get("space") || "";
+</script>
+
+</body>
+</html>

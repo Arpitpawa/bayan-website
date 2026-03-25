@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact & Enquiry | Bayan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/contact-enquiry.css">
+</head>
+
+<body>
+
+<section class="contact-wrapper">
+
+  <!-- LEFT SIDE -->
+  <div class="contact-left">
+
+    <span class="eyebrow">BAYAN GROUP</span>
+
+    <h1>Have a question<br>for us?</h1>
+
+    <p class="subtext">
+      Whether you're planning a wedding, corporate gathering or a private celebration,
+      our team is here to craft your perfect experience.
+    </p>
+
+    <div class="contact-info">
+      <p><strong>Rajasthan, India</strong></p>
+
+      <p>
+        <a href="mailto:crs@thebayanhotels.com">
+          crs@thebayanhotels.com
+        </a>
+      </p>
+
+      <p>
+        <a href="tel:+918306300609">+91 8306300609</a><br>
+        <a href="tel:+918306300610">+91 8306300610</a>
+      </p>
+    </div>
+
+  </div>
+
+
+  <!-- RIGHT SIDE FORM -->
+  <div class="contact-right">
+
+    <form id="enquiryForm">
+
+      <!-- ROW -->
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Full Name" required>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Email Address">
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="property" placeholder="Property" readonly>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="space" placeholder="Event Space" readonly>
+      </div>
+
+      <div class="form-group">
+        <select id="eventType">
+          <option value="">Event Type</option>
+          <option>Wedding</option>
+          <option>Corporate</option>
+          <option>Private Party</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <input type="number" id="guests" placeholder="Number of Guests">
+      </div>
+
+      <div class="form-group">
+        <input type="date" id="date">
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" placeholder="Tell us about your event"></textarea>
+      </div>
+
+      <!-- BUTTON -->
+      <button type="button" class="whatsapp-btn" onclick="sendWhatsApp()">
+        ⚡ Get Instant Response on WhatsApp
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- JS -->
+<script>
+
+/* AUTO FILL FROM URL */
+const params = new URLSearchParams(window.location.search);
+document.getElementById("property").value = params.get("property") || "";
+document.getElementById("space").value = params.get("space") || "";
+
+
+/* WHATSAPP SEND */
+function sendWhatsApp() {
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value;
+  const property = document.getElementById("property").value;
+  const space = document.getElementById("space").value;
+  const type = document.getElementById("eventType").value;
+  const guests = document.getElementById("guests").value;
+  const date = document.getElementById("date").value;
+  const message = document.getElementById("message").value;
+
+  if (!name || !phone) {
+    alert("Please fill Name and Phone");
+    return;
+  }
+
+  const text = `New Enquiry - Bayan
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+
+Property: ${property}
+Event Space: ${space}
+Event Type: ${type}
+
+Guests: ${guests}
+Date: ${date}
+
+Message:
+${message}`;
+
+  const whatsappURL = `https://wa.me/918306300609?text=${encodeURIComponent(text)}`;
+
+  window.open(whatsappURL, "_blank");
+}
+
+</script>
+
+</body>
+</html>

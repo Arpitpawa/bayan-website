@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enquiry | Bayan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/enquiry.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+
+<section class="enquiry-hero">
+  <span class="eyebrow">BAYAN EVENTS</span>
+  <h1>Plan your celebration with us</h1>
+  <p>Share your details and our team will curate a refined experience.</p>
+</section>
+
+<section class="enquiry-wrapper">
+
+  <!-- LEFT -->
+  <div class="enquiry-left">
+
+    <form>
+
+      <!-- STEP 1 -->
+      <div class="form-step active" id="step1">
+
+        <div class="form-group">
+          <label>Title</label>
+          <select>
+            <option>Select Title</option>
+            <option>Mr.</option>
+            <option>Mrs.</option>
+            <option>Ms.</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="Enter your phone number">
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email address">
+        </div>
+
+        <button type="button" class="submit-btn" onclick="nextStep(2)">
+          Continue →
+        </button>
+
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="form-step" id="step2">
+
+        <div class="form-group">
+          <label>Property</label>
+          <input type="text" placeholder="Select property">
+        </div>
+
+        <div class="form-group">
+          <label>Event Space</label>
+          <input type="text" placeholder="Select event space">
+        </div>
+
+        <div class="form-group">
+          <label>Guests</label>
+          <input type="number" placeholder="Number of guests">
+        </div>
+
+        <div class="form-group">
+          <label>Event Date</label>
+          <input type="text" id="date" placeholder="Select event date">
+        </div>
+
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell us about your event"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="back-btn" onclick="nextStep(1)">← Back</button>
+          <button type="button" class="submit-btn">Send Enquiry →</button>
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="enquiry-right">
+    <h3>Contact our team</h3>
+    <p>We’ll assist you in planning your perfect event.</p>
+
+    <div class="contact-divider"></div>
+
+    <p><strong>Email</strong><br>crs@thebayanhotels.com</p>
+    <p><strong>Phone</strong><br>+91 8306300609</p>
+  </div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script>
+function nextStep(step) {
+  document.querySelectorAll(".form-step").forEach(s => s.classList.remove("active"));
+  document.getElementById("step" + step).classList.add("active");
+}
+
+flatpickr("#date", {
+  minDate: "today",
+  dateFormat: "d M, Y"
+});
+</script>
+<script>
+
+/* STEP SWITCH */
+function nextStep(step) {
+  document.querySelectorAll(".form-step").forEach(s => s.classList.remove("active"));
+  document.getElementById("step" + step).classList.add("active");
+}
+
+/* CALENDAR */
+flatpickr("#date", {
+  minDate: "today",
+  dateFormat: "d M, Y"
+});
+
+/* ===============================
+   AUTO FILL FROM URL (IMPORTANT)
+================================= */
+
+const params = new URLSearchParams(window.location.search);
+
+// Property
+const propertyField = document.getElementById("property");
+if (propertyField) {
+  propertyField.value = params.get("property") || "";
+}
+
+// Event Space
+const spaceField = document.getElementById("space");
+if (spaceField) {
+  spaceField.value = params.get("space") || "";
+}
+
+// OPTIONAL: Event Type (future use)
+const type = params.get("type");
+if (type) {
+  const eventTypeField = document.getElementById("eventType");
+  if (eventTypeField) eventTypeField.value = type;
+}
+
+/* ===============================
+   WHATSAPP SEND
+================================= */
+
+function sendWhatsApp() {
+
+  const salutation = document.getElementById("salutation")?.value || "";
+  const name = document.getElementById("name")?.value || "";
+  const phone = document.getElementById("phone")?.value || "";
+  const property = document.getElementById("property")?.value || "";
+  const space = document.getElementById("space")?.value || "";
+  const guests = document.getElementById("guests")?.value || "";
+  const date = document.getElementById("date")?.value || "";
+  const message = document.getElementById("message")?.value || "";
+
+  if (!name || !phone) {
+    alert("Please fill required fields");
+    return;
+  }
+
+  const text = `New Enquiry - Bayan
+
+Name: ${salutation} ${name}
+Phone: ${phone}
+
+Property: ${property}
+Event Space: ${space}
+Guests: ${guests}
+Date: ${date}
+
+Message:
+${message}`;
+
+  const url = `https://wa.me/918306300609?text=${encodeURIComponent(text)}`;
+
+  window.open(url, "_blank");
+}
+
+</script>
+</body>
+</html>
